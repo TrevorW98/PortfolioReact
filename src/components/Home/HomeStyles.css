@@ -1,0 +1,61 @@
+body{
+    background: #c94b4b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.titleStyle{
+    font-size: 100px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    
+}
+.secondaryHeader{
+    font-size: 40px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.marginTop{
+    margin-top: 30px;
+}
+.right{
+    display: flex;
+    justify-content:flex-end
+}
+.noPadding{
+    padding: 0px;
+    margin: 0px;
+}
+.jumboTronStyle{
+    border-radius: 15px;
+    background-color: #8a4bc9de;
+}
+.aboutMeText{
+    color: white;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 15px;
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-150 { font-size: 130px; }
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(255, 255, 255, 1); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
