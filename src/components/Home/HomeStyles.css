@@ -1,20 +1,13 @@
-
-.titleStyle1{
-    font-size: 100px;
-    color: #28365A;
-    font-family: 'Oswald', sans-serif;
+body{
+    height: 100%;
+    background-color: #13192a ;
 }
-.titleStyle2{
+.titleStyle1{
     font-size: 100px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
 .secondaryHeader1{
-    font-size: 40px;
-    color: #28365A;
-    font-family: 'Oswald', sans-serif;
-}
-.secondaryHeader2{
     font-size: 40px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -44,7 +37,7 @@
     margin: 0px;
 }
 .jumboTronStyle{
-    border-radius: 0px 15px 15px 0px;
+    border-radius:  15px 15px 0px 0px;
     background-color: #28365A;
 }
 .aboutMeText{
@@ -52,6 +45,12 @@
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
     margin-left: 15px;
+}
+.carouselBG{
+    border-radius: 15px;
+}
+.blueBG{
+    background-color: #4860A0;
 }
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
@@ -69,8 +68,8 @@
 
 .pageBreakBG{
 background: #28365A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #4860A0, #28365A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #4860A0, #28365A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to bottom, #28365A, #4860A0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #28365A, #4860A0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
