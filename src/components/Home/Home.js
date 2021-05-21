@@ -19,6 +19,7 @@ import FoodPic4 from '../../assets/NewYorkCrust.jpg'
 import FoodPic5 from '../../assets/Wings.jpg'
 import TritonLogo from '../../assets/Triton.png'
 import HFPLogo from '../../assets/HFPLogo.png'
+import ATLogo from '../../assets/AnimalTriviaLogo.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -36,11 +37,12 @@ class Home extends React.Component {
             src3: PersonalPic3,
             src4: PersonalPic4,
             src5: PersonalPic5,
-            caption1: "",
-            caption2: "",
-            caption3: "",
-            caption4: "",
-            caption5: ""
+            carHeader: "life and family",
+            alt1: "",
+            alt1: "",
+            alt1: "",
+            alt1: "",
+            alt1: ""
         }
     }
 
@@ -83,13 +85,16 @@ class Home extends React.Component {
         const foodPicsBtn = () => {
             this.setState({ src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5 });
         }
+        const TriviaLink = () =>{
+            window.open("http://animaltrivia.azurewebsites.net", '_blank');
+        }
         return (
             <>
                 <Router>
                     <Link to="/"></Link>
                     <Switch>
                         <Route path="/">
-                            <Container fluid className="noPadding">
+                            <Container fluid >
                                 <Row>
                                     <Col >
                                         <Container>
@@ -107,10 +112,15 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container fluid className="noPadding">
+                            <Container fluid>
+                                <Row >
+                                    <Col className="noPadding">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                    </Col>
+                                </Row>
                                 <Row>
                                     <Col>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                    
                                     </Col>
                                 </Row>
                                 <Row className="center blueBG">
@@ -119,7 +129,7 @@ class Home extends React.Component {
                                         <IconButton id="petPics" className="material-icons md-dark md-48" value="pets" onClick={petPicsBtn}></IconButton>
                                         <IconButton id="foodPics" className="material-icons md-dark md-48" value="restaurant" onClick={foodPicsBtn}></IconButton>
                                     </Col>
-                                    <Col lg={6} className="center">
+                                    <Col lg={5} className="center">
                                         <Carousel>
                                             <Carousel.Item>
                                                 <img
@@ -159,13 +169,13 @@ class Home extends React.Component {
                                         </Carousel>
                                     </Col>
                                 </Row>
-                                <Row>
-                                    <Col>
+                                <Row >
+                                    <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
                                     </Col>
                                 </Row>
                                 <Row className="">
-                                    <Col lg={4} className="center">
+                                    <Col className="center">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Img variant="top" src={TritonLogo} style={{height: '20rem'}} />
                                             <Card.Body>
@@ -178,7 +188,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col lg={4} className="center">
+                                    <Col className="center">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Img variant="top" src={HFPLogo} style={{height: '20rem'}} />
                                             <Card.Body>
@@ -191,22 +201,22 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col lg={4} className="center">
+                                    <Col className="center">
                                         <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
+                                            <Card.Img variant="top" src={ATLogo} style={{height: '20rem'}} />
                                             <Card.Body>
                                                 <Card.Title>Animal Trivia</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
                                         </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                <Button variant="primary" onClick={TriviaLink}>Play Animal Trivia</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
                                 <Row className="marginTop">
-                                    <Col lg={4} className="center">
+                                    <Col  className="center">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
                                             <Card.Body>
@@ -219,7 +229,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col lg={4} className="center">
+                                    <Col  className="center">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
                                             <Card.Body>
@@ -232,7 +242,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col lg={4} className="center">
+                                    <Col  className="center">
                                         <Card style={{ width: '22rem' }}>
                                             <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
                                             <Card.Body>
