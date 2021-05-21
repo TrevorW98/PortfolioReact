@@ -36,9 +36,10 @@ body{
     padding: 0px;
     margin: 0px;
 }
-.jumboTronStyle{
-    border-radius:  15px 15px 0px 0px;
+.carouselIcons{
+    border-radius:  15px 15px 15px 15px;
     background-color: #28365A;
+   height: 50%;
 }
 .aboutMeText{
     color: white;
@@ -48,6 +49,7 @@ body{
 }
 .carouselBG{
     border-radius: 15px;
+    height: auto;
 }
 .blueBG{
     background-color: #4860A0;
@@ -56,7 +58,7 @@ body{
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 70px; }
+.material-icons.md-48 { font-size: 100px; }
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark { color: rgba(255, 255, 255, 1); }
