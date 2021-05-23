@@ -1,0 +1,15 @@
+
+.displayBGTop{
+    background-color: rgb(73, 73, 73);
+    border-radius: 5px 5px 0px 0px;
+}
+.displayBGMid{
+    background-color: rgb(73, 73, 73);
+}
+.displayBGBottom{
+    background-color: rgb(73, 73, 73);
+    border-radius: 0px 0px 5px 5px;
+}
+.displayTxt{
+    color: white;
+}

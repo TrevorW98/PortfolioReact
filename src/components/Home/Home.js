@@ -2,6 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Jumbotron, Row, Card, Button, Carousel } from 'react-bootstrap';
 import './HomeStyles.css';
+import Butt from '../Button/butt.js';
+import Disp from '../Display/disp.js';
+import regBtn from '../Button/regBtn.js';
+
+import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/LovelyHike.jpg'
 import PersonalPic2 from '../../assets/Orientation.jpg'
 import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg'
@@ -39,13 +44,69 @@ class Home extends React.Component {
             src5: PersonalPic5,
             carHeader: "life and family",
             alt1: "",
-            alt1: "",
-            alt1: "",
-            alt1: "",
-            alt1: ""
+            alt2: "",
+            alt3: "",
+            alt4: "",
+            alt5: "",
+            showCalc: false,
+            firstInput: "",
+            secondInput: "",
+            result: null,
+            operator: "",
+            clear: false,
+            displayResult: false,
+            nextCalc: false
         }
     }
+    incrementNum = (addTo) => {
+        if (this.state.displayResult !== true) {
+            this.setState({ firstInput: this.state.firstInput += addTo })
+        } else {
+            this.setState({ secondInput: this.state.secondInput += addTo })
+        }
+    }
+    setOperator = (newOperator) => {
+        this.setState({ displayResult: true })
+        this.setState({ operator: newOperator })
+    }
+    //Finally got the mulitple calculations working! I was trying to set the firstInput equal to the result state with each equation
+    //But instead i just set the first input to the actual equation itself and cleared the second input and operator
+    //I tried many more complicated ways but this simple way worked and the other ones didnt lol oh well
+    mathMethod = () => {
+        switch (this.state.operator) {
+            case "+":
+                this.setState({ firstInput: parseInt(this.state.firstInput) + parseInt(this.state.secondInput) })
+                this.setState({ secondInput: "", operator: "" })
+                break;
+            case "-":
+                this.setState({ firstInput: parseInt(this.state.firstInput) - parseInt(this.state.secondInput) })
+                this.setState({ secondInput: "", operator: "" })
+                break;
+            case "/":
+                this.setState({ firstInput: parseInt(this.state.firstInput) / parseInt(this.state.secondInput) })
+                this.setState({ secondInput: "", operator: "" })
+                break;
+            case "*":
+                this.setState({ firstInput: parseInt(this.state.firstInput) * parseInt(this.state.secondInput) })
+                this.setState({ secondInput: "", operator: "" })
+                break;
+            default:
+                this.setState({ result: null, firstInput: "", secondInput: "", operator: "", clear: false, displayResult: false })
+                break;
+        }
+    }
+    clearMethod = () => {
+        this.setState({
+            result: null,
+            firstInput: "",
+            secondInput: "",
+            operator: "",
+            clear: false,
+            displayResult: false,
+           
+        })
 
+    }
 
     componentDidMount() {
         window.addEventListener('scroll', this.titleScroll);
@@ -85,8 +146,11 @@ class Home extends React.Component {
         const foodPicsBtn = () => {
             this.setState({ src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5 });
         }
-        const TriviaLink = () =>{
+        const TriviaLink = () => {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
+        }
+        const showTheCalc = () => {
+            this.setState({showCalc: true});
         }
         return (
             <>
@@ -120,14 +184,26 @@ class Home extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col>
-                                    
+
                                     </Col>
                                 </Row>
                                 <Row className="center blueBG">
                                     <Col lg={1} className="d-none d-lg-block carouselIcons">
-                                        <IconButton id="personalPics" className="material-icons md-dark md-48" value="person" onClick={personalPicsBtn}></IconButton>
-                                        <IconButton id="petPics" className="material-icons md-dark md-48" value="pets" onClick={petPicsBtn}></IconButton>
-                                        <IconButton id="foodPics" className="material-icons md-dark md-48" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                        <Row >
+                                            <Col className="center">
+                                                <IconButton id="personalPics" className="material-icons md-dark md-48" value="person" onClick={personalPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className="center iconSpacing">
+                                                <IconButton id="petPics" className="material-icons md-dark md-48" value="pets" onClick={petPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row className="marginTop">
+                                            <Col className="center">
+                                                <IconButton id="foodPics" className="material-icons md-dark md-48" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
                                     </Col>
                                     <Col lg={5} className="center">
                                         <Carousel>
@@ -176,8 +252,8 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="">
                                     <Col className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src={TritonLogo} style={{height: '20rem'}} />
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '20rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Triton</Card.Title>
                                                 <Card.Text>
@@ -189,8 +265,8 @@ class Home extends React.Component {
                                         </Card>
                                     </Col>
                                     <Col className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src={HFPLogo} style={{height: '20rem'}} />
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                            <Card.Img variant="top" src={HFPLogo} style={{ height: '20rem' }} />
                                             <Card.Body>
                                                 <Card.Title>HealthForce Partners</Card.Title>
                                                 <Card.Text>
@@ -201,37 +277,37 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src={ATLogo} style={{height: '20rem'}} />
+                                    <Col className="center" >
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }} onCLick={this.TriviaLink}>
+                                            <Card.Img variant="top" src={ATLogo} style={{ height: '20rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Animal Trivia</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
                                         </Card.Text>
-                                                <Button variant="primary" onClick={TriviaLink}>Play Animal Trivia</Button>
+                                                <Button variant="primary" >Go somewhere</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
                                 <Row className="marginTop">
-                                    <Col  className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
+                                    <Col className="center">
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Body>
                                                 <Card.Title>Calculator</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                </Card.Text>
+                                               
+                                                <Button variant="primary" > Use the React Calculator</Button>
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col  className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
+                                    <Col className="center">
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                            <Card.Img variant="top" src="holder.js/100px180" style={{ height: '20rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Weather Application</Card.Title>
                                                 <Card.Text>
@@ -242,9 +318,9 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col  className="center">
-                                        <Card style={{ width: '22rem' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{height: '20rem'}} />
+                                    <Col className="center">
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                            <Card.Img variant="top" src="holder.js/100px180" style={{ height: '20rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Rock Paper Scissors Lizard Spock</Card.Title>
                                                 <Card.Text>
