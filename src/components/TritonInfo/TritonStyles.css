@@ -1,0 +1,29 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+.titleSpecs{
+    font-size: 160px;
+    color: #70a6da;
+    font-family: 'Oswald', sans-serif;
+}
+.secondaryHeaderSpecs{
+    font-size: 35px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.imgSpecs{
+    height: 880px;
+}
+.hrStyle{
+    color: #a1cff5;
+}
+.protoBtnStyle{
+    background-color: #203242;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+.blueBG{
+    background-color: #4860A0;
+}

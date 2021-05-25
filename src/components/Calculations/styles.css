@@ -1,15 +1,39 @@
 
-.displayBGTop{
-    background-color: rgb(73, 73, 73);
-    border-radius: 5px 5px 0px 0px;
-}
-.displayBGMid{
-    background-color: rgb(73, 73, 73);
-}
-.displayBGBottom{
-    background-color: rgb(73, 73, 73);
-    border-radius: 0px 0px 5px 5px;
-}
 .displayTxt{
-    color: white;
+    color: rgb(0, 0, 0);
+}
+.displayBG{
+    background-color: white;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.calcBG{
+    background-color: #4860A0;
+}
+.topRow{
+border-radius: 15px 15px 0px 0px;
+}
+.botRow{
+    border-radius: 0px 0px 15px 15px;
+}
+.protoBtnStyle{
+    background-color: #203242;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+.titleStyle1{
+    font-size: 140px;
+    color: #70a6da;
+    font-family: 'Oswald', sans-serif;
+}
+.blueBG{
+    background-color: #4860A0;
+}
+.secondaryHeaderSpecs{
+    font-size: 35px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
 }

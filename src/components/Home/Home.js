@@ -2,10 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Jumbotron, Row, Card, Button, Carousel } from 'react-bootstrap';
 import './HomeStyles.css';
-import Butt from '../Button/butt.js';
-import Disp from '../Display/disp.js';
-import regBtn from '../Button/regBtn.js';
-
 import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/LovelyHike.jpg'
 import PersonalPic2 from '../../assets/Orientation.jpg'
@@ -25,6 +21,9 @@ import FoodPic5 from '../../assets/Wings.jpg'
 import TritonLogo from '../../assets/Triton.png'
 import HFPLogo from '../../assets/HFPLogo.png'
 import ATLogo from '../../assets/AnimalTriviaLogo.png'
+import ReactLogo from '../../assets/ReactLogo.png'
+import WeatherLogo from '../../assets/weather.png'
+import RPSLS from '../../assets/rpsls.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -32,6 +31,7 @@ import {
     Link
 } from 'react-router-dom';
 import IconButton from '../Button/IconButton.js';
+import TritonInfo from '../TritonInfo/TritonInfo.js';
 
 class Home extends React.Component {
     constructor(props) {
@@ -103,7 +103,7 @@ class Home extends React.Component {
             operator: "",
             clear: false,
             displayResult: false,
-           
+
         })
 
     }
@@ -149,14 +149,27 @@ class Home extends React.Component {
         const TriviaLink = () => {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
         }
-        const showTheCalc = () => {
-            this.setState({showCalc: true});
+        const HFPLink = () => {
+            window.open("", '_blank');
         }
         return (
             <>
                 <Router>
-                    <Link to="/"></Link>
+                    <Link to="/">
+                    </Link>
                     <Switch>
+                        <Route path="/Calculator">
+                            <CalculationButtons></CalculationButtons>
+                        </Route>
+                        <Route path="/Triton">
+                            <TritonInfo></TritonInfo>
+                        </Route>
+                        <Route path="/Weather">
+
+                        </Route>
+                        <Route path="/RPSLS">
+
+                        </Route>
                         <Route path="/">
                             <Container fluid >
                                 <Row>
@@ -168,8 +181,8 @@ class Home extends React.Component {
                                                 </Col>
                                             </Row>
                                             <Row className="center">
-                                                <Col className="secondaryTitleBG1">
-                                                    <p className="center secondaryHeader1">Web Developer</p>
+                                                <Col className="secondaryTitleBG1 center">
+                                                    <p className="text-center secondaryHeader1">Web Developer & Chef</p>
                                                 </Col>
                                             </Row>
                                         </Container>
@@ -245,113 +258,205 @@ class Home extends React.Component {
                                         </Carousel>
                                     </Col>
                                 </Row>
+                                <Row className="center blueBG">
+                                    <Col lg={10} className="mt-2">
+                                        <p className="secondaryHeaderSpecs">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
+                                    web developer and former chef. I was the sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. Now I am proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
+                                    </Col>
+                                </Row>
                                 <Row >
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
                                     </Col>
                                 </Row>
-                                <Row className="">
+                                <Row>
+                                    <Col className="center">
+                                        <p className="titleStyle2">Projects</p>
+                                    </Col>
+                                </Row>
+                                <Row className="mt-5">
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '20rem' }} />
+                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Triton</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                </Card.Text>
+                                                <Link to="/Triton" className="center">
+                                                    <Button className="protoBtnStyle" variant="primary">Learn about Triton</Button>
+                                                </Link>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={HFPLogo} style={{ height: '20rem' }} />
+                                            <Card.Img variant="top" src={HFPLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>HealthForce Partners</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                </Card.Text>
+                                                <div className="center">
+                                                    <Button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</Button>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col className="center" >
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }} onCLick={this.TriviaLink}>
-                                            <Card.Img variant="top" src={ATLogo} style={{ height: '20rem' }} />
+                                        <Card style={{ width: '24rem', borderStyle: 'none' }} >
+                                            <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Animal Trivia</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary" >Go somewhere</Button>
+                                                </Card.Text>
+                                                <div className="center">
+                                                    <Button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</Button>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
-                                <Row className="marginTop">
+                                <Row className="marginTop mt-5">
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                        <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Calculator</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
                                                 </Card.Text>
-                                               
-                                                <Button variant="primary" > Use the React Calculator</Button>
+                                                <Link to="/Calculator" className="center">
+                                                    <Button className="protoBtnStyle" variant="primary"> Use the React Calculator</Button>
+                                                </Link>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{ height: '20rem' }} />
+                                            <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Weather Application</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                </Card.Text>
+                                                <div className="center">
+                                                    <Button className="protoBtnStyle" variant="primary">Check the weather</Button>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src="holder.js/100px180" style={{ height: '20rem' }} />
+                                            <Card.Img variant="top" src={RPSLS} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Rock Paper Scissors Lizard Spock</Card.Title>
                                                 <Card.Text>
                                                     Some quick example text to build on the card title and make up the bulk of
                                                     the card's content.
-                                        </Card.Text>
-                                                <Button variant="primary">Go somewhere</Button>
+                                                </Card.Text>
+                                                <div className="center">
+                                                    <Button className="protoBtnStyle" variant="primary">Play RPSLS</Button>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
+                                <Row >
+                                    <Col className="noPadding">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                    </Col>
+                                </Row>
+                                <Row className="blueBG">
+                                    <Col>
+                                        <p className="titleStyle3 text-center">Full list of developer skills:</p>
+                                    </Col>
+                                </Row>
+                                <Row className="blueBG center ">
+                                    <Col lg={4} className="center mt-4">
+                                        <ul className="secondaryHeaderSpecs">
+                                            <li>
+                                                <p>C#</p>
+                                            </li>
+                                            <li>
+                                                <p>HTML</p>
+                                            </li>
+                                            <li>
+                                                <p>TypeScript</p>
+                                            </li>
+                                            <li>
+                                                <p>JavaScript</p>
+                                            </li>
+                                            <li>
+                                                <p>CSS</p>
+                                            </li>
+                                            <li>
+                                                <p>Ionic</p>
+                                            </li>
+                                            <li>
+                                                <p>React</p>
+                                            </li>
+                                            <li>
+                                                <p>Unity</p>
+                                            </li>
+                                            <li>
+                                                <p>Angular 11</p>
+                                            </li>
+                                            <li>
+                                                <p>Bootstrap 5</p>
+                                            </li>
+                                        </ul>
+                                    </Col>
+                                    <Col lg={1}></Col>
+                                    <Col lg={4} className="center mt-4">
+                                        <ul className="secondaryHeaderSpecs">
+                                            <li>
+                                                <p>GitHub</p>
+                                            </li>
+                                            <li>
+                                                <p>Slack</p>
+                                            </li>
+                                            <li>
+                                                <p>Notion</p>
+                                            </li>
+                                            <li>
+                                                <p>Jira</p>
+                                            </li>
+                                            <li>
+                                                <p>Zoom</p>
+                                            </li>
+                                            <li>
+                                                <p>Azure</p>
+                                            </li>
+                                            <li>
+                                                <p>VScode</p>
+                                            </li>
+                                            <li>
+                                                <p>FileZilla</p>
+                                            </li>
+                                            <li>
+                                                <p>Postman</p>
+                                            </li>
+                                            <li>
+                                                <p>Google Cloud Services</p>
+                                            </li>
+                                        </ul>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col className="noPadding">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+                                    </Col>
+                                </Row>
                             </Container>
                         </Route>
-                        <Route path="/Trivia">
 
-                        </Route>
-                        <Route path="/Calculator">
-
-                        </Route>
-                        <Route path="/HFP">
-
-                        </Route>
-                        <Route path="/Triton">
-
-                        </Route>
-                        <Route path="/Weather">
-
-                        </Route>
-                        <Route path="/RPSLS">
-
-                        </Route>
                     </Switch>
                 </Router>
             </>
