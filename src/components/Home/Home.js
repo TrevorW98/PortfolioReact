@@ -263,7 +263,7 @@ class Home extends React.Component {
                                 <Row className="center blueBG">
                                     <Col lg={10} className="mt-2">
                                         <p className="secondaryHeaderSpecs">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
-                                    web developer and former chef. I was the sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. Now I am proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
+                                    web developer and former chef. I was a sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. I am now proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
                                     </Col>
                                 </Row>
                                 <Row >
@@ -273,7 +273,7 @@ class Home extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col className="center">
-                                        <p className="titleStyle2">Projects</p>
+                                        <p className="titleStyle2">Projects and Coursework</p>
                                     </Col>
                                 </Row>
                                 <Row className="mt-5">
@@ -350,21 +350,6 @@ class Home extends React.Component {
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button className="protoBtnStyle" variant="primary">Check the weather</Button>
-                                                </div>
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                    <Col className="center">
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={RPSLS} style={{ height: '22rem' }} />
-                                            <Card.Body>
-                                                <Card.Title>Rock Paper Scissors Lizard Spock</Card.Title>
-                                                <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
-                                                </Card.Text>
-                                                <div className="center">
-                                                    <Button className="protoBtnStyle" variant="primary">Play RPSLS</Button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
