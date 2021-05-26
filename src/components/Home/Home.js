@@ -154,6 +154,9 @@ class Home extends React.Component {
         const HFPLink = () => {
             window.open("", '_blank');
         }
+        const WeatherLink = () => {
+            window.open("http://weatherapplicationjs.azurewebsites.net", '_blank');
+        }
         return (
             <>
                 <Router>
@@ -344,7 +347,7 @@ class Home extends React.Component {
                                                    
                                                 </Card.Text>
                                                 <div className="center">
-                                                    <Button className="protoBtnStyle" variant="primary">Check the weather</Button>
+                                                    <Button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</Button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
