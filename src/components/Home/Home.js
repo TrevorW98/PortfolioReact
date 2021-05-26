@@ -283,8 +283,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Triton</Card.Title>
                                                 <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
+                                                   
                                                 </Card.Text>
                                                 <Link to="/Triton" className="center">
                                                     <Button className="protoBtnStyle" variant="primary">Learn about Triton</Button>
@@ -298,8 +297,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>HealthForce Partners</Card.Title>
                                                 <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
+                                                   
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</Button>
@@ -313,8 +311,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Animal Trivia</Card.Title>
                                                 <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
+                                                  
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</Button>
@@ -330,8 +327,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Calculator</Card.Title>
                                                 <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
+                                                   
                                                 </Card.Text>
                                                 <Link to="/Calculator" className="center">
                                                     <Button className="protoBtnStyle" variant="primary"> Use the React Calculator</Button>
@@ -345,8 +341,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Weather Application</Card.Title>
                                                 <Card.Text>
-                                                    Some quick example text to build on the card title and make up the bulk of
-                                                    the card's content.
+                                                   
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button className="protoBtnStyle" variant="primary">Check the weather</Button>
