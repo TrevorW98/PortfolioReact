@@ -24,6 +24,8 @@ import ATLogo from '../../assets/AnimalTriviaLogo.png'
 import ReactLogo from '../../assets/ReactLogo.png'
 import WeatherLogo from '../../assets/weather.png'
 import RPSLS from '../../assets/rpsls.png'
+import ContactUs from '../ContactForm/ContactForm.js';
+import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
 import {
     BrowserRouter as Router,
     Switch,
@@ -324,7 +326,7 @@ class Home extends React.Component {
                                 <Row className="marginTop mt-5">
                                     <Col className="center">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                        <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
                                                 <Card.Title>Calculator</Card.Title>
                                                 <Card.Text>
@@ -454,6 +456,19 @@ class Home extends React.Component {
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
                                     </Col>
                                 </Row>
+                                <Row>
+                                    <Col>
+                                        <p className="titleStyle3 text-center">Contact Me</p>
+                                    </Col>
+                                </Row>
+                                <Row className="center">
+                                    <Col lg={6}>
+                                        <ContactUs></ContactUs>
+                                    </Col>
+                                </Row>
+                               
+                                    <SocialMediaLinks></SocialMediaLinks>
+                                
                             </Container>
                         </Route>
 
@@ -465,3 +480,5 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+{/* <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */ }
