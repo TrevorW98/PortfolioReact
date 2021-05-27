@@ -150,7 +150,7 @@ class Home extends React.Component {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
         }
         const HFPLink = () => {
-            window.open("", '_blank');
+            window.open("https://healthforcepartners.net/", '_blank');
         }
         const WeatherLink = () => {
             window.open("http://weatherapplicationjs.azurewebsites.net", '_blank');
@@ -330,7 +330,8 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Triton</Card.Title>
                                                 <Card.Text>
-                                                   
+                                                (This project is in development, coming soon!)
+                                                    A full-stack mobile application built in Angular and Ionic.
                                                 </Card.Text>
                                                 <Link to="/Triton" className="center">
                                                     <Button className="protoBtnStyle" variant="primary">Learn about Triton</Button>
@@ -344,7 +345,8 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>HealthForce Partners</Card.Title>
                                                 <Card.Text>
-                                                   
+                                                   (This project is in development, coming soon!)
+                                                   My first experience with professional development was migrating HealthForce Partners' website to Wix from WordPress.
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</Button>
@@ -358,7 +360,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Animal Trivia</Card.Title>
                                                 <Card.Text>
-                                                  
+                                                  A project completed during my time at CodeStack Academy, showcasing React's strength as a library.
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</Button>
@@ -374,7 +376,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Calculator</Card.Title>
                                                 <Card.Text>
-                                                   
+                                                   A basic calculator from an early project in CodeStack Academy.
                                                 </Card.Text>
                                                 <Link to="/Calculator" className="center">
                                                     <Button className="protoBtnStyle" variant="primary"> Use the React Calculator</Button>
@@ -388,7 +390,7 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title>Weather Application</Card.Title>
                                                 <Card.Text>
-                                                   
+                                                    Search your city/country's weather with this basic weather API application, showcasing vanilla JavaScript.
                                                 </Card.Text>
                                                 <div className="center">
                                                     <Button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</Button>

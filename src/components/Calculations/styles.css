@@ -37,3 +37,13 @@ border-radius: 15px 15px 0px 0px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
+.xsTitle{
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.xsSecondaryTitle{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
