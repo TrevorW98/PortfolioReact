@@ -328,8 +328,8 @@ class Home extends React.Component {
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
-                                                <Card.Title>Triton</Card.Title>
-                                                <Card.Text>
+                                                <Card.Title className="cardheadStyle">Triton</Card.Title>
+                                                <Card.Text className="cardTextStyle">
                                                 (This project is in development, coming soon!)
                                                     A full-stack mobile application built in Angular and Ionic.
                                                 </Card.Text>
@@ -343,8 +343,8 @@ class Home extends React.Component {
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={HFPLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
-                                                <Card.Title>HealthForce Partners</Card.Title>
-                                                <Card.Text>
+                                                <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
+                                                <Card.Text className="cardTextStyle">
                                                    (This project is in development, coming soon!)
                                                    My first experience with professional development was migrating HealthForce Partners' website to Wix from WordPress.
                                                 </Card.Text>
@@ -358,8 +358,8 @@ class Home extends React.Component {
                                         <Card style={{ width: '24rem', borderStyle: 'none' }} >
                                             <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
-                                                <Card.Title>Animal Trivia</Card.Title>
-                                                <Card.Text>
+                                                <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
+                                                <Card.Text className="cardTextStyle">
                                                   A project completed during my time at CodeStack Academy, showcasing React's strength as a library.
                                                 </Card.Text>
                                                 <div className="center">
@@ -374,8 +374,8 @@ class Home extends React.Component {
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
-                                                <Card.Title>Calculator</Card.Title>
-                                                <Card.Text>
+                                                <Card.Title className="cardheadStyle">Calculator</Card.Title>
+                                                <Card.Text className="cardTextStyle">
                                                    A basic calculator from an early project in CodeStack Academy.
                                                 </Card.Text>
                                                 <Link to="/Calculator" className="center">
@@ -388,8 +388,8 @@ class Home extends React.Component {
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
-                                                <Card.Title>Weather Application</Card.Title>
-                                                <Card.Text>
+                                                <Card.Title className="cardheadStyle">Weather Application</Card.Title>
+                                                <Card.Text className="cardTextStyle">
                                                     Search your city/country's weather with this basic weather API application, showcasing vanilla JavaScript.
                                                 </Card.Text>
                                                 <div className="center">
