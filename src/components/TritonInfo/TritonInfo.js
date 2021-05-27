@@ -37,19 +37,28 @@ class TritonInfo extends React.Component {
                     <Switch>
                         <Route path="/Triton">
                             <Container fluid>
-                                <Row>
-                                    <Col className="center">
-                                        <p className="titleSpecs">Triton</p>
+                                <Row className="mt-2">
+                                    <Col>
+                                        <Link to="/Home">
+                                            <Button className="protoBtnStyle">Return to Home</Button>
+                                        </Link>
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col>
-                                        <hr className="hrStyle"></hr>
+                                    <Col className="center">
+                                        <p className="titleSpecs text-center d-none d-md-block">Triton</p>
+                                        <p className="xsTitle d-block d-md-none">Triton</p>
                                     </Col>
                                 </Row>
                                 <Row className="ml-5 center">
                                     <Col lg={10}>
-                                        <p className="secondaryHeaderSpecs">Triton is a full-stack mobile application for Android that allows users to learn more about animals and pets, and how to take care of them. It features a constantly growing
+                                        <p className="secondaryHeaderSpecs d-none d-md-block ">Triton is a full-stack mobile application for Android that allows users to learn more about animals and pets, and how to take care of them. It features a constantly growing
+                                        Animal Index, featuring information on each of the animals listed. The Pick-My-Pet Quiz will help to determine what pet may be right for the user's living situation and lifestyle, while the
+                                        pet journal, profile, and notifications help the user to track their pets behavior and health.
+                                        </p>
+                                    </Col>
+                                    <Col lg={10}>
+                                        <p className="xsSecondaryTitle d-block d-md-none">Triton is a full-stack mobile application for Android that allows users to learn more about animals and pets, and how to take care of them. It features a constantly growing
                                         Animal Index, featuring information on each of the animals listed. The Pick-My-Pet Quiz will help to determine what pet may be right for the user's living situation and lifestyle, while the
                                         pet journal, profile, and notifications help the user to track their pets behavior and health.
                                         </p>
@@ -61,7 +70,7 @@ class TritonInfo extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="center blueBG">
-                                    <Col lg={10} >
+                                    <Col xl={10} lg={10} md={10} sm={12} xs={12} >
                                         <Carousel>
                                             <Carousel.Item>
                                                 <Image
@@ -96,7 +105,8 @@ class TritonInfo extends React.Component {
                                 </Row>
                                 <Row className="center blueBG">
                                     <Col className="center mt-5">
-                                        <p className="secondaryHeaderSpecs ml-5">These are pictures from both the prototype and the app in development</p>
+                                        <p className="secondaryHeader ml-5 d-none d-md-block">These are pictures from both the prototype and the app in development</p>
+                                        <p className="xsSecondaryHeader ml-5 d-block d-md-none">These are pictures from both the prototype and the app in development</p>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -105,7 +115,7 @@ class TritonInfo extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="mt-5 center">
-                                    <Col xl={4} lg={4} md={8} sm={10}>
+                                    <Col xl={4} lg={4} md={8} sm={10} xs={10}>
                                         <Image
                                             className="d-block w-100"
                                             src={TritonDev5}
@@ -113,7 +123,7 @@ class TritonInfo extends React.Component {
                                     </Col>
                                     <Col lg={1} ></Col>
                                     <div className="mt-5 .d-none .d-md-block .d-lg-none"></div>
-                                    <Col lg={4} md={8} sm={10}>
+                                    <Col lg={4} md={8} sm={10} xs={10}>
                                         <Image
                                             className="d-block w-100"
                                             src={TritonDev6}
@@ -121,7 +131,7 @@ class TritonInfo extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="mt-5 center">
-                                    <Col lg={4} md={8} sm={10}>
+                                    <Col lg={4} md={8} sm={10} xs={10}>
                                         <Image
                                             className="d-block w-100"
                                             src={TritonDev7}
@@ -129,7 +139,7 @@ class TritonInfo extends React.Component {
                                     </Col>
                                     <Col lg={1}></Col>
                                     <div className="mt-5 .d-none .d-md-block .d-lg-none"></div>
-                                    <Col lg={4} md={8} sm={10}>
+                                    <Col lg={4} md={8} sm={10} xs={10}>
                                         <Image
                                             className="d-block w-100"
                                             src={TritonDev8}
@@ -143,12 +153,33 @@ class TritonInfo extends React.Component {
                                 </Row>
                                 <Row className="blueBG">
                                     <Col>
-                                        <p className="secondaryHeaderSpecs text-center">Full list of features:</p>
+                                        <p className="secondaryHeader text-center d-none d-md-block">Full list of features:</p>
+                                        <p className="xsSecondaryHeader text-center d-block d-md-none">Full list of features:</p>
                                     </Col>
                                 </Row>
                                 <Row className="blueBG">
                                     <Col className="center">
-                                        <ul className="secondaryHeaderSpecs">
+                                        <ul className="secondaryHeader d-none d-md-block">
+                                            <li>
+                                                <p>Animal Index with over 150 animals and their information.</p>
+                                            </li>
+                                            <li>
+                                                <p>Pick-My-Pet Quiz to determine what type of pet would be best for your situation.</p>
+                                            </li>
+                                            <li>
+                                                <p>Pet Profile with your pets picture and information, including documents and medical information.</p>
+                                            </li>
+                                            <li>
+                                                <p>Pet Journal to write down any notes or specific occurrences.</p>
+                                            </li>
+                                            <li>
+                                                <p>Vet finder allows users to find vet offices near them and save the one they use the most.</p>
+                                            </li>
+                                            <li>
+                                                <p>Notifications for feeding times and daily events like applying medicine.</p>
+                                            </li>
+                                        </ul>
+                                        <ul className="xsSecondaryHeader d-block d-md-none">
                                             <li>
                                                 <p>Animal Index with over 150 animals and their information.</p>
                                             </li>

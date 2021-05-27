@@ -111,12 +111,10 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.titleScroll);
-
         let personalPics = document.getElementById("personalPics");
         let petPics = document.getElementById("petPics");
         let foodPics = document.getElementById("foodPics");
-
+    
         personalPics.addEventListener("mouseover", function () {
             personalPics.classList.add("pulse");
         });
@@ -179,15 +177,21 @@ class Home extends React.Component {
                             <Container fluid >
                                 <Row>
                                     <Col >
-                                        <Container>
+                                        <Container fluid>
                                             <Row className="center">
-                                                <Col className="titleBG1">
+                                                <Col lg={10} md={12} className="titleBG1 d-none d-md-block">
                                                     <p className="titleStyle1 center">Trevor Womack</p>
+                                                </Col>
+                                                <Col lg={10} md={12} className="titleBG1 d-block d-md-none">
+                                                    <p className="xsTitle center">Trevor Womack</p>
                                                 </Col>
                                             </Row>
                                             <Row className="center">
-                                                <Col className="secondaryTitleBG1 center">
+                                                <Col className="center d-none d-md-block">
                                                     <p className="text-center secondaryHeader1">Web Developer & Chef</p>
+                                                </Col>
+                                                <Col className="center d-block d-md-none">
+                                                    <p className="text-center xsSecondaryTitle">Web Developer & Chef</p>
                                                 </Col>
                                             </Row>
                                         </Container>
@@ -206,24 +210,59 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="center blueBG">
-                                    <Col lg={1} className="d-none d-lg-block carouselIcons">
+                                    <Col xl={1} lg={2} md={2} className="carouselIcons d-none d-md-block">
                                         <Row >
                                             <Col className="center">
-                                                <IconButton id="personalPics" className="material-icons md-dark md-48" value="person" onClick={personalPicsBtn}></IconButton>
+                                                <IconButton id="personalPics" className="material-icons md-dark md-120" value="person" onClick={personalPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col className="center iconSpacing">
-                                                <IconButton id="petPics" className="material-icons md-dark md-48" value="pets" onClick={petPicsBtn}></IconButton>
+                                                <IconButton id="petPics" className="material-icons md-dark md-120" value="pets" onClick={petPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row className="marginTop">
                                             <Col className="center">
-                                                <IconButton id="foodPics" className="material-icons md-dark md-48" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                                <IconButton id="foodPics" className="material-icons md-dark md-120" value="restaurant" onClick={foodPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                     </Col>
-                                    <Col lg={5} className="center">
+                                    <Col sm={2} className="carouselIcons d-none d-sm-block d-md-none">
+                                        <Row >
+                                            <Col className="center">
+                                                <IconButton  className="material-icons md-dark md-80" value="person" onClick={personalPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className="center iconSpacing">
+                                                <IconButton  className="material-icons md-dark md-80" value="pets" onClick={petPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row className="marginTop">
+                                            <Col className="center">
+                                                <IconButton  className="material-icons md-dark md-80" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                    <Col xs={2} className="carouselIcons d-block d-sm-none">
+                                        <Row >
+                                            <Col className="center mt-2">
+                                                <IconButton  className="material-icons md-dark md-36" value="person" onClick={personalPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className="center iconSpacing">
+                                                <IconButton  className="material-icons md-dark md-36" value="pets" onClick={petPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                        <Row className=" iconSpacing mb-2">
+                                            <Col className="center">
+                                                <IconButton  className="material-icons md-dark md-36" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                   
+                                    <Col xl={8} lg={6} md={8} sm={8} xs={9} className="center">
                                         <Carousel>
                                             <Carousel.Item>
                                                 <img
@@ -265,7 +304,9 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="center blueBG">
                                     <Col lg={10} className="mt-2">
-                                        <p className="secondaryHeaderSpecs">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
+                                        <p className="secondaryHeader d-none d-md-block text-center">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
+                                    web developer and former chef. I was a sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. I am now proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
+                                    <p className="xsSecondaryHeader d-block d-md-none text-center">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
                                     web developer and former chef. I was a sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. I am now proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
                                     </Col>
                                 </Row>
@@ -275,12 +316,15 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="center">
-                                        <p className="titleStyle2">Projects and Coursework</p>
+                                    <Col className="center d-none d-md-block">
+                                        <p className="titleStyle2 text-center">Projects and Coursework</p>
+                                    </Col>
+                                    <Col className="center d-block d-md-none">
+                                        <p className="xsTitle text-center">Projects and Coursework</p>
                                     </Col>
                                 </Row>
                                 <Row className="mt-5">
-                                    <Col className="center">
+                                    <Col xs={12} sm={12} md={4} lg={4}  className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
@@ -294,7 +338,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col className="center">
+                                    <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={HFPLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
@@ -308,7 +352,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col className="center" >
+                                    <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
                                         <Card style={{ width: '24rem', borderStyle: 'none' }} >
                                             <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
@@ -324,7 +368,7 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="marginTop mt-5">
-                                    <Col className="center">
+                                    <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
@@ -338,7 +382,7 @@ class Home extends React.Component {
                                             </Card.Body>
                                         </Card>
                                     </Col>
-                                    <Col className="center">
+                                    <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} />
                                             <Card.Body>
@@ -360,12 +404,46 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="blueBG">
                                     <Col>
-                                        <p className="titleStyle3 text-center">Full list of developer skills:</p>
+                                        <p className="titleStyle3 text-center d-none d-lg-block">Full list of developer skills:</p>
+                                        <p className="xsTitle text-center d-block d-lg-none">Full list of developer skills:</p>
                                     </Col>
+                                    
                                 </Row>
                                 <Row className="blueBG center ">
-                                    <Col lg={4} className="center mt-4">
-                                        <ul className="secondaryHeaderSpecs">
+                                    <Col xl={6} lg={6} md={6} sm={6} xs={6} className="center mt-4">
+                                        <ul className="secondaryHeader d-none d-md-block">
+                                            <li>
+                                                <p>C#</p>
+                                            </li>
+                                            <li>
+                                                <p>HTML</p>
+                                            </li>
+                                            <li>
+                                                <p>TypeScript</p>
+                                            </li>
+                                            <li>
+                                                <p>JavaScript</p>
+                                            </li>
+                                            <li>
+                                                <p>CSS</p>
+                                            </li>
+                                            <li>
+                                                <p>Ionic</p>
+                                            </li>
+                                            <li>
+                                                <p>React</p>
+                                            </li>
+                                            <li>
+                                                <p>Unity</p>
+                                            </li>
+                                            <li>
+                                                <p>Angular 11</p>
+                                            </li>
+                                            <li>
+                                                <p>Bootstrap 5</p>
+                                            </li>
+                                        </ul>
+                                        <ul className="xsSecondaryHeader d-block d-md-none">
                                             <li>
                                                 <p>C#</p>
                                             </li>
@@ -398,9 +476,41 @@ class Home extends React.Component {
                                             </li>
                                         </ul>
                                     </Col>
-                                    <Col lg={1}></Col>
-                                    <Col lg={4} className="center mt-4">
-                                        <ul className="secondaryHeaderSpecs">
+                                  
+                                    <Col xl={6} lg={6} md={6} sm={6} xs={6} className="center mt-4">
+                                        <ul className="secondaryHeader d-none d-md-block">
+                                            <li>
+                                                <p>GitHub</p>
+                                            </li>
+                                            <li>
+                                                <p>Slack</p>
+                                            </li>
+                                            <li>
+                                                <p>Notion</p>
+                                            </li>
+                                            <li>
+                                                <p>Jira</p>
+                                            </li>
+                                            <li>
+                                                <p>Zoom</p>
+                                            </li>
+                                            <li>
+                                                <p>Azure</p>
+                                            </li>
+                                            <li>
+                                                <p>VScode</p>
+                                            </li>
+                                            <li>
+                                                <p>FileZilla</p>
+                                            </li>
+                                            <li>
+                                                <p>Postman</p>
+                                            </li>
+                                            <li>
+                                                <p>Google Cloud Services</p>
+                                            </li>
+                                        </ul>
+                                        <ul className="xsSecondaryHeader d-block d-md-none">
                                             <li>
                                                 <p>GitHub</p>
                                             </li>
@@ -441,7 +551,8 @@ class Home extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <p className="titleStyle3 text-center">Contact Me</p>
+                                        <p className="titleStyle3 text-center d-none d-lg-block">Contact Me</p>
+                                        <p className="xsTitle text-center d-block d-lg-none">Contact Me</p>
                                     </Col>
                                 </Row>
                                 <Row className="center">
@@ -449,9 +560,7 @@ class Home extends React.Component {
                                         <ContactUs></ContactUs>
                                     </Col>
                                 </Row>
-                               
                                     <SocialMediaLinks></SocialMediaLinks>
-                                
                             </Container>
                         </Route>
 
