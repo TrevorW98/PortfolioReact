@@ -3,16 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Jumbotron, Row, Card, Button, Carousel } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
-import PersonalPic1 from '../../assets/Code.png'
-import PersonalPic2 from '../../assets/Orientation.jpg'
+import PersonalPic1 from '../../assets/Orientation.jpg' 
+import PersonalPic2 from '../../assets/TritonCode.jpg'
 import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg'
 import PersonalPic4 from '../../assets/StompingGrounds.jpg'
-import PersonalPic5 from '../../assets/TritonCode.jpg'
+import PersonalPic5 from  '../../assets/Code.jpg'
 import PetPic1 from '../../assets/NaviCute.jpg'
 import PetPic2 from '../../assets/NoodleCute.jpg'
 import PetPic3 from '../../assets/Mocha.jpg'
 import PetPic4 from '../../assets/FlowerCrownPrincess.jpg'
-import PetPic5 from '../../assets/MissMaamOnARock.jpg'
+import PetPic5 from '../../assets/Sophia.jpg'
 import FoodPic1 from '../../assets/ChickenPermission.jpg'
 import FoodPic2 from '../../assets/DeviledEggs.jpg'
 import FoodPic3 from '../../assets/FiveStarBreakfast.jpg'
@@ -139,11 +139,11 @@ class Home extends React.Component {
 
         const personalPicsBtn = () => {
             this.setState({ src1: PersonalPic1, src2: PersonalPic2, src3: PersonalPic3, src4: PersonalPic4, src5: PersonalPic5
-            ,alt1: "This website's code", alt2: "Group coding with the HFP team", alt3: "A nice picture I took of mushrooms growing on a tree", alt4: "A picture of myself on a nostalgic hike", alt5: "Code from the front and back end of Triton"});
+            ,alt1:"Group coding with the HFP team", alt2: "Code from the front and back end of Triton" , alt3: "A nice picture I took of mushrooms growing on a tree", alt4: "A picture of myself on a nostalgic hike", alt5: "This website's code" });
         }
         const petPicsBtn = () => {
             this.setState({ src1: PetPic1, src2: PetPic2, src3: PetPic3, src4: PetPic4, src5: PetPic5 
-                ,alt1: "This website's code", alt2: "", alt3: "", alt4: "", alt5: ""});
+                ,alt1: "My cat Navi", alt2: "My cat Noodle", alt3: "Our previous foster cat, Mocha", alt4: "My bearded dragon, Rhae", alt5: "My current foster kitten, Sophia"});
         }
         const foodPicsBtn = () => {
             this.setState({ src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5 
