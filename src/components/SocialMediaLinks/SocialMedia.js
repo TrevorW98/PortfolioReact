@@ -27,13 +27,13 @@ class SocialMedia extends React.Component {
             <>
                 <Row className="center mb-5">
                     <Col lg={1} className="mt-3 center">
-                        <Button className="buttonStyle" onClick={linkedIn}><FontAwesomeIcon icon={faLinkedin} size="3x" /></Button>
+                        <Button aria-label="Linked In Profile" className="buttonStyle" onClick={linkedIn}><FontAwesomeIcon icon={faLinkedin} size="3x" /></Button>
                     </Col>
                     <Col lg={1} className="mt-3 center">
-                        <Button className="buttonStyle" onClick={gitHub}><FontAwesomeIcon icon={faGithub} size="3x" /></Button>
+                        <Button aria-label="Github Profile" className="buttonStyle" onClick={gitHub}><FontAwesomeIcon icon={faGithub} size="3x" /></Button>
                     </Col>
                     <Col lg={1} className="mt-3 center">
-                        <Button className="buttonStyle" onClick={instaGram}><FontAwesomeIcon icon={faInstagram} size="3x" /></Button>
+                        <Button aria-label="Instagram Profile" className="buttonStyle" onClick={instaGram}><FontAwesomeIcon icon={faInstagram} size="3x" /></Button>
                     </Col>
                 </Row>
             </>

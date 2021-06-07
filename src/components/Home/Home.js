@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Jumbotron, Row, Card, Button, Carousel } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
-import PersonalPic1 from '../../assets/LovelyHike.jpg'
+import PersonalPic1 from '../../assets/Code.png'
 import PersonalPic2 from '../../assets/Orientation.jpg'
 import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg'
 import PersonalPic4 from '../../assets/StompingGrounds.jpg'
-import PersonalPic5 from '../../assets/Family.jpg'
+import PersonalPic5 from '../../assets/TritonCode.jpg'
 import PetPic1 from '../../assets/NaviCute.jpg'
 import PetPic2 from '../../assets/NoodleCute.jpg'
 import PetPic3 from '../../assets/Mocha.jpg'
@@ -138,13 +138,16 @@ class Home extends React.Component {
     render() {
 
         const personalPicsBtn = () => {
-            this.setState({ src1: PersonalPic1, src2: PersonalPic2, src3: PersonalPic3, src4: PersonalPic4, src5: PersonalPic5 });
+            this.setState({ src1: PersonalPic1, src2: PersonalPic2, src3: PersonalPic3, src4: PersonalPic4, src5: PersonalPic5
+            ,alt1: "This website's code", alt2: "Group coding with the HFP team", alt3: "A nice picture I took of mushrooms growing on a tree", alt4: "A picture of myself on a nostalgic hike", alt5: "Code from the front and back end of Triton"});
         }
         const petPicsBtn = () => {
-            this.setState({ src1: PetPic1, src2: PetPic2, src3: PetPic3, src4: PetPic4, src5: PetPic5 });
+            this.setState({ src1: PetPic1, src2: PetPic2, src3: PetPic3, src4: PetPic4, src5: PetPic5 
+                ,alt1: "This website's code", alt2: "", alt3: "", alt4: "", alt5: ""});
         }
         const foodPicsBtn = () => {
-            this.setState({ src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5 });
+            this.setState({ src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5 
+                ,alt1: "This website's code", alt2: "", alt3: "", alt4: "", alt5: ""});
         }
         const TriviaLink = () => {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
@@ -158,8 +161,6 @@ class Home extends React.Component {
         return (
             <>
                 <Router>
-                    <Link to="/">
-                    </Link>
                     <Switch>
                         <Route path="/Calculator">
                             <CalculationButtons></CalculationButtons>
@@ -176,7 +177,7 @@ class Home extends React.Component {
                         <Route path="/">
                             <Container fluid >
                                 <Row>
-                                    <Col >
+                                    <Col>
                                         <Container fluid>
                                             <Row className="center">
                                                 <Col lg={10} md={12} className="titleBG1 d-none d-md-block">
@@ -209,55 +210,55 @@ class Home extends React.Component {
 
                                     </Col>
                                 </Row>
-                                <Row className="center blueBG">
-                                    <Col xl={1} lg={2} md={2} className="carouselIcons d-none d-md-block">
+                                <Row className="center blueBG ">
+                                    <Col xl={1} lg={2} md={2} className="carouselIcons d-none d-md-block buttonBG">
                                         <Row >
                                             <Col className="center">
-                                                <IconButton id="personalPics" className="material-icons md-dark md-120" value="person" onClick={personalPicsBtn}></IconButton>
+                                                <IconButton aria-label="Personal pictures button" id="personalPics" className="material-icons md-dark md-120" value="person" onClick={personalPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col className="center iconSpacing">
-                                                <IconButton id="petPics" className="material-icons md-dark md-120" value="pets" onClick={petPicsBtn}></IconButton>
+                                                <IconButton aria-label="Pet pictures button" id="petPics" className="material-icons md-dark md-120" value="pets" onClick={petPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row className="marginTop">
                                             <Col className="center">
-                                                <IconButton id="foodPics" className="material-icons md-dark md-120" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                                <IconButton aria-label="Food pictures button" id="foodPics" className="material-icons md-dark md-120" value="restaurant" onClick={foodPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                     </Col>
                                     <Col sm={2} className="carouselIcons d-none d-sm-block d-md-none">
                                         <Row >
                                             <Col className="center">
-                                                <IconButton  className="material-icons md-dark md-80" value="person" onClick={personalPicsBtn}></IconButton>
+                                                <IconButton aria-label="Personal pictures button"  className="material-icons md-dark md-80" value="person" onClick={personalPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col className="center iconSpacing">
-                                                <IconButton  className="material-icons md-dark md-80" value="pets" onClick={petPicsBtn}></IconButton>
+                                                <IconButton aria-label="Pet pictures button"  className="material-icons md-dark md-80" value="pets" onClick={petPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row className="marginTop">
                                             <Col className="center">
-                                                <IconButton  className="material-icons md-dark md-80" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                                <IconButton aria-label="Food pictures button" className="material-icons md-dark md-80" value="restaurant" onClick={foodPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                     </Col>
                                     <Col xs={2} className="carouselIcons d-block d-sm-none">
                                         <Row >
                                             <Col className="center mt-2">
-                                                <IconButton  className="material-icons md-dark md-36" value="person" onClick={personalPicsBtn}></IconButton>
+                                                <IconButton aria-label="Personal pictures button" className="material-icons md-dark md-36" value="person" onClick={personalPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col className="center iconSpacing">
-                                                <IconButton  className="material-icons md-dark md-36" value="pets" onClick={petPicsBtn}></IconButton>
+                                                <IconButton aria-label="Pet pictures button" className="material-icons md-dark md-36" value="pets" onClick={petPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                         <Row className=" iconSpacing mb-2">
                                             <Col className="center">
-                                                <IconButton  className="material-icons md-dark md-36" value="restaurant" onClick={foodPicsBtn}></IconButton>
+                                                <IconButton aria-label="Food pictures button" className="material-icons md-dark md-36" value="restaurant" onClick={foodPicsBtn}></IconButton>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -268,35 +269,35 @@ class Home extends React.Component {
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src1}
-                                                    alt="First slide"
+                                                    alt={this.state.alt1}
                                                 />
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src2}
-                                                    alt="Second slide"
+                                                    alt={this.state.alt2}
                                                 />
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src3}
-                                                    alt="Third slide"
+                                                    alt={this.state.alt3}
                                                 />
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src4}
-                                                    alt="Third slide"
+                                                    alt={this.state.alt4}
                                                 />
                                             </Carousel.Item>
                                             <Carousel.Item>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src5}
-                                                    alt="Third slide"
+                                                    alt={this.state.alt5}
                                                 />
                                             </Carousel.Item>
                                         </Carousel>
@@ -304,10 +305,12 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="center blueBG">
                                     <Col lg={10} className="mt-2">
-                                        <p className="secondaryHeader d-none d-md-block text-center">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
-                                    web developer and former chef. I was a sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. I am now proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
-                                    <p className="xsSecondaryHeader d-block d-md-none text-center">My name Is Trevor Womack, I was born in Stockton, CA, and I am a
-                                    web developer and former chef. I was a sous chef at 5 star steakhouse in Stockton before I started CodeStack Academy, an eight month web development certification course. I am now proficient in HTML5, CSS, JavaScript, React, Angular, C#, and much more!</p>
+                                        <p className="secondaryHeader d-none d-md-block text-center">Hello! My name Is Trevor Womack and I am a
+                                    fullstack web developer with a focus on front-end. Previously, I was kitchen manager at in Stockton where I fulfilled my love of cooking and got to work
+                                    with an amazing team of cooks. Now, I have certification as a software developer after an intense 10 month program with over 1000 hours of instructor led coursework and I am proficient in developing applications in multiple languages and technologies.</p>
+                                    <p className="xsSecondaryHeader d-block d-md-none text-center">Hello! My name Is Trevor Womack and I am a
+                                    fullstack web developer with a focus on front-end. Previously, I was kitchen manager at in Stockton where I fulfilled my love of cooking and got to work
+                                    with an amazing team of cooks. Now, I have certification as a software developer after an intense 10 month program with over 1000 hours of instructor led coursework and I am proficient in developing applications in multiple languages and technologies.</p>
                                     </Col>
                                 </Row>
                                 <Row >
@@ -326,7 +329,7 @@ class Home extends React.Component {
                                 <Row className="mt-5">
                                     <Col xs={12} sm={12} md={4} lg={4}  className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} alt="The logo for Triton" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Triton</Card.Title>
                                                 <Card.Text className="cardTextStyle">
@@ -341,7 +344,7 @@ class Home extends React.Component {
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={HFPLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={HFPLogo} style={{ height: '22rem' }} alt="The logo for Health Force Partners" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
                                                 <Card.Text className="cardTextStyle">
@@ -356,7 +359,7 @@ class Home extends React.Component {
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
                                         <Card style={{ width: '24rem', borderStyle: 'none' }} >
-                                            <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} alt="The letters 'A' and 'T' to represent the animal trivia application"/>
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
                                                 <Card.Text className="cardTextStyle">
@@ -372,7 +375,7 @@ class Home extends React.Component {
                                 <Row className="marginTop mt-5">
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} alt="A picture of the logo for the React library" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Calculator</Card.Title>
                                                 <Card.Text className="cardTextStyle">
@@ -386,7 +389,7 @@ class Home extends React.Component {
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} />
+                                            <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} alt="A picture of a sun and a cloud to represent the weather application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Weather Application</Card.Title>
                                                 <Card.Text className="cardTextStyle">

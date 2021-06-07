@@ -1,0 +1,18 @@
+.buttonBG{
+    background-color: #28365A;
+    border: none;
+}
+.buttonBG :hover{
+    background-color: #28365A;
+    border: none;
+}
+.buttonBG :active{
+    background-color: #28365A;
+    border: none;
+    border-radius: 15px;
+}
+.buttonBG :active :hover  {
+    background-color: #28365A;
+    border: none;
+    border-radius: 15px;
+}

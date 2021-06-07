@@ -106,6 +106,21 @@ body{
     color: #000000;
     font-family: 'Oswald', sans-serif;
 }
+.buttonBG{
+    background-color: #28365A;
+    border: none;
+    border-radius: 15px;
+}
+.buttonBG :hover{
+    background-color: #28365A;
+    border: none;
+    border-radius: 15px;
+}
+.buttonBG :active{
+    background-color: #28365A;
+    border: none;
+    border-radius: 15px;
+}
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
