@@ -21,22 +21,22 @@ export default function ContactUs() {
         <>
             <Form onSubmit={sendEmail}>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Group as={Col} controlId="formGridName">
                         <Form.Control type="text" name="name" placeholder="Name" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Control type="email" name="email" placeholder="Email" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Group as={Col} controlId="formGridSubject">
                         <Form.Control type="text" name="subject" placeholder="Subject" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridPassword">
+                    <Form.Group as={Col} controlId="formGridMessage">
                         <Form.Control as="textarea" type="text" placeholder="Message" name="message" />
                     </Form.Group>
                 </Form.Row>

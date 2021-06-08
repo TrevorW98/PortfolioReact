@@ -180,8 +180,8 @@ class Home extends React.Component {
                                     <Col>
                                         <Container fluid>
                                             <Row className="center">
-                                                <Col lg={10} md={12} className="titleBG1 d-none d-md-block">
-                                                    <p className="titleStyle1 center">Trevor Womack</p>
+                                                <Col lg={10} md={12} className="titleBG1 d-none d-md-block" >
+                                                    <h1 className="titleStyle1 center">Trevor Womack</h1>
                                                 </Col>
                                                 <Col lg={10} md={12} className="titleBG1 d-block d-md-none">
                                                     <p className="xsTitle center">Trevor Womack</p>
@@ -189,7 +189,7 @@ class Home extends React.Component {
                                             </Row>
                                             <Row className="center">
                                                 <Col className="center d-none d-md-block">
-                                                    <p className="text-center secondaryHeader1">Web Developer & Chef</p>
+                                                    <h2 className="text-center secondaryHeader1">Web Developer & Chef</h2>
                                                 </Col>
                                                 <Col className="center d-block d-md-none">
                                                     <p className="text-center xsSecondaryTitle">Web Developer & Chef</p>
@@ -305,7 +305,7 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="center blueBG">
                                     <Col lg={10} className="mt-2">
-                                        <p className="secondaryHeader d-none d-md-block text-center">Hello! My name Is Trevor Womack and I am a
+                                        <p className="secondaryHeader d-none d-md-block text-center" id="main">Hello! My name Is Trevor Womack and I am a
                                     fullstack web developer with a focus on front-end. Previously, I was kitchen manager at in Stockton where I fulfilled my love of cooking and got to work
                                     with an amazing team of cooks. Now, I have certification as a software developer after an intense 10 month program with over 1000 hours of instructor led coursework and I am proficient in developing applications in multiple languages and technologies.</p>
                                     <p className="xsSecondaryHeader d-block d-md-none text-center">Hello! My name Is Trevor Womack and I am a
@@ -337,7 +337,7 @@ class Home extends React.Component {
                                                     A full-stack mobile application built in Angular and Ionic.
                                                 </Card.Text>
                                                 <Link to="/Triton" className="center">
-                                                    <Button className="protoBtnStyle" variant="primary">Learn about Triton</Button>
+                                                    <button className="protoBtnStyle" variant="primary">Learn about Triton</button>
                                                 </Link>
                                             </Card.Body>
                                         </Card>
@@ -352,7 +352,7 @@ class Home extends React.Component {
                                                    My first experience with professional development was migrating HealthForce Partners' website to Wix from WordPress.
                                                 </Card.Text>
                                                 <div className="center">
-                                                    <Button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</Button>
+                                                    <button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
@@ -366,7 +366,7 @@ class Home extends React.Component {
                                                   A project completed during my time at CodeStack Academy, showcasing React's strength as a library.
                                                 </Card.Text>
                                                 <div className="center">
-                                                    <Button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</Button>
+                                                    <button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
@@ -382,7 +382,7 @@ class Home extends React.Component {
                                                    A basic calculator from an early project in CodeStack Academy.
                                                 </Card.Text>
                                                 <Link to="/Calculator" className="center">
-                                                    <Button className="protoBtnStyle" variant="primary"> Use the React Calculator</Button>
+                                                    <button className="protoBtnStyle" variant="primary"> Use the React Calculator</button>
                                                 </Link>
                                             </Card.Body>
                                         </Card>
@@ -396,7 +396,7 @@ class Home extends React.Component {
                                                     Search your city/country's weather with this basic weather API application, showcasing vanilla JavaScript.
                                                 </Card.Text>
                                                 <div className="center">
-                                                    <Button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</Button>
+                                                    <button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
