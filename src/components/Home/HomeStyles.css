@@ -2,8 +2,18 @@ body{
     height: 100%;
     background-color: #13192a ;
 }
-.titleStyle1{
-    font-size: 110px;
+.headingOneLarge{
+    font-size: 60px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.headingOneSmall{
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.headingTwo{
+    font-size: 20px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
@@ -84,7 +94,7 @@ body{
     transform: scale(1.2); 
 }
 .secondaryHeader{
-    font-size: 35px;
+    font-size: 20px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
@@ -128,12 +138,16 @@ body{
     border: none;
     border-radius: 15px;
 }
+.left{
+    display: flex;
+    justify-content: flex-start;
+}
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-80 { font-size: 75px; }
-.material-icons.md-120 { font-size: 120px; }
+.material-icons.md-36 { font-size: 20px; }
+.material-icons.md-80 { font-size: 40px; }
+.material-icons.md-120 { font-size: 60px; }
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark { color: rgba(255, 255, 255, 1); }

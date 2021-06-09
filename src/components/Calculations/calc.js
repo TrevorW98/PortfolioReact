@@ -27,9 +27,9 @@ class CalculationButtons extends React.Component {
     }
     incrementNum = (addTo) => {
         if (this.state.displayResult !== true) {
-            this.setState({ firstInput: this.state.firstInput += addTo })
+            this.setState({ firstInput: this.state.firstInput + addTo })
         } else {
-            this.setState({ secondInput: this.state.secondInput += addTo })
+            this.setState({ secondInput: this.state.secondInput + addTo })
         }
     }
     setOperator = (newOperator) => {

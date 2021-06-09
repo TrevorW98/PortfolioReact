@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Button, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './social.css'
@@ -25,17 +25,11 @@ class SocialMedia extends React.Component {
 
         return (
             <>
-                <Row className="center mb-5">
-                    <Col lg={1} className="mt-3 center">
-                        <button aria-label="Linked In Profile" className="buttonStyle" onClick={linkedIn}><FontAwesomeIcon icon={faLinkedin} size="3x" /></button>
-                    </Col>
-                    <Col lg={1} className="mt-3 center">
-                        <button aria-label="Github Profile" className="buttonStyle" onClick={gitHub}><FontAwesomeIcon icon={faGithub} size="3x" /></button>
-                    </Col>
-                    <Col lg={1} className="mt-3 center">
-                        <button aria-label="Instagram Profile" className="buttonStyle" onClick={instaGram}><FontAwesomeIcon icon={faInstagram} size="3x" /></button>
-                    </Col>
-                </Row>
+                <Col  className="mt-3 center d-flex justify-content-end">
+                    <button aria-label="Linked In Profile" className="buttonStyle" onClick={linkedIn}><FontAwesomeIcon icon={faLinkedin} size="3x" /></button>
+                    <button aria-label="Github Profile" className="buttonStyle" onClick={gitHub}><FontAwesomeIcon icon={faGithub} size="3x" /></button>
+                    <button aria-label="Instagram Profile" className="buttonStyle" onClick={instaGram}><FontAwesomeIcon icon={faInstagram} size="3x" /></button>
+                </Col>
             </>
         )
     }
