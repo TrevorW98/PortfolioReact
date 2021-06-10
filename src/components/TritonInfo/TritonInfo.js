@@ -8,14 +8,14 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import TritonDev1 from '../../assets/TritonDev1.png'
-import TritonDev2 from '../../assets/TritonDev2.png'
-import TritonDev3 from '../../assets/TritonDev3.png'
-import TritonDev4 from '../../assets/TritonDev4.png'
-import TritonDev5 from '../../assets/TritonEvents.jpg'
-import TritonDev6 from '../../assets/TritonProfile.jpg'
-import TritonDev7 from '../../assets/TritonRegister.jpg'
-import TritonDev8 from '../../assets/TritonSignIn.jpg'
+import TritonDev1 from '../../assets/dev2fixed.png'
+import TritonDev2 from '../../assets/tritonprotofixed.png'
+import TritonDev3 from '../../assets/tritonprotofixed.png'
+import TritonDev4 from '../../assets/tritonprotofixed.png'
+import TritonDev5 from '../../assets/eventsfixed.jpg'
+import TritonDev6 from '../../assets/profilefixed.jpg'
+import TritonDev7 from '../../assets/registerfixed.jpg'
+import TritonDev8 from '../../assets/signinfixed.jpg'
 
 class TritonInfo extends React.Component {
     constructor(props) {

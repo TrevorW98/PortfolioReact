@@ -4,38 +4,36 @@ import { Col, Container, Row, Card, Carousel, Tab, Nav,  Figure, OverlayTrigger,
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/Orientation.jpg';
-import PersonalPic2 from '../../assets/TritonCode.jpg';
-import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg';
-import PersonalPic4 from '../../assets/StompingGrounds.jpg';
-import PersonalPic5 from '../../assets/Code.jpg';
-import TritonLogo from '../../assets/Triton.png';
-import HFPLogo from '../../assets/HFPLogo.png';
-import ATLogo from '../../assets/AnimalTriviaLogo.png';
-import ReactLogo from '../../assets/ReactLogo.png';
-import WeatherLogo from '../../assets/weather.png';
+import PersonalPic2 from '../../assets/code1fixed.png';
+import PersonalPic3 from '../../assets/apifixed.png';
+import PersonalPic4 from '../../assets/stompfixed.jpg';
+import TritonLogo from '../../assets/tritonlogofixed.png';
+import HFPLogo from '../../assets/HFPLogofixed.png';
+import ATLogo from '../../assets/animals.jpg';
+import ReactLogo from '../../assets/ReactLogofixed.png';
+import WeatherLogo from '../../assets/weatherfixed.png';
 import ContactUs from '../ContactForm/ContactForm.js';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
-import Access from '../../assets/access.png';
-import HTML from '../../assets/html.png';
-import CSharp from '../../assets/CSharp.png';
-import JS from '../../assets/jsLogo.png';
-import TS from '../../assets/typescript.png';
-import CSS from '../../assets/cssLogo.png';
-import Ionic from '../../assets/ionicLogo.png';
-import ReactPic from '../../assets/reactPng.png';
+import Access from '../../assets/accessFixed.png';
+import HTML from '../../assets/htmlfixed.png';
+import CSharp from '../../assets/CSharpfixed.png';
+import JS from '../../assets/jsLogofixed.png';
+import TS from '../../assets/tsfixed.png';
+import CSS from '../../assets/cssLogofixed.png';
+import Ionic from '../../assets/ionicLogofixed.png';
+import ReactPic from '../../assets/reactPngfixed.png';
 import NG from '../../assets/angular.png';
-import Boot from '../../assets/bootstrapLogo.png';
-import Unity from '../../assets/Unity.png';
+import Boot from '../../assets/bootstrapLogofixed.png';
+import Unity from '../../assets/unityFixed.png';
 import Github from '../../assets/github.png'
-import Slack from '../../assets/slack.png'
-import Notion from '../../assets/Notion.png'
-import Jira from '../../assets/jira.png'
-import Zoom from '../../assets/Zoom.png'
-import Azure from '../../assets/Azurelogo.png'
-import VSCode from '../../assets/VSCodelogo.png'
-import FileZilla from '../../assets/filez.png'
+import Slack from '../../assets/slackfixed.png'
+import Notion from '../../assets/Notionfixed.png'
+import Jira from '../../assets/jirafixed.png'
+import Zoom from '../../assets/zoom.png'
+import VSCode from '../../assets/VSfixed.png'
+import FileZilla from '../../assets/filezfixed.png'
 import Postman from '../../assets/postman.svg'
-import GCS from '../../assets/googlecloud.png'
+import GCS from '../../assets/googlecloudfixed.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -53,13 +51,11 @@ class Home extends React.Component {
             src2: PersonalPic2,
             src3: PersonalPic3,
             src4: PersonalPic4,
-            src5: PersonalPic5,
             carHeader: "life and family",
             alt1: "Group coding with the HFP team",
             alt2: "Code from the front and back end of Triton",
             alt3: "A nice picture I took of mushrooms growing on a tree",
             alt4: "A picture of myself on a nostalgic hike",
-            alt5: "This website's code",
             showCalc: false,
             firstInput: "",
             secondInput: "",
@@ -282,39 +278,32 @@ class Home extends React.Component {
                                 <Row className="center blueBG ">
                                     <Col xl={6} lg={6} md={8} sm={8} xs={9} className="center">
                                         <Carousel>
-                                            <Carousel.Item>
+                                            <Carousel.Item style={{ width: '36rem', borderStyle: 'none' }} >
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src1}
                                                     alt={this.state.alt1}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item>
+                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src2}
                                                     alt={this.state.alt2}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item>
+                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src3}
                                                     alt={this.state.alt3}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item>
+                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src4}
                                                     alt={this.state.alt4}
-                                                />
-                                            </Carousel.Item>
-                                            <Carousel.Item>
-                                                <img
-                                                    className="d-block w-100 carouselBG"
-                                                    src={this.state.src5}
-                                                    alt={this.state.alt5}
                                                 />
                                             </Carousel.Item>
                                         </Carousel>
@@ -412,29 +401,29 @@ class Home extends React.Component {
                                                             <Row className="mt-5">
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipHTML} >
-                                                                        <Figure ><Figure.Image width={70} alt="Html logo" src={HTML} /></Figure>
+                                                                        <Figure className="ml-2"><Figure.Image width={70} alt="Html logo" src={HTML} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipCSharp} >
-                                                                        <Figure><Figure.Image width={70} alt="C Sharp logo" src={CSharp} /></Figure>
+                                                                        <Figure><Figure.Image width={80} alt="C Sharp logo" src={CSharp} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipJS} >
-                                                                        <Figure><Figure.Image width={70} alt="Java Script logo" src={JS} /></Figure>
+                                                                        <Figure className="mr-2"><Figure.Image width={70} alt="Java Script logo" src={JS} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
-                                                            <Row className="mt-4">
-                                                                <Col className="center">
+                                                            <Row className="mt-4 center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipTS} >
-                                                                        <Figure className="mt-2"><Figure.Image width={65} alt="Type Script logo" src={TS} /></Figure>
+                                                                        <Figure className="mt-2 mr-3"><Figure.Image width={70} alt="Type Script logo" src={TS} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
-                                                                <Col className="center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipCSS} >
-                                                                        <Figure ><Figure.Image width={75} alt="CSS logo" src={CSS} /></Figure>
+                                                                        <Figure className="mr-2"><Figure.Image width={80} alt="CSS logo" src={CSS} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
@@ -444,7 +433,7 @@ class Home extends React.Component {
                                                             <Row className="mt-5">
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipIonic} >
-                                                                        <Figure className="mt-3"><Figure.Image width={90} alt="Ionic logo" src={Ionic} /></Figure>
+                                                                        <Figure className=""><Figure.Image width={70} alt="Ionic logo" src={Ionic} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                                 <Col className="center">
@@ -458,15 +447,15 @@ class Home extends React.Component {
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
-                                                            <Row className="mt-4">
-                                                                <Col className="center">
+                                                            <Row className="mt-4 center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipBoot} >
-                                                                        <Figure><Figure.Image width={65} alt="Bootstrap" src={Boot} /></Figure>
+                                                                        <Figure className="mr-4"><Figure.Image width={65} alt="Bootstrap" src={Boot} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
-                                                                <Col className="center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipUnity} >
-                                                                        <Figure className="mt-3"><Figure.Image width={110} alt="Unity" src={Unity} /></Figure>
+                                                                        <Figure className="mt-3 mr-3"><Figure.Image width={110} alt="Unity" src={Unity} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
@@ -481,36 +470,31 @@ class Home extends React.Component {
                                                                 </Col>
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipSlack} >
-                                                                        <Figure><Figure.Image width={120} alt="Slack" src={Slack} /></Figure>
+                                                                        <Figure className="mt-3"><Figure.Image width={70} alt="Slack" src={Slack} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipNotion} >
-                                                                        <Figure className="mt-3"><Figure.Image width={70} alt="Notion" src={Notion} /></Figure>
+                                                                        <Figure className="mt-4"><Figure.Image width={70} alt="Notion" src={Notion} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
-                                                            <Row className="mt-4">
-                                                                <Col className="center">
+                                                            <Row className="mt-4 center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipJira} >
-                                                                        <Figure className="mt-3"><Figure.Image width={145} alt="Jira" src={Jira} /></Figure>
+                                                                        <Figure className="mr-4" ><Figure.Image width={70} alt="Jira" src={Jira} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
-                                                                <Col className="center">
+                                                                <Col className="center" md={4}>
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipZoom} >
-                                                                        <Figure className="mt-3"><Figure.Image width={110} alt="Zoom" src={Zoom} /></Figure>
+                                                                        <Figure className=""><Figure.Image width={70} alt="Zoom" src={Zoom} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
                                                             <Row className="mt-5">
                                                                 <Col className="center">
-                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipAzure} >
-                                                                        <Figure ><Figure.Image width={140} alt="Azure" src={Azure} /></Figure>
-                                                                    </OverlayTrigger>
-                                                                </Col>
-                                                                <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipVS} >
-                                                                        <Figure className="mt-2"><Figure.Image width={60} alt="VScode" src={VSCode} /></Figure>
+                                                                        <Figure className="mt-2 ml-2"><Figure.Image width={60} alt="VScode" src={VSCode} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                                 <Col className="center">
@@ -518,19 +502,13 @@ class Home extends React.Component {
                                                                         <Figure className="mt-2"><Figure.Image width={70} alt="FileZilla" src={FileZilla} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
-                                                            </Row>
-                                                            <Row className="mt-4">
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipPostman} >
-                                                                        <Figure className="mt-4"><Figure.Image width={85} alt="Postman" src={Postman} /></Figure>
-                                                                    </OverlayTrigger>
-                                                                </Col>
-                                                                <Col className="center">
-                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipGoogle} >
-                                                                        <Figure ><Figure.Image width={110} alt="GCS" src={GCS} /></Figure>
+                                                                        <Figure className="mt-1 mr-2"><Figure.Image width={85} alt="Postman" src={Postman} /></Figure>
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
+                                                          
                                                         </Tab.Pane>
                                                     </Tab.Content>
                                                 </Col>
@@ -556,44 +534,38 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="mt-5">
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
                                             <Card.Img variant="top" src={TritonLogo} alt="The logo for Triton" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Triton</Card.Title>
-                                                <Card.Text className="cardTextStyle">
-
-                                                    A full-stack mobile application built in Angular and Ionic.
-                                                </Card.Text>
                                             </Card.Body>
+                                               <Card.Text className="cardTextStyle text-center">Angular, Ionic, Bootstrap, Android SDK, C#</Card.Text>
                                                 <Link to="/Triton" className="center mb-2">
                                                     <button className="Home" variant="primary">Learn about Triton</button>
                                                 </Link>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height" >
                                             <Card.Img variant="top" src={HFPLogo} alt="The logo for Health Force Partners" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
-                                                <Card.Text className="cardTextStyle">
-                                                  
-                                                    My first experience with professional development was migrating HealthForce Partners' website to Wix from WordPress.
-                                                </Card.Text>
+                                                
                                             </Card.Body>
+                                            <Card.Text className="cardTextStyle text-center">Wix Website Builder</Card.Text>
                                                 <div className="center mb-2">
                                                     <button variant="primary" className="Home" onClick={HFPLink}>Visit the website</button>
                                                 </div>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
-                                        <Card style={{ width: '23rem', borderStyle: 'none' }} >
+                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
                                             <Card.Img variant="top" src={ATLogo} alt="The letters 'A' and 'T' to represent the animal trivia application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
-                                                <Card.Text className="cardTextStyle">
-                                                    A project completed during my time at CodeStack Academy, showcasing React's strength as a library.
-                                                </Card.Text>
+                                                
                                             </Card.Body>
+                                            <Card.Text className="cardTextStyle text-center">React, Bootstrap, JSX, CSS</Card.Text>
                                                 <div className="center mb-2">
                                                     <button variant="primary" className="Home" onClick={TriviaLink}>Play Animal Trivia</button>
                                                 </div>
@@ -602,28 +574,26 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="marginTop mt-2">
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
                                             <Card.Img variant="top" src={ReactLogo} alt="A picture of the logo for the React library" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Calculator</Card.Title>
-                                                <Card.Text className="cardTextStyle">
-                                                    A basic calculator from an early project in CodeStack Academy.
-                                                </Card.Text>
+                                                
                                             </Card.Body>
+                                            <Card.Text className="cardTextStyle text-center">React, CSS, Bootstrap</Card.Text>
                                                 <Link to="/Calculator" className="center mb-2">
-                                                    <button className="Home" variant="primary"> Use the React Calculator</button>
+                                                    <button className="Home" variant="primary"> Use the Calculator</button>
                                                 </Link>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
                                             <Card.Img variant="top" src={WeatherLogo} alt="A picture of a sun and a cloud to represent the weather application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Weather Application</Card.Title>
-                                                <Card.Text className="cardTextStyle">
-                                                    Search your city/country's weather with this basic weather API application, showcasing vanilla JavaScript.
-                                                </Card.Text>
+                                               
                                             </Card.Body>
+                                            <Card.Text className="cardTextStyle text-center">Javascript, HTML, CSS</Card.Text>
                                                 <div className="center mb-2">
                                                     <button className="Home" onClick={WeatherLink} variant="primary">Check the weather</button>
                                                 </div>
