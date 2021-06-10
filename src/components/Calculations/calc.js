@@ -83,91 +83,113 @@ class CalculationButtons extends React.Component {
                     <Switch>
                         <Route path='/Calculator'>
                             <Container className="mt-5 ">
-                                <Row>
+                                <Row className="center">
                                     <Col className="center">
-                                        <p className="titleStyle1 text-center d-none d-md-block">React Calculator</p>
-                                        <p className="xsTitle text-center d-block d-md-none">React Calculator</p>
+                                        <p className="headingOneLarge text-center d-none d-md-block">React Calculator</p>
+                                        <p className="headingOneSmall text-center d-block d-md-none">React Calculator</p>
                                     </Col>
                                 </Row>
-                                <Row className="center mt-5">
-                                    <Col lg={1} className="d-flex justify-content-center displayBG">
+                                <Row className="center mt-5 ml-2 ">
+                                    <Col lg={4} className="d-flex justify-content-center displayBG rounding">
                                         <Disp className="displayTxt" message={this.state.firstInput} />
-                                    </Col>
-                                </Row>
-                                <Row className="center">
-                                    <Col lg={1} className="d-flex justify-content-center displayBG">
                                         <Disp className="displayTxt" message={this.state.operator} />
-                                    </Col>
-                                </Row>
-                                <Row className="center">
-                                    <Col lg={1} className="d-flex justify-content-center displayBG">
                                         <Disp className="displayTxt" message={this.state.secondInput} />
-                                    </Col>
-                                </Row>
-                                <Row className="center">
-                                    <Col lg={1} className="d-flex justify-content-center displayBG">
                                         <Disp className="displayTxt" message={this.state.result} />
                                     </Col>
                                 </Row>
                             </Container>
-                            <Container >
+                            <Container className="mt-2">
                                 <Row className="center">
-                                    <Col xl={2} lg={2} md={3} xs={6} sm={4} className="center calcBG topRow">
-                                        <Butt number={1} onClick={this.incrementNum} />
-                                        <Butt number={2} onClick={this.incrementNum} />
-                                        <Butt number={3} onClick={this.incrementNum} />
-                                        <Butt number={"+"} onClick={this.setOperator} />
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle " number={1} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={2} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={3} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={"+"} onClick={this.setOperator} />
                                     </Col>
                                 </Row>
-                                <Row className="center">
-                                    <Col xl={2} lg={2} md={3} xs={6} sm={4} className="center calcBG">
-                                        <Butt number={4} onClick={this.incrementNum} />
-                                        <Butt number={5} onClick={this.incrementNum} />
-                                        <Butt number={6} onClick={this.incrementNum} />
-                                        <Butt number={"-"} onClick={this.setOperator} />
+                                <Row className="center mt-2">
+                                    <Col lg={1} >
+                                        <Butt className="protoBtnStyle" number={4} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={5} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={6} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={"-"} onClick={this.setOperator} />
                                     </Col>
                                 </Row>
-                                <Row className="center">
-                                    <Col xl={2} lg={2} md={3} xs={6} sm={4} className="center calcBG">
-                                        <Butt number={7} onClick={this.incrementNum} />
-                                        <Butt number={8} onClick={this.incrementNum} />
-                                        <Butt number={9} onClick={this.incrementNum} />
-                                        <Butt number={0} onClick={this.incrementNum} />
+                                <Row className="center mt-2">
+                                    <Col lg={1} >
+                                        <Butt className="protoBtnStyle" number={7} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={8} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={9} onClick={this.incrementNum} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={0} onClick={this.incrementNum} />
                                     </Col>
                                 </Row>
-                                <Row className="center">
-                                    <Col xl={2} lg={2} md={3} xs={6} sm={4} className="center calcBG botRow">
-                                        
-                                            <Butt number={"/"} onClick={this.setOperator} />
-                                            <Butt number={"*"} onClick={this.setOperator} />
-                                            <Butt number={"="} onClick={this.mathMethod} />
-                                            <Butt number={"C"} onClick={this.clearMethod} />
-                                       
+                                <Row className="center mt-2">
+                                    <Col lg={1} >
+                                        <Butt className="protoBtnStyle" number={"/"} onClick={this.setOperator} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={"*"} onClick={this.setOperator} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={"="} onClick={this.mathMethod} />
+                                    </Col>
+                                    <Col lg={1}>
+                                        <Butt className="protoBtnStyle" number={"C"} onClick={this.clearMethod} />
                                     </Col>
                                 </Row>
                             </Container>
                             <Container fluid>
                                 <Row >
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG">
-                                    <Col>
-                                        <p className="secondaryHeader d-none d-md-block">This is one of the assignments I completed early on within the course to demonstrate properties and state changes within react! It's not much, but I like to look at it and think of where I came from, and how differently I used to code.</p>
-                                        <p className="xsSecondaryHeader d-block d-md-none">This is one of the assignments I completed early on within the course to demonstrate properties and state changes within react! It's not much, but I like to look at it and think of where I came from, and how differently I used to code.</p>
+                                <Row className="blueBG center">
+                                    <Col lg={8} className="mt-5">
+                                        <p className="secondaryHeader d-none d-md-block">This is one of the assignments I completed early on
+                                        within CodeStack Academy to demonstrate properties and state changes within react! It's not much, but
+                                        I like to look at it and think of where I came from, and how differently I used to code. Before I
+                                        started the academy, I had no knowledge about coding or what it even meant. Building this calculator
+                                           inspired me, I realized how many possibilities there were when coding.</p>
+                                        <p className="xsSecondaryHeader d-block d-md-none">This is one of the assignments I completed early on
+                                        within CodeStack Academy to demonstrate properties and state changes within react! It's not much, but
+                                        I like to look at it and think of where I came from, and how differently I used to code. Before I started
+                                        the academy, I had no knowledge about coding or what it even meant. Building this calculator inspired me,
+                                            I realized how many possibilities there were when coding.</p>
+                                    </Col>
+                                </Row>
+                                <Row className=" blueBG">
+                                    <Col className="center mt-4">
+                                        <Link to='/home'>
+                                            <Button className="Home" variant="primary">Return to Home</Button>
+                                        </Link>
                                     </Col>
                                 </Row>
                                 <Row >
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-                                    </Col>
-                                </Row>
-                                <Row className="mt-3">
-                                    <Col className="center">
-                                        <Link to='/home'>
-                                            <Button className="protoBtnStyle" variant="primary">Return to Home</Button>
-                                        </Link>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
                             </Container>

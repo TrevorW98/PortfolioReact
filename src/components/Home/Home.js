@@ -1,20 +1,41 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col, Container, Row, Card, Carousel } from 'react-bootstrap';
+import { Col, Container, Row, Card, Carousel, Tab, Nav,  Figure, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
-import PersonalPic1 from '../../assets/Orientation.jpg'
-import PersonalPic2 from '../../assets/TritonCode.jpg'
-import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg'
-import PersonalPic4 from '../../assets/StompingGrounds.jpg'
-import PersonalPic5 from '../../assets/Code.jpg'
-import TritonLogo from '../../assets/Triton.png'
-import HFPLogo from '../../assets/HFPLogo.png'
-import ATLogo from '../../assets/AnimalTriviaLogo.png'
-import ReactLogo from '../../assets/ReactLogo.png'
-import WeatherLogo from '../../assets/weather.png'
+import PersonalPic1 from '../../assets/Orientation.jpg';
+import PersonalPic2 from '../../assets/TritonCode.jpg';
+import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg';
+import PersonalPic4 from '../../assets/StompingGrounds.jpg';
+import PersonalPic5 from '../../assets/Code.jpg';
+import TritonLogo from '../../assets/Triton.png';
+import HFPLogo from '../../assets/HFPLogo.png';
+import ATLogo from '../../assets/AnimalTriviaLogo.png';
+import ReactLogo from '../../assets/ReactLogo.png';
+import WeatherLogo from '../../assets/weather.png';
 import ContactUs from '../ContactForm/ContactForm.js';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
+import Access from '../../assets/access.jpg';
+import HTML from '../../assets/html.png';
+import CSharp from '../../assets/CSharp.png';
+import JS from '../../assets/jsLogo.png';
+import TS from '../../assets/typescript.png';
+import CSS from '../../assets/cssLogo.png';
+import Ionic from '../../assets/ionicLogo.png';
+import ReactPic from '../../assets/reactPng.png';
+import NG from '../../assets/angular.png';
+import Boot from '../../assets/bootstrapLogo.png';
+import Unity from '../../assets/Unity.png';
+import Github from '../../assets/github.png'
+import Slack from '../../assets/slack.png'
+import Notion from '../../assets/Notion.png'
+import Jira from '../../assets/jira.png'
+import Zoom from '../../assets/Zoom.png'
+import Azure from '../../assets/Azurelogo.png'
+import VSCode from '../../assets/VSCodelogo.png'
+import FileZilla from '../../assets/filez.png'
+import Postman from '../../assets/postman.svg'
+import GCS from '../../assets/googlecloud.png'
 import {
     BrowserRouter as Router,
     Switch,
@@ -61,9 +82,9 @@ class Home extends React.Component {
         this.setState({ displayResult: true })
         this.setState({ operator: newOperator })
     }
-    //Finally got the mulitple calculations working! I was trying to set the firstInput equal to the result state with each equation
+    //Finally got the multiple calculations working! I was trying to set the firstInput equal to the result state with each equation
     //But instead i just set the first input to the actual equation itself and cleared the second input and operator
-    //I tried many more complicated ways but this simple way worked and the other ones didnt lol oh well
+    //I tried many more complicated ways but this simple way worked and the other ones didn't lol oh well
     mathMethod = () => {
         switch (this.state.operator) {
             case "+":
@@ -97,59 +118,117 @@ class Home extends React.Component {
             displayResult: false,
 
         })
-
     }
 
     componentDidMount() {
-        // let personalPics = document.getElementById("personalPics");
-        // let petPics = document.getElementById("petPics");
-        // let foodPics = document.getElementById("foodPics");
 
-        // personalPics.addEventListener("mouseover", function () {
-        //     personalPics.classList.add("pulse");
-        // });
-        // personalPics.addEventListener("mouseleave", function () {
-        //     personalPics.classList.remove("pulse");
-        // });
-        // petPics.addEventListener("mouseover", function () {
-        //     petPics.classList.add("pulse");
-        // });
-        // petPics.addEventListener("mouseleave", function () {
-        //     petPics.classList.remove("pulse");
-        // });
-        // foodPics.addEventListener("mouseover", function () {
-        //     foodPics.classList.add("pulse");
-        // });
-        // foodPics.addEventListener("mouseleave", function () {
-        //     foodPics.classList.remove("pulse");
-        // });
     }
 
     render() {
-
-        // const personalPicsBtn = () => {
-        //     this.setState({
-        //         src1: PersonalPic1, src2: PersonalPic2, src3: PersonalPic3, src4: PersonalPic4, src5: PersonalPic5
-        //         , alt1: "Group coding with the HFP team", alt2: "Code from the front and back end of Triton", alt3: "A nice picture I took of mushrooms growing on a tree", alt4: "A picture of myself on a nostalgic hike", alt5: "This website's code"
-        //     });
-        // }
-        // const petPicsBtn = () => {
-        //     this.setState({
-        //         src1: PetPic1, src2: PetPic2, src3: PetPic3, src4: PetPic4, src5: PetPic5
-        //         , alt1: "My cat Navi", alt2: "My cat Noodle", alt3: "Our previous foster cat, Mocha", alt4: "My bearded dragon, Rhae", alt5: "My current foster kitten, Sophia"
-        //     });
-        // }
-        // const foodPicsBtn = () => {
-        //     this.setState({
-        //         src1: FoodPic1, src2: FoodPic2, src3: FoodPic3, src4: FoodPic4, src5: FoodPic5
-        //         , alt1: "This website's code", alt2: "", alt3: "", alt4: "", alt5: ""
-        //     });
-        // }
+        const renderTooltipHTML = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                HTML
+            </Tooltip>
+        );
+        const renderTooltipCSharp = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                C#
+            </Tooltip>
+        );
+        const renderTooltipCSS = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                CSS
+            </Tooltip>
+        );
+        const renderTooltipTS = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                TypeScript
+            </Tooltip>
+        );
+        const renderTooltipJS = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Javascript
+            </Tooltip>
+        );
+        const renderTooltipNG = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Angular
+            </Tooltip>
+        );
+        const renderTooltipAzure = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Azure
+            </Tooltip>
+        );
+        const renderTooltipBoot = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Bootstrap 5
+            </Tooltip>
+        );
+        const renderTooltipFile = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                FileZilla FTP
+            </Tooltip>
+        );
+        const renderTooltipGit = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                GitHub
+            </Tooltip>
+        );
+        const renderTooltipGoogle = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Google Cloud Console
+            </Tooltip>
+        );
+        const renderTooltipIonic = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Ionic
+            </Tooltip>
+        );
+        const renderTooltipJira = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Jira
+            </Tooltip>
+        );
+        const renderTooltipNotion = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Notion
+            </Tooltip>
+        );
+        const renderTooltipPostman = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Postman
+            </Tooltip>
+        );
+        const renderTooltipReact = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                React
+            </Tooltip>
+        );
+        const renderTooltipSlack = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Slack
+            </Tooltip>
+        );
+        const renderTooltipVS = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                VScode
+            </Tooltip>
+        ); const renderTooltipZoom = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Zoom
+            </Tooltip>
+        );
+        const renderTooltipUnity = (props) => (
+            <Tooltip id="button-tooltip" {...props}>
+                Unity
+            </Tooltip>
+        );
         const TriviaLink = () => {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
         }
         const HFPLink = () => {
-            window.open("https://healthforcepartners.net/", '_blank');
+            window.open("https://info0886684.wixsite.com/healthforcepartners", '_blank');
         }
         const WeatherLink = () => {
             window.open("http://weatherapplicationjs.azurewebsites.net", '_blank');
@@ -183,9 +262,8 @@ class Home extends React.Component {
                                         <p className=" xsSecondaryTitle">Web Developer</p>
                                     </Col>
                                     <Col className="d-flex justify-content-end">
-                                        <a className="xsSecondaryTitle" href="#contactSection"> Contact Me!</a>
+                                        <a className="headingTwo" href="#contactSection"> Contact Me!</a>
                                     </Col>
-                                    
                                 </Row>
                                 <Row >
                                     <Col className="noPadding">
@@ -194,8 +272,15 @@ class Home extends React.Component {
                                         </svg>
                                     </Col>
                                 </Row>
+                                <Row className="blueBG">
+                                    <Col>
+                                        <p className="titleStyle3 text-center d-none d-lg-block">About Me</p>
+                                        <p className="xsTitle text-center d-block d-lg-none">About Me</p>
+                                    </Col>
+
+                                </Row>
                                 <Row className="center blueBG ">
-                                    <Col xl={5} lg={6} md={8} sm={8} xs={9} className="center">
+                                    <Col xl={6} lg={6} md={8} sm={8} xs={9} className="center">
                                         <Carousel>
                                             <Carousel.Item>
                                                 <img
@@ -234,21 +319,229 @@ class Home extends React.Component {
                                             </Carousel.Item>
                                         </Carousel>
                                     </Col>
-                                    <Col lg={5} className="mt-2">
-                                        <p className="secondaryHeader d-none d-md-block " id="main">I am a
-                                        fullstack web developer with a focus on front-end work. Previously, I was kitchen manager at in Stockton where I fulfilled my love of cooking and got to work
-                                    with an amazing team of cooks. Now, I have certification as a software developer after an intense 10 month program with over 1,000 hours of instructor led coursework and I am proficient in developing applications in multiple languages and technologies.</p>
-                                        <p className="xsSecondaryHeader d-block d-md-none">I am a
-                                        fullstack web developer with a focus on front-end work. I have certification as a software developer after an intense 10 month program with over 1,000 hours of instructor led coursework and I am proficient in developing applications in multiple languages and technologies.</p>
+                                    <Col lg={6} className="mt-5">
+                                        <Row>
+                                            <Col>
+                                                <p className="secondaryHeader d-none d-md-block " id="main">I am a
+                                                fullstack web developer with a focus on front-end work. I received certification
+                                                as a software developer after an intense 10 month program with over 1,000 hours of instructor led coursework.
+                                                I am proficient in developing applications in multiple languages and technologies, of which you can see below.
+                                           Feel free to explore my work and drop me a line if you want to learn more.</p>
+                                                <p className="xsSecondaryHeader d-block d-md-none">I am a
+                                                fullstack web developer with a focus on front-end work. I received certification as a software developer after
+                                                an intense 10 month program with over 1,000 hours of instructor led coursework. I am proficient in developing
+                                                applications in multiple languages and technologies, of which you can see below. Feel free to explore my work
+                                           and drop me a line if you want to learn more.</p>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                <p className="secondaryHeader d-none d-md-block ">{this.state.description}</p>
+                                                <p className="xsSecondaryHeader d-block d-md-none">{this.state.description}</p>
+                                            </Col>
+                                        </Row>
                                     </Col>
                                 </Row>
-                                <Row className="center blueBG">
+                                <Row >
+                                    <Col className="noPadding">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                        </svg>
+                                    </Col>
+                                </Row>
+                                <Row >
                                     <Col>
-                                        <p>{this.state.description}</p>
+                                        <p className="titleStyle3 text-center d-none d-lg-block">My Mission</p>
+                                        <p className="xsTitle text-center d-block d-lg-none">My Mission</p>
+                                    </Col>
+
+                                </Row>
+                                <Row className="mt-5 mb-5">
+                                    <Col>
+                                        <Row>
+                                            <Col lg={7} className="center mt-5">
+                                                <p className="secondaryHeader d-none d-md-block " id="main">My goal is to increase the accessibility of current
+                                                and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
+                                                and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
+                                                screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
+                                                <p className="xsSecondaryHeader d-block d-md-none">My goal is to increase the accessibility of current
+                                                and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
+                                                and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
+                                                screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
+                                            </Col>
+                                            <Col >
+                                                <Card.Img className=" d-none d-md-block" variant="top" src={Access} alt="The accessibility score for this website" />
+                                            </Col>
+                                        </Row>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col className="noPadding">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                        </svg>
+                                    </Col>
+                                </Row>
+                                {/* */}
+                                <Row className="blueBG">
+                                    <Col>
+                                        <p className="titleStyle3 text-center d-none d-lg-block">Languages and technologies</p>
+                                        <p className="xsTitle text-center d-block d-lg-none">Languages and technologies</p>
+                                    </Col>
+                                </Row>
+                                <Row className="blueBG center">
+                                    <Col lg={7} className="tabsBG noPadding" >
+                                        <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
+                                            <Row className="center" >
+                                                <Col sm={3} >
+                                                    <Nav variant="pills" className="flex-column ">
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="first" className="tabsFont">Languages</Nav.Link>
+                                                        </Nav.Item>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="second" className="tabsFont">Frameworks & Libraries</Nav.Link>
+                                                        </Nav.Item>
+                                                        <Nav.Item>
+                                                            <Nav.Link eventKey="third" className="tabsFont">DevOps & Collaboration</Nav.Link>
+                                                        </Nav.Item>
+                                                    </Nav>
+                                                </Col>
+                                                <Col sm={9} >
+                                                    <Tab.Content >
+                                                        <Tab.Pane eventKey="first">
+                                                            <Row className="mt-5">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipHTML} >
+                                                                        <Figure ><Figure.Image width={70} alt="Html logo" src={HTML} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipCSharp} >
+                                                                        <Figure><Figure.Image width={70} alt="C Sharp logo" src={CSharp} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipJS} >
+                                                                        <Figure><Figure.Image width={70} alt="Java Script logo" src={JS} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row className="mt-4">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipTS} >
+                                                                        <Figure className="mt-2"><Figure.Image width={65} alt="Type Script logo" src={TS} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipCSS} >
+                                                                        <Figure ><Figure.Image width={75} alt="CSS logo" src={CSS} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                        </Tab.Pane>
+
+                                                        <Tab.Pane eventKey="second">
+                                                            <Row className="mt-5">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipIonic} >
+                                                                        <Figure className="mt-3"><Figure.Image width={90} alt="Ionic logo" src={Ionic} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipReact} >
+                                                                        <Figure><Figure.Image width={70} alt="React logo" src={ReactPic} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipNG} >
+                                                                        <Figure><Figure.Image width={70} alt="Angular 11" src={NG} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row className="mt-4">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipBoot} >
+                                                                        <Figure><Figure.Image width={65} alt="Bootstrap" src={Boot} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipUnity} >
+                                                                        <Figure className="mt-3"><Figure.Image width={110} alt="Unity" src={Unity} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                        </Tab.Pane>
+
+                                                        <Tab.Pane eventKey="third">
+                                                        <Row className="mt-5">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipGit} >
+                                                                        <Figure className="mt-3"><Figure.Image width={70} alt="Github" src={Github} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipSlack} >
+                                                                        <Figure><Figure.Image width={120} alt="Slack" src={Slack} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipNotion} >
+                                                                        <Figure className="mt-3"><Figure.Image width={70} alt="Notion" src={Notion} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row className="mt-4">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipJira} >
+                                                                        <Figure className="mt-3"><Figure.Image width={145} alt="Jira" src={Jira} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipZoom} >
+                                                                        <Figure className="mt-3"><Figure.Image width={110} alt="Zoom" src={Zoom} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row className="mt-5">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipAzure} >
+                                                                        <Figure ><Figure.Image width={140} alt="Azure" src={Azure} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipVS} >
+                                                                        <Figure className="mt-2"><Figure.Image width={60} alt="VScode" src={VSCode} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipFile} >
+                                                                        <Figure className="mt-2"><Figure.Image width={70} alt="FileZilla" src={FileZilla} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                            <Row className="mt-4">
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipPostman} >
+                                                                        <Figure className="mt-4"><Figure.Image width={85} alt="Postman" src={Postman} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                                <Col className="center">
+                                                                    <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipGoogle} >
+                                                                        <Figure ><Figure.Image width={110} alt="GCS" src={GCS} /></Figure>
+                                                                    </OverlayTrigger>
+                                                                </Col>
+                                                            </Row>
+                                                        </Tab.Pane>
+                                                       
+                                                    </Tab.Content>
+                                                </Col>
+                                            </Row>
+                                        </Tab.Container>
+                                    </Col>
+                                </Row>
+                                <Row >
+                                    <Col className="noPadding">
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                                             <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
                                         </svg>
@@ -264,247 +557,103 @@ class Home extends React.Component {
                                 </Row>
                                 <Row className="mt-5">
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={TritonLogo} style={{ height: '22rem' }} alt="The logo for Triton" />
+                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
+                                            <Card.Img variant="top" src={TritonLogo} alt="The logo for Triton" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Triton</Card.Title>
                                                 <Card.Text className="cardTextStyle">
-                                                    (This project is in development, coming soon!)
+
                                                     A full-stack mobile application built in Angular and Ionic.
                                                 </Card.Text>
-                                                <Link to="/Triton" className="center">
+                                            </Card.Body>
+                                                <Link to="/Triton" className="center mb-2">
                                                     <button className="protoBtnStyle" variant="primary">Learn about Triton</button>
                                                 </Link>
-                                            </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={HFPLogo} style={{height: '22rem' }} alt="The logo for Health Force Partners" />
+                                            <Card.Img variant="top" src={HFPLogo} alt="The logo for Health Force Partners" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
                                                 <Card.Text className="cardTextStyle">
-                                                    (This project is in development, coming soon!)
+                                                  
                                                     My first experience with professional development was migrating HealthForce Partners' website to Wix from WordPress.
                                                 </Card.Text>
-                                                <div className="center">
+                                            </Card.Body>
+                                                <div className="center mb-2">
                                                     <button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</button>
                                                 </div>
-                                            </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
                                         <Card style={{ width: '24rem', borderStyle: 'none' }} >
-                                            <Card.Img variant="top" src={ATLogo} style={{ height: '22rem' }} alt="The letters 'A' and 'T' to represent the animal trivia application" />
+                                            <Card.Img variant="top" src={ATLogo} alt="The letters 'A' and 'T' to represent the animal trivia application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
                                                 <Card.Text className="cardTextStyle">
                                                     A project completed during my time at CodeStack Academy, showcasing React's strength as a library.
                                                 </Card.Text>
-                                                <div className="center">
+                                            </Card.Body>
+                                                <div className="center mb-2">
                                                     <button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</button>
                                                 </div>
-                                            </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
                                 <Row className="marginTop mt-5">
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={ReactLogo} style={{ height: '22rem' }} alt="A picture of the logo for the React library" />
+                                            <Card.Img variant="top" src={ReactLogo} alt="A picture of the logo for the React library" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Calculator</Card.Title>
                                                 <Card.Text className="cardTextStyle">
                                                     A basic calculator from an early project in CodeStack Academy.
                                                 </Card.Text>
-                                                <Link to="/Calculator" className="center">
+                                            </Card.Body>
+                                                <Link to="/Calculator" className="center mb-2">
                                                     <button className="protoBtnStyle" variant="primary"> Use the React Calculator</button>
                                                 </Link>
-                                            </Card.Body>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
                                         <Card style={{ width: '24rem', borderStyle: 'none' }}>
-                                            <Card.Img variant="top" src={WeatherLogo} style={{ height: '22rem' }} alt="A picture of a sun and a cloud to represent the weather application" />
+                                            <Card.Img variant="top" src={WeatherLogo} alt="A picture of a sun and a cloud to represent the weather application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Weather Application</Card.Title>
                                                 <Card.Text className="cardTextStyle">
                                                     Search your city/country's weather with this basic weather API application, showcasing vanilla JavaScript.
                                                 </Card.Text>
-                                                <div className="center">
+                                            </Card.Body>
+                                                <div className="center mb-2">
                                                     <button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</button>
                                                 </div>
-                                            </Card.Body>
                                         </Card>
                                     </Col>
                                 </Row>
-                                <Row >
-                                    <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-                                    </Col>
-                                </Row>
-                                <Row className="blueBG">
-                                    <Col>
-                                        <p className="titleStyle3 text-center d-none d-lg-block">Full list of developer skills:</p>
-                                        <p className="xsTitle text-center d-block d-lg-none">Full list of developer skills:</p>
-                                    </Col>
 
-                                </Row>
-                                <Row className="blueBG center ">
-                                    <Col xl={6} lg={6} md={6} sm={6} xs={6} className="center mt-4">
-                                        <ul className="secondaryHeader d-none d-md-block">
-                                            <li>
-                                                <p>C#</p>
-                                            </li>
-                                            <li>
-                                                <p>HTML</p>
-                                            </li>
-                                            <li>
-                                                <p>TypeScript</p>
-                                            </li>
-                                            <li>
-                                                <p>JavaScript</p>
-                                            </li>
-                                            <li>
-                                                <p>CSS</p>
-                                            </li>
-                                            <li>
-                                                <p>Ionic</p>
-                                            </li>
-                                            <li>
-                                                <p>React</p>
-                                            </li>
-                                            <li>
-                                                <p>Unity</p>
-                                            </li>
-                                            <li>
-                                                <p>Angular 11</p>
-                                            </li>
-                                            <li>
-                                                <p>Bootstrap 5</p>
-                                            </li>
-                                        </ul>
-                                        <ul className="xsSecondaryHeader d-block d-md-none">
-                                            <li>
-                                                <p>C#</p>
-                                            </li>
-                                            <li>
-                                                <p>HTML</p>
-                                            </li>
-                                            <li>
-                                                <p>TypeScript</p>
-                                            </li>
-                                            <li>
-                                                <p>JavaScript</p>
-                                            </li>
-                                            <li>
-                                                <p>CSS</p>
-                                            </li>
-                                            <li>
-                                                <p>Ionic</p>
-                                            </li>
-                                            <li>
-                                                <p>React</p>
-                                            </li>
-                                            <li>
-                                                <p>Unity</p>
-                                            </li>
-                                            <li>
-                                                <p>Angular 11</p>
-                                            </li>
-                                            <li>
-                                                <p>Bootstrap 5</p>
-                                            </li>
-                                        </ul>
-                                    </Col>
+                                {/*  */}
 
-                                    <Col xl={6} lg={6} md={6} sm={6} xs={6} className="center mt-4">
-                                        <ul className="secondaryHeader d-none d-md-block">
-                                            <li>
-                                                <p>GitHub</p>
-                                            </li>
-                                            <li>
-                                                <p>Slack</p>
-                                            </li>
-                                            <li>
-                                                <p>Notion</p>
-                                            </li>
-                                            <li>
-                                                <p>Jira</p>
-                                            </li>
-                                            <li>
-                                                <p>Zoom</p>
-                                            </li>
-                                            <li>
-                                                <p>Azure</p>
-                                            </li>
-                                            <li>
-                                                <p>VScode</p>
-                                            </li>
-                                            <li>
-                                                <p>FileZilla</p>
-                                            </li>
-                                            <li>
-                                                <p>Postman</p>
-                                            </li>
-                                            <li>
-                                                <p>Google Cloud Services</p>
-                                            </li>
-                                        </ul>
-                                        <ul className="xsSecondaryHeader d-block d-md-none">
-                                            <li>
-                                                <p>GitHub</p>
-                                            </li>
-                                            <li>
-                                                <p>Slack</p>
-                                            </li>
-                                            <li>
-                                                <p>Notion</p>
-                                            </li>
-                                            <li>
-                                                <p>Jira</p>
-                                            </li>
-                                            <li>
-                                                <p>Zoom</p>
-                                            </li>
-                                            <li>
-                                                <p>Azure</p>
-                                            </li>
-                                            <li>
-                                                <p>VScode</p>
-                                            </li>
-                                            <li>
-                                                <p>FileZilla</p>
-                                            </li>
-                                            <li>
-                                                <p>Postman</p>
-                                            </li>
-                                            <li>
-                                                <p>Google Cloud Services</p>
-                                            </li>
-                                        </ul>
-                                    </Col>
-                                </Row>
                                 <Row id="contactSection">
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
-                                <Row>
+                                <Row className="contactBG">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Contact Me</p>
                                         <p className="xsTitle text-center d-block d-lg-none">Contact Me</p>
                                     </Col>
                                 </Row>
-                                <Row className="center">
-                                    <Col lg={6}>
+                                <Row className="center contactBG">
+                                    <Col lg={6} className="mb-5">
                                         <ContactUs></ContactUs>
                                     </Col>
                                 </Row>
-
                             </Container>
                         </Route>
-
                     </Switch>
                 </Router>
             </>
@@ -514,4 +663,4 @@ class Home extends React.Component {
 
 export default Home;
 
-/* <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */ 
+/* <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */

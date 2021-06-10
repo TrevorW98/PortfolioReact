@@ -15,7 +15,7 @@ body{
 .headingTwo{
     font-size: 20px;
     color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .titleStyle2{
     font-size: 90px;
@@ -23,7 +23,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .titleStyle3{
-    font-size: 90px;
+    font-size: 60px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
@@ -62,11 +62,7 @@ body{
     padding: 0px;
     margin: 0px;
 }
-.carouselIcons{
-    border-radius:  15px 15px 15px 15px;
-    background-color: #28365A;
-   height: 50%;
-}
+
 .aboutMeText{
     color: white;
     font-size: 30px;
@@ -90,18 +86,17 @@ body{
     transition: transform .2s;
 }
 .protoBtnStyle :hover{
-  
     transform: scale(1.2); 
 }
 .secondaryHeader{
-    font-size: 20px;
+    font-size: 25px;
     color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .xsSecondaryHeader{
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .xsTitle{
     font-size: 40px;
@@ -141,6 +136,18 @@ body{
 .left{
     display: flex;
     justify-content: flex-start;
+}
+.tabsBG{
+    background-color: white;
+    border-radius: 10px;
+}
+.tabsFont{
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.contactBG{
+    background-color: #4860A0;
 }
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
