@@ -15,7 +15,7 @@ import ReactLogo from '../../assets/ReactLogo.png';
 import WeatherLogo from '../../assets/weather.png';
 import ContactUs from '../ContactForm/ContactForm.js';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
-import Access from '../../assets/access.jpg';
+import Access from '../../assets/access.png';
 import HTML from '../../assets/html.png';
 import CSharp from '../../assets/CSharp.png';
 import JS from '../../assets/jsLogo.png';
@@ -390,7 +390,7 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="blueBG center">
-                                    <Col lg={7} className="tabsBG noPadding" >
+                                    <Col lg={7} xs={10} className="tabsBG noPadding" >
                                         <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
                                             <Row className="center" >
                                                 <Col sm={3} >
@@ -532,7 +532,6 @@ class Home extends React.Component {
                                                                 </Col>
                                                             </Row>
                                                         </Tab.Pane>
-                                                       
                                                     </Tab.Content>
                                                 </Col>
                                             </Row>
@@ -572,7 +571,7 @@ class Home extends React.Component {
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={HFPLogo} alt="The logo for Health Force Partners" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
@@ -587,7 +586,7 @@ class Home extends React.Component {
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }} >
+                                        <Card style={{ width: '23rem', borderStyle: 'none' }} >
                                             <Card.Img variant="top" src={ATLogo} alt="The letters 'A' and 'T' to represent the animal trivia application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
@@ -601,9 +600,9 @@ class Home extends React.Component {
                                         </Card>
                                     </Col>
                                 </Row>
-                                <Row className="marginTop mt-5">
+                                <Row className="marginTop mt-2">
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={ReactLogo} alt="A picture of the logo for the React library" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Calculator</Card.Title>
@@ -617,7 +616,7 @@ class Home extends React.Component {
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '24rem', borderStyle: 'none' }}>
+                                        <Card style={{ width: '23rem', borderStyle: 'none' }}>
                                             <Card.Img variant="top" src={WeatherLogo} alt="A picture of a sun and a cloud to represent the weather application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Weather Application</Card.Title>
