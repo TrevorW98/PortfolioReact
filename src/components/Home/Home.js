@@ -3,10 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Row, Card, Carousel, Tab, Nav,  Figure, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
-import PersonalPic1 from '../../assets/Orientation.jpg';
+import PersonalPic1 from '../../assets/Orientation.png';
 import PersonalPic2 from '../../assets/code1fixed.png';
 import PersonalPic3 from '../../assets/apifixed.png';
-import PersonalPic4 from '../../assets/stompfixed.jpg';
+import PersonalPic4 from '../../assets/stompfixed.png';
 import TritonLogo from '../../assets/tritonlogofixed.png';
 import HFPLogo from '../../assets/HFPLogofixed.png';
 import ATLogo from '../../assets/animals.jpg';
@@ -278,28 +278,28 @@ class Home extends React.Component {
                                 <Row className="center blueBG ">
                                     <Col xl={6} lg={6} md={8} sm={8} xs={9} className="center">
                                         <Carousel>
-                                            <Carousel.Item style={{ width: '36rem', borderStyle: 'none' }} >
+                                            <Carousel.Item >
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src1}
                                                     alt={this.state.alt1}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
+                                            <Carousel.Item >
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src2}
                                                     alt={this.state.alt2}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
+                                            <Carousel.Item >
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src3}
                                                     alt={this.state.alt3}
                                                 />
                                             </Carousel.Item>
-                                            <Carousel.Item style={{ width: '35rem', borderStyle: 'none' }}>
+                                            <Carousel.Item >
                                                 <img
                                                     className="d-block w-100 carouselBG"
                                                     src={this.state.src4}
