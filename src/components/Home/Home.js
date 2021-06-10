@@ -549,10 +549,10 @@ class Home extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col className="center d-none d-md-block">
-                                        <p className="titleStyle2 text-center">Projects and Coursework</p>
+                                        <p className="titleStyle3 text-center">Projects and Coursework</p>
                                     </Col>
                                     <Col className="center d-block d-md-none">
-                                        <p className="xsTitle text-center">Projects and Coursework</p>
+                                        <p className="headingOneSmall text-center">Projects and Coursework</p>
                                     </Col>
                                 </Row>
                                 <Row className="mt-5">
@@ -567,7 +567,7 @@ class Home extends React.Component {
                                                 </Card.Text>
                                             </Card.Body>
                                                 <Link to="/Triton" className="center mb-2">
-                                                    <button className="protoBtnStyle" variant="primary">Learn about Triton</button>
+                                                    <button className="Home" variant="primary">Learn about Triton</button>
                                                 </Link>
                                         </Card>
                                     </Col>
@@ -582,7 +582,7 @@ class Home extends React.Component {
                                                 </Card.Text>
                                             </Card.Body>
                                                 <div className="center mb-2">
-                                                    <button variant="primary" className="protoBtnStyle" onClick={HFPLink}>Visit the website</button>
+                                                    <button variant="primary" className="Home" onClick={HFPLink}>Visit the website</button>
                                                 </div>
                                         </Card>
                                     </Col>
@@ -596,7 +596,7 @@ class Home extends React.Component {
                                                 </Card.Text>
                                             </Card.Body>
                                                 <div className="center mb-2">
-                                                    <button variant="primary" className="protoBtnStyle" onClick={TriviaLink}>Play Animal Trivia</button>
+                                                    <button variant="primary" className="Home" onClick={TriviaLink}>Play Animal Trivia</button>
                                                 </div>
                                         </Card>
                                     </Col>
@@ -612,7 +612,7 @@ class Home extends React.Component {
                                                 </Card.Text>
                                             </Card.Body>
                                                 <Link to="/Calculator" className="center mb-2">
-                                                    <button className="protoBtnStyle" variant="primary"> Use the React Calculator</button>
+                                                    <button className="Home" variant="primary"> Use the React Calculator</button>
                                                 </Link>
                                         </Card>
                                     </Col>
@@ -626,7 +626,7 @@ class Home extends React.Component {
                                                 </Card.Text>
                                             </Card.Body>
                                                 <div className="center mb-2">
-                                                    <button className="protoBtnStyle" onClick={WeatherLink} variant="primary">Check the weather</button>
+                                                    <button className="Home" onClick={WeatherLink} variant="primary">Check the weather</button>
                                                 </div>
                                         </Card>
                                     </Col>

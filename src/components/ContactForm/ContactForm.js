@@ -40,7 +40,7 @@ export default function ContactUs() {
                         <Form.Control as="textarea" type="text" placeholder="Message" name="message" />
                     </Form.Group>
                 </Form.Row>
-                <Button className="protoBtnStyle" variant="primary" type="submit" value="Send">
+                <Button className="Home" variant="primary" type="submit" value="Send">
                     Submit
                 </Button>
             </Form>
