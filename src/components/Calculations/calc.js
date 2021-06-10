@@ -90,7 +90,7 @@ class CalculationButtons extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row className="center mt-5 ml-2 ">
-                                    <Col lg={4} className="d-flex justify-content-center displayBG rounding">
+                                    <Col lg={4} xs={4} className="d-flex justify-content-center displayBG rounding">
                                         <Disp className="displayTxt" message={this.state.firstInput} />
                                         <Disp className="displayTxt" message={this.state.operator} />
                                         <Disp className="displayTxt" message={this.state.secondInput} />
@@ -100,58 +100,58 @@ class CalculationButtons extends React.Component {
                             </Container>
                             <Container className="mt-2">
                                 <Row className="center">
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle " number={1} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={2} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={3} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"+"} onClick={this.setOperator} />
                                     </Col>
                                 </Row>
                                 <Row className="center mt-2">
-                                    <Col lg={1} >
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={4} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={5} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={6} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"-"} onClick={this.setOperator} />
                                     </Col>
                                 </Row>
                                 <Row className="center mt-2">
-                                    <Col lg={1} >
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={7} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={8} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}> 
                                         <Butt className="protoBtnStyle" number={9} onClick={this.incrementNum} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={0} onClick={this.incrementNum} />
                                     </Col>
                                 </Row>
                                 <Row className="center mt-2">
-                                    <Col lg={1} >
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"/"} onClick={this.setOperator} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"*"} onClick={this.setOperator} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"="} onClick={this.mathMethod} />
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col lg={1} sm={2} xs={2}>
                                         <Butt className="protoBtnStyle" number={"C"} onClick={this.clearMethod} />
                                     </Col>
                                 </Row>
