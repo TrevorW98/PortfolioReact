@@ -33,7 +33,7 @@ import Zoom from '../../assets/zoom.png'
 import VSCode from '../../assets/VSfixed.png'
 import FileZilla from '../../assets/filezfixed.png'
 import Postman from '../../assets/postman.svg'
-import GCS from '../../assets/googlecloudfixed.png'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -151,11 +151,6 @@ class Home extends React.Component {
                 Angular
             </Tooltip>
         );
-        const renderTooltipAzure = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Azure
-            </Tooltip>
-        );
         const renderTooltipBoot = (props) => (
             <Tooltip id="button-tooltip" {...props}>
                 Bootstrap 5
@@ -169,11 +164,6 @@ class Home extends React.Component {
         const renderTooltipGit = (props) => (
             <Tooltip id="button-tooltip" {...props}>
                 GitHub
-            </Tooltip>
-        );
-        const renderTooltipGoogle = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Google Cloud Console
             </Tooltip>
         );
         const renderTooltipIonic = (props) => (
