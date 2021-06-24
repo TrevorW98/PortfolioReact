@@ -3,14 +3,24 @@
     justify-content: center;
 }
 .titleSpecs{
-    font-size: 160px;
+    font-size: 100px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
 .secondaryHeaderSpecs{
-    font-size: 35px;
+    font-size: 25px;
     color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.secondaryHeaderSpecsblk{
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.secondaryHeaderSpecsblkxs{
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .imgSpecs{
     height: 880px;
@@ -25,7 +35,7 @@
     border: none;
 }
 .blueBG{
-    background-color: #4860A0;
+    background-color: #000000;
 }
 .xsTitle{
     font-size: 40px;
@@ -36,4 +46,16 @@
     font-size: 20px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
+}
+.TritonButtons{
+    background-color: #ffffff;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+}
+.white{
+    background-color: white;
 }

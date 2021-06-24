@@ -158,10 +158,12 @@ body{
     border-radius: 10px;
 }
 .tabsFont{
+    background-color: #000000;
     font-size: 25px;
-    color: #000000;
+    color: #ffffff;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+
 .contactBG{
     background-color: #4860A0;
 }

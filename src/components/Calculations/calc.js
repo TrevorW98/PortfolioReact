@@ -160,35 +160,35 @@ class CalculationButtons extends React.Component {
                                 <Row >
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG center">
+                                <Row className="white center">
                                     <Col lg={8} className="mt-5">
-                                        <p className="secondaryHeader d-none d-md-block">This is one of the assignments I completed early on
+                                        <p className="secondaryHeaderSpecsblk d-none d-md-block">This is one of the assignments I completed early on
                                         within CodeStack Academy to demonstrate properties and state changes within react! It's not much, but
                                         I like to look at it and think of where I came from, and how differently I used to code. Before I
                                         started the academy, I had no knowledge about coding or what it even meant. Building this calculator
                                            inspired me, I realized how many possibilities there were when coding.</p>
-                                        <p className="xsSecondaryHeader d-block d-md-none">This is one of the assignments I completed early on
+                                        <p className="secondaryHeaderSpecsblkxs d-block d-md-none">This is one of the assignments I completed early on
                                         within CodeStack Academy to demonstrate properties and state changes within react! It's not much, but
                                         I like to look at it and think of where I came from, and how differently I used to code. Before I started
                                         the academy, I had no knowledge about coding or what it even meant. Building this calculator inspired me,
                                             I realized how many possibilities there were when coding.</p>
                                     </Col>
                                 </Row>
-                                <Row className=" blueBG">
+                                <Row className=" white">
                                     <Col className="center mt-4">
                                         <Link to='/home'>
-                                            <Button className="Home" variant="primary">Return to Home</Button>
+                                            <Button className="buttonStyleReturn" variant="primary">Return to Home</Button>
                                         </Link>
                                     </Col>
                                 </Row>
                                 <Row >
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>

@@ -384,7 +384,7 @@ class Home extends React.Component {
                                         <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
                                             <Row className="center" >
                                                 <Col sm={2} >
-                                                    <Nav variant="pills" className="flex-column ">
+                                                    <Nav variant="tabs" className="flex-column ">
                                                         <Nav.Item>
                                                             <Nav.Link eventKey="first" className="tabsFont">Languages</Nav.Link>
                                                         </Nav.Item>

@@ -40,7 +40,7 @@ class TritonInfo extends React.Component {
                                 <Row className="mt-2">
                                     <Col>
                                         <Link to="/Home">
-                                            <Button className="protoBtnStyle">Return to Home</Button>
+                                            <Button className="TritonButtons">Return to Home</Button>
                                         </Link>
                                     </Col>
                                 </Row>
@@ -66,10 +66,12 @@ class TritonInfo extends React.Component {
                                 </Row>
                                 <Row >
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
-                                <Row className="center blueBG">
+                                <Row className="center white">
                                     <Col xl={10} lg={10} md={10} sm={12} xs={12} >
                                         <Carousel>
                                             <Carousel.Item>
@@ -103,15 +105,17 @@ class TritonInfo extends React.Component {
                                         </Carousel>
                                     </Col>
                                 </Row>
-                                <Row className="center blueBG">
+                                <Row className="center white">
                                     <Col className="center mt-5">
-                                        <p className="secondaryHeader ml-5 d-none d-md-block">These are pictures from both the prototype and the app in development</p>
-                                        <p className="xsSecondaryHeader ml-5 d-block d-md-none">These are pictures from both the prototype and the app in development</p>
+                                        <p className="secondaryHeaderSpecsblk ml-5 d-none d-md-block">These are pictures from both the prototype and the app in development</p>
+                                        <p className="secondaryHeaderSpecsblkxs ml-5 d-block d-md-none">These are pictures from both the prototype and the app in development</p>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
                                 <Row className="mt-5 center">
@@ -148,18 +152,20 @@ class TritonInfo extends React.Component {
                                 </Row>
                                 <Row >
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,117.3C672,139,768,213,864,256C960,299,1056,309,1152,266.7C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG">
+                                <Row className="white">
                                     <Col>
-                                        <p className="secondaryHeader text-center d-none d-md-block">Full list of features:</p>
-                                        <p className="xsSecondaryHeader text-center d-block d-md-none">Full list of features:</p>
+                                        <p className="secondaryHeaderSpecsblk text-center d-none d-md-block">Full list of features:</p>
+                                        <p className="secondaryHeaderSpecsblkxs text-center d-block d-md-none">Full list of features:</p>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG">
+                                <Row className="white">
                                     <Col className="center">
-                                        <ul className="secondaryHeader d-none d-md-block">
+                                        <ul className="secondaryHeaderSpecsblk d-none d-md-block">
                                             <li>
                                                 <p>Animal Index with over 150 animals and their information.</p>
                                             </li>
@@ -179,7 +185,7 @@ class TritonInfo extends React.Component {
                                                 <p>Notifications for feeding times and daily events like applying medicine.</p>
                                             </li>
                                         </ul>
-                                        <ul className="xsSecondaryHeader d-block d-md-none">
+                                        <ul className="secondaryHeaderSpecsblkxs d-block d-md-none">
                                             <li>
                                                 <p>Animal Index with over 150 animals and their information.</p>
                                             </li>
@@ -203,18 +209,20 @@ class TritonInfo extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4860A0" fill-opacity="1" d="M0,288L80,240C160,192,320,96,480,80C640,64,800,128,960,138.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                        </svg>
                                     </Col>
                                 </Row>
                                 <Row className="mb-3 center">
-                                    <Col lg={4} className="center mt-5">
-                                        <Button className="protoBtnStyle" onClick={ProtoLink}>
-                                            Check out the prototype here
+                                    <Col lg={4} className="center">
+                                        <Button className="TritonButtons" onClick={ProtoLink}>
+                                            Check out the prototype
                                         </Button>
                                     </Col>
-                                    <Col lg={4} className="center mt-5">
+                                    <Col lg={4} className="center">
                                         <Link to="/Home">
-                                            <Button className="protoBtnStyle">Return to Home</Button>
+                                            <Button className="TritonButtons">Return to Home</Button>
                                         </Link>
                                     </Col>
                                 </Row>

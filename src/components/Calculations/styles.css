@@ -64,3 +64,25 @@ border-radius: 15px 15px 0px 0px;
     border: none;
     width: 200px;
 }
+.white{
+    background-color: white;
+}
+.buttonStyleReturn{
+    background-color: #000000;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+}
+.secondaryHeaderSpecsblk{
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.secondaryHeaderSpecsblkxs{
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
