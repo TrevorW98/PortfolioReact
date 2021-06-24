@@ -254,18 +254,18 @@ class Home extends React.Component {
                                 <Row >
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG">
+                                <Row className="whiteBG">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">About Me</p>
                                         <p className="xsTitle text-center d-block d-lg-none">About Me</p>
                                     </Col>
 
                                 </Row>
-                                <Row className="center blueBG ">
+                                <Row className="center whiteBG ">
                                     <Col xl={6} lg={6} md={8} sm={8} xs={9} className="center">
                                         <Carousel>
                                             <Carousel.Item >
@@ -301,22 +301,33 @@ class Home extends React.Component {
                                     <Col lg={6} className="mt-5">
                                         <Row>
                                             <Col>
-                                                <p className="secondaryHeader d-none d-md-block " id="main">I am a
-                                                fullstack web developer with a focus on front-end work. I received certification
-                                                as a software developer after an intense 10 month program with over 1,000 hours of instructor led coursework.
-                                                I am proficient in developing applications in multiple languages and technologies, of which you can see below.
-                                           Feel free to explore my work and drop me a line if you want to learn more.</p>
-                                                <p className="xsSecondaryHeader d-block d-md-none">I am a
-                                                fullstack web developer with a focus on front-end work. I received certification as a software developer after
-                                                an intense 10 month program with over 1,000 hours of instructor led coursework. I am proficient in developing
-                                                applications in multiple languages and technologies, of which you can see below. Feel free to explore my work
-                                           and drop me a line if you want to learn more.</p>
+                                                <p className="secondaryHeaderblk d-none d-md-block " id="main">I am a
+                                                fullstack web developer with a passion for accessibility. I have received certification
+                                                as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
+                                             proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the 
+                                             15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
+                                             further explore my passion for software development.
+                                           </p>
+                                                <p className="xsSecondaryHeaderblk d-block d-md-none">I am a
+                                                fullstack web developer with a passion for accessibility. I have received certification
+                                                as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
+                                             proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the 
+                                             15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
+                                             further explore my passion for software development.</p>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col>
-                                                <p className="secondaryHeader d-none d-md-block ">{this.state.description}</p>
-                                                <p className="xsSecondaryHeader d-block d-md-none">{this.state.description}</p>
+                                               <p className="secondaryHeaderblk d-none d-md-block "> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating 
+                                               things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I 
+                                               could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
+                                               continue to grow and learn each day.
+                                                </p>
+                                                <p className="xsSecondaryHeaderblk d-block d-md-none"> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating 
+                                               things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I 
+                                               could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
+                                               continue to grow and learn each day.
+                                                </p>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -324,13 +335,13 @@ class Home extends React.Component {
                                 <Row >
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
                                 <Row >
                                     <Col>
-                                        <p className="titleStyle3 text-center d-none d-lg-block">My Mission</p>
+                                        <p className="titleStyle4 text-center d-none d-lg-block">My Mission</p>
                                         <p className="xsTitle text-center d-block d-lg-none">My Mission</p>
                                     </Col>
 
@@ -357,22 +368,22 @@ class Home extends React.Component {
                                 <Row>
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
                                 {/* */}
-                                <Row className="blueBG">
+                                <Row className="whiteBG">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Languages and technologies</p>
                                         <p className="xsTitle text-center d-block d-lg-none">Languages and technologies</p>
                                     </Col>
                                 </Row>
-                                <Row className="blueBG center">
-                                    <Col lg={7} xs={10} className="tabsBG noPadding" >
+                                <Row className="whiteBG center">
+                                    <Col lg={9} xs={11} className="tabsBG noPadding" >
                                         <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
                                             <Row className="center" >
-                                                <Col sm={3} >
+                                                <Col sm={2} >
                                                     <Nav variant="pills" className="flex-column ">
                                                         <Nav.Item>
                                                             <Nav.Link eventKey="first" className="tabsFont">Languages</Nav.Link>
@@ -385,7 +396,7 @@ class Home extends React.Component {
                                                         </Nav.Item>
                                                     </Nav>
                                                 </Col>
-                                                <Col sm={9} >
+                                                <Col sm={10} >
                                                     <Tab.Content >
                                                         <Tab.Pane eventKey="first">
                                                             <Row className="mt-5">
@@ -510,13 +521,13 @@ class Home extends React.Component {
                                     <Col className="noPadding">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col className="center d-none d-md-block">
-                                        <p className="titleStyle3 text-center">Projects and Coursework</p>
+                                        <p className="titleStyle4 text-center">Projects and Coursework</p>
                                     </Col>
                                     <Col className="center d-block d-md-none">
                                         <p className="headingOneSmall text-center">Projects and Coursework</p>
@@ -596,17 +607,17 @@ class Home extends React.Component {
                                 <Row id="contactSection">
                                     <Col className="noPadding">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#4860A0" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
+                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
                                         </svg>
                                     </Col>
                                 </Row>
-                                <Row className="contactBG">
+                                <Row className="whiteBG">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Contact Me</p>
                                         <p className="xsTitle text-center d-block d-lg-none">Contact Me</p>
                                     </Col>
                                 </Row>
-                                <Row className="center contactBG">
+                                <Row className="center whiteBG">
                                     <Col lg={6} className="mb-5">
                                         <ContactUs></ContactUs>
                                     </Col>

@@ -1,6 +1,6 @@
 body{
     height: 100%;
-    background-color: #13192a ;
+    background-color: #000000 ;
 }
 .headingOneLarge{
     font-size: 60px;
@@ -23,6 +23,11 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 .titleStyle3{
+    font-size: 60px;
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+.titleStyle4{
     font-size: 60px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -73,8 +78,8 @@ body{
     border-radius: 0px;
     height: auto;
 }
-.blueBG{
-    background-color: #4860A0;
+.whiteBG{
+    background-color: #ffffff;
 }
 .protoBtnStyle{
     background-color: #203242;
@@ -89,13 +94,23 @@ body{
     transform: scale(1.2); 
 }
 .secondaryHeader{
-    font-size: 25px;
+    font-size: 28px;
     color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.secondaryHeaderblk{
+    font-size: 28px;
+    color: #000000;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 .xsSecondaryHeader{
     font-size: 18px;
     color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.xsSecondaryHeaderblk{
+    font-size: 18px;
+    color: #000000;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 .xsTitle{
