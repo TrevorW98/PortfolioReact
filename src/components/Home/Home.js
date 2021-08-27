@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col, Container, Row, Card, Carousel, Tab, Nav,  Figure, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Col, Container, Row, Card, Carousel, Tab, Nav, Figure, OverlayTrigger, Tooltip, Image } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/Orientation.png';
@@ -33,6 +33,8 @@ import Zoom from '../../assets/zoom.png'
 import VSCode from '../../assets/VSfixed.png'
 import FileZilla from '../../assets/filezfixed.png'
 import Postman from '../../assets/postman.svg'
+import Hero from '../../assets/Hero.jpg' 
+import { Typewriter } from 'react-simple-typewriter'
 
 import {
     BrowserRouter as Router,
@@ -230,115 +232,68 @@ class Home extends React.Component {
                             <TritonInfo></TritonInfo>
                         </Route>
                         <Route path="/">
+                            {/* This container holds the header and main image */}
                             <Container fluid >
-                                <Row>
-                                    <Col className="titleBG1 d-none d-md-block" >
-                                        <h1 className="headingOneLarge ">Trevor Womack</h1>
+                                <Row style={{ marginBottom: '700px', marginTop: '200px' }}>
+                                    <Col md={8}>
+                                        <Image style={{borderRadius: '50px'}} src={PersonalPic4} fluid></Image>
                                     </Col>
-                                    <Col className="titleBG1 d-block d-md-none">
-                                        <p className="headingOneSmall ">Trevor Womack</p>
-                                    </Col>
-                                    <SocialMediaLinks></SocialMediaLinks>
-                                </Row>
-                                <Row >
-                                    <Col className=" d-none d-md-block">
-                                        <h2 className="headingTwo">Web Developer</h2>
-                                    </Col>
-                                    <Col className=" d-block d-md-none">
-                                        <p className=" xsSecondaryTitle">Web Developer</p>
-                                    </Col>
-                                    <Col className="d-flex justify-content-end">
-                                        <a className="headingTwo" href="#contactSection"> Contact Me!</a>
-                                    </Col>
-                                </Row>
-                                <Row >
-                                    <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
-                                        </svg>
+                                    <Col md={4} style={{textAlign: 'left'}}>
+                                        <h1 style={{ margin: '20px', color: 'white', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '90px' }}>
+                                            Trevor Womack:{' '}
+                                            <span style={{ color: 'White', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '70px' }}>
+                                                {/* Style will be inherited from the parent element */}
+                                                <Typewriter
+                                                    words={['Web Developer', 'Designer', 'Chef', 'Cat Dad', 'Freelancer']}
+                                                    loop={5}
+                                                    cursor
+                                                    cursorStyle='_'
+                                                    typeSpeed={70}
+                                                    deleteSpeed={50}
+                                                    delaySpeed={1000}
+                                                    onLoopDone={() => console.log(`Done after 5 loops!`)}
+                                                />
+                                            </span>
+                                        </h1>
                                     </Col>
                                 </Row>
-                                <Row className="whiteBG">
-                                    <Col>
-                                        <p className="titleStyle3 text-center d-none d-lg-block">About Me</p>
-                                        <p className="xsTitle text-center d-block d-lg-none">About Me</p>
-                                    </Col>
+                                <Row className="center mt-5">
 
-                                </Row>
-                                <Row className="center whiteBG ">
-                                    <Col xl={6} lg={6} md={8} sm={8} xs={9} className="center">
-                                        <Carousel>
-                                            <Carousel.Item >
-                                                <img
-                                                    className="d-block w-100 carouselBG"
-                                                    src={this.state.src1}
-                                                    alt={this.state.alt1}
-                                                />
-                                            </Carousel.Item>
-                                            <Carousel.Item >
-                                                <img
-                                                    className="d-block w-100 carouselBG"
-                                                    src={this.state.src2}
-                                                    alt={this.state.alt2}
-                                                />
-                                            </Carousel.Item>
-                                            <Carousel.Item >
-                                                <img
-                                                    className="d-block w-100 carouselBG"
-                                                    src={this.state.src3}
-                                                    alt={this.state.alt3}
-                                                />
-                                            </Carousel.Item>
-                                            <Carousel.Item >
-                                                <img
-                                                    className="d-block w-100 carouselBG"
-                                                    src={this.state.src4}
-                                                    alt={this.state.alt4}
-                                                />
-                                            </Carousel.Item>
-                                        </Carousel>
-                                    </Col>
-                                    <Col lg={6} className="mt-5">
+                                    {/* <Col lg={6} className="mt-5">
                                         <Row>
                                             <Col>
                                                 <p className="secondaryHeaderblk d-none d-md-block " id="main">I am a
-                                                fullstack web developer with a passion for accessibility. I have received certification
-                                                as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
-                                             proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the 
-                                             15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
-                                             further explore my passion for software development.
-                                           </p>
+                                                    fullstack web developer with a passion for accessibility. I have received certification
+                                                    as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
+                                                    proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the
+                                                    15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
+                                                    further explore my passion for software development.
+                                                </p>
                                                 <p className="xsSecondaryHeaderblk d-block d-md-none">I am a
-                                                fullstack web developer with a passion for accessibility. I have received certification
-                                                as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
-                                             proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the 
-                                             15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
-                                             further explore my passion for software development.</p>
+                                                    fullstack web developer with a passion for accessibility. I have received certification
+                                                    as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
+                                                    proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the
+                                                    15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
+                                                    further explore my passion for software development.</p>
                                             </Col>
                                         </Row>
                                         <Row>
                                             <Col>
-                                               <p className="secondaryHeaderblk d-none d-md-block "> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating 
-                                               things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I 
-                                               could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
-                                               continue to grow and learn each day.
+                                                <p className="secondaryHeaderblk d-none d-md-block "> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating
+                                                    things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I
+                                                    could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
+                                                    continue to grow and learn each day.
                                                 </p>
-                                                <p className="xsSecondaryHeaderblk d-block d-md-none"> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating 
-                                               things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I 
-                                               could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
-                                               continue to grow and learn each day.
+                                                <p className="xsSecondaryHeaderblk d-block d-md-none"> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating
+                                                    things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I
+                                                    could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
+                                                    continue to grow and learn each day.
                                                 </p>
                                             </Col>
                                         </Row>
-                                    </Col>
+                                    </Col> */}
                                 </Row>
-                                <Row >
-                                    <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
-                                        </svg>
-                                    </Col>
-                                </Row>
+
                                 <Row >
                                     <Col>
                                         <p className="titleStyle4 text-center d-none d-lg-block">My Mission</p>
@@ -351,13 +306,13 @@ class Home extends React.Component {
                                         <Row>
                                             <Col lg={7} className="center mt-5">
                                                 <p className="secondaryHeader d-none d-md-block " id="main">My goal is to increase the accessibility of current
-                                                and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
-                                                and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
-                                                screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
+                                                    and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
+                                                    and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
+                                                    screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
                                                 <p className="xsSecondaryHeader d-block d-md-none">My goal is to increase the accessibility of current
-                                                and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
-                                                and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
-                                                screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
+                                                    and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
+                                                    and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
+                                                    screen size responsiveness allow me to reach my goal and provide everyone the chance to use my software.</p>
                                             </Col>
                                             <Col >
                                                 <Card.Img className=" d-none d-md-block" variant="top" src={Access} alt="The accessibility score for this website" />
@@ -366,20 +321,12 @@ class Home extends React.Component {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
-                                        </svg>
-                                    </Col>
-                                </Row>
-                                {/* */}
-                                <Row className="whiteBG">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Languages and technologies</p>
                                         <p className="xsTitle text-center d-block d-lg-none">Languages and technologies</p>
                                     </Col>
                                 </Row>
-                                <Row className="whiteBG center">
+                                <Row className="center">
                                     <Col lg={9} xs={11} className="tabsBG noPadding" >
                                         <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
                                             <Row className="center" >
@@ -463,7 +410,7 @@ class Home extends React.Component {
                                                         </Tab.Pane>
 
                                                         <Tab.Pane eventKey="third">
-                                                        <Row className="mt-5">
+                                                            <Row className="mt-5">
                                                                 <Col className="center">
                                                                     <OverlayTrigger placement="bottom" delay={{ show: 100, hide: 200 }} overlay={renderTooltipGit} >
                                                                         <Figure className="mt-3"><Figure.Image width={70} alt="Github" src={Github} /></Figure>
@@ -509,7 +456,7 @@ class Home extends React.Component {
                                                                     </OverlayTrigger>
                                                                 </Col>
                                                             </Row>
-                                                          
+
                                                         </Tab.Pane>
                                                     </Tab.Content>
                                                 </Col>
@@ -517,14 +464,7 @@ class Home extends React.Component {
                                         </Tab.Container>
                                     </Col>
                                 </Row>
-                                <Row >
-                                    <Col className="noPadding">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,0L0,0Z"></path>
-                                        </svg>
-                                    </Col>
-                                </Row>
                                 <Row>
                                     <Col className="center d-none d-md-block">
                                         <p className="titleStyle4 text-center">Projects and Coursework</p>
@@ -540,10 +480,10 @@ class Home extends React.Component {
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Triton</Card.Title>
                                             </Card.Body>
-                                               <Card.Text className="cardTextStyle text-center">Angular, Ionic, Bootstrap, Android SDK, C#</Card.Text>
-                                                <Link to="/Triton" className="center mb-2">
-                                                    <button className="Home" variant="primary">Learn about Triton</button>
-                                                </Link>
+                                            <Card.Text className="cardTextStyle text-center">Angular, Ionic, Bootstrap, Android SDK, C#</Card.Text>
+                                            <Link to="/Triton" className="center mb-2">
+                                                <button className="Home" variant="primary">Learn about Triton</button>
+                                            </Link>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
@@ -551,12 +491,12 @@ class Home extends React.Component {
                                             <Card.Img variant="top" src={HFPLogo} alt="The logo for Health Force Partners" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
-                                                
+
                                             </Card.Body>
                                             <Card.Text className="cardTextStyle text-center">Wix Website Builder</Card.Text>
-                                                <div className="center mb-2">
-                                                    <button variant="primary" className="Home" onClick={HFPLink}>Visit the website</button>
-                                                </div>
+                                            <div className="center mb-2">
+                                                <button variant="primary" className="Home" onClick={HFPLink}>Visit the website</button>
+                                            </div>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
@@ -564,12 +504,12 @@ class Home extends React.Component {
                                             <Card.Img variant="top" src={ATLogo} alt="The letters 'A' and 'T' to represent the animal trivia application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
-                                                
+
                                             </Card.Body>
                                             <Card.Text className="cardTextStyle text-center">React, Bootstrap, JSX, CSS</Card.Text>
-                                                <div className="center mb-2">
-                                                    <button variant="primary" className="Home" onClick={TriviaLink}>Play Animal Trivia</button>
-                                                </div>
+                                            <div className="center mb-2">
+                                                <button variant="primary" className="Home" onClick={TriviaLink}>Play Animal Trivia</button>
+                                            </div>
                                         </Card>
                                     </Col>
                                 </Row>
@@ -579,12 +519,12 @@ class Home extends React.Component {
                                             <Card.Img variant="top" src={ReactLogo} alt="A picture of the logo for the React library" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Calculator</Card.Title>
-                                                
+
                                             </Card.Body>
                                             <Card.Text className="cardTextStyle text-center">React, CSS, Bootstrap</Card.Text>
-                                                <Link to="/Calculator" className="center mb-2">
-                                                    <button className="Home" variant="primary"> Use the Calculator</button>
-                                                </Link>
+                                            <Link to="/Calculator" className="center mb-2">
+                                                <button className="Home" variant="primary"> Use the Calculator</button>
+                                            </Link>
                                         </Card>
                                     </Col>
                                     <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
@@ -592,26 +532,20 @@ class Home extends React.Component {
                                             <Card.Img variant="top" src={WeatherLogo} alt="A picture of a sun and a cloud to represent the weather application" />
                                             <Card.Body>
                                                 <Card.Title className="cardheadStyle">Weather Application</Card.Title>
-                                               
+
                                             </Card.Body>
                                             <Card.Text className="cardTextStyle text-center">Javascript, HTML, CSS</Card.Text>
-                                                <div className="center mb-2">
-                                                    <button className="Home" onClick={WeatherLink} variant="primary">Check the weather</button>
-                                                </div>
+                                            <div className="center mb-2">
+                                                <button className="Home" onClick={WeatherLink} variant="primary">Check the weather</button>
+                                            </div>
                                         </Card>
                                     </Col>
                                 </Row>
 
                                 {/*  */}
 
-                                <Row id="contactSection">
-                                    <Col className="noPadding">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                            <path fill="#ffffff" fill-opacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
-                                        </svg>
-                                    </Col>
-                                </Row>
-                                <Row className="whiteBG">
+
+                                <Row className="whiteBG mt-5">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Contact Me</p>
                                         <p className="xsTitle text-center d-block d-lg-none">Contact Me</p>

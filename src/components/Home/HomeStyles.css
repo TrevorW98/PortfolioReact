@@ -1,8 +1,11 @@
 body{
     height: 100%;
-    background-color: #000000 ;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3b3c3d, #1c1e1f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3b3c3d, #1c1e1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
-.headingOneLarge{
+.trevorWomackTitle{
     font-size: 60px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -201,21 +204,6 @@ body{
 background: #28365A;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #28365A, #4860A0);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #28365A, #4860A0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-
-
-.displayBGTop{
-    background-color: rgb(73, 73, 73);
-    border-radius: 5px 5px 0px 0px;
-}
-.displayBGMid{
-    background-color: rgb(73, 73, 73);
-}
-.displayBGBottom{
-    background-color: rgb(73, 73, 73);
-    border-radius: 0px 0px 5px 5px;
 }
 .displayTxt{
     color: white;
