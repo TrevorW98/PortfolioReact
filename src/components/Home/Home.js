@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col, Container, Row, Card, Carousel, Tab, Nav, Figure, OverlayTrigger, Tooltip, Image } from 'react-bootstrap';
+import { Col, Container, Row, Card, Carousel } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/Orientation.png';
@@ -13,27 +13,29 @@ import ATLogo from '../../assets/animals.jpg';
 import ReactLogo from '../../assets/ReactLogofixed.png';
 import WeatherLogo from '../../assets/weatherfixed.png';
 import ContactUs from '../ContactForm/ContactForm.js';
-import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
+import { animated } from 'react-spring';
+import { use3dEffect } from 'use-3d-effect';
+// import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
 import Access from '../../assets/accessFixed.png';
-import HTML from '../../assets/htmlfixed.png';
-import CSharp from '../../assets/CSharpfixed.png';
-import JS from '../../assets/jsLogofixed.png';
-import TS from '../../assets/tsfixed.png';
-import CSS from '../../assets/cssLogofixed.png';
-import Ionic from '../../assets/ionicLogofixed.png';
-import ReactPic from '../../assets/reactPngfixed.png';
-import NG from '../../assets/angular.png';
-import Boot from '../../assets/bootstrapLogofixed.png';
-import Unity from '../../assets/unityFixed.png';
-import Github from '../../assets/github.png'
-import Slack from '../../assets/slackfixed.png'
-import Notion from '../../assets/Notionfixed.png'
-import Jira from '../../assets/jirafixed.png'
-import Zoom from '../../assets/zoom.png'
-import VSCode from '../../assets/VSfixed.png'
-import FileZilla from '../../assets/filezfixed.png'
-import Postman from '../../assets/postman.svg'
-import Hero from '../../assets/Hero.jpg' 
+// import HTML from '../../assets/htmlfixed.png';
+// import CSharp from '../../assets/CSharpfixed.png';
+// import JS from '../../assets/jsLogofixed.png';
+// import TS from '../../assets/tsfixed.png';
+// import CSS from '../../assets/cssLogofixed.png';
+// import Ionic from '../../assets/ionicLogofixed.png';
+// import ReactPic from '../../assets/reactPngfixed.png';
+// import NG from '../../assets/angular.png';
+// import Boot from '../../assets/bootstrapLogofixed.png';
+// import Unity from '../../assets/unityFixed.png';
+// import Github from '../../assets/github.png'
+// import Slack from '../../assets/slackfixed.png'
+// import Notion from '../../assets/Notionfixed.png'
+// import Jira from '../../assets/jirafixed.png'
+// import Zoom from '../../assets/zoom.png'
+// import VSCode from '../../assets/VSfixed.png'
+// import FileZilla from '../../assets/filezfixed.png'
+// import Postman from '../../assets/postman.svg'
+// import Hero from '../../assets/Hero.jpg'
 import { Typewriter } from 'react-simple-typewriter'
 
 import {
@@ -123,95 +125,6 @@ class Home extends React.Component {
     }
 
     render() {
-        const renderTooltipHTML = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                HTML
-            </Tooltip>
-        );
-        const renderTooltipCSharp = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                C#
-            </Tooltip>
-        );
-        const renderTooltipCSS = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                CSS
-            </Tooltip>
-        );
-        const renderTooltipTS = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                TypeScript
-            </Tooltip>
-        );
-        const renderTooltipJS = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Javascript
-            </Tooltip>
-        );
-        const renderTooltipNG = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Angular
-            </Tooltip>
-        );
-        const renderTooltipBoot = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Bootstrap 5
-            </Tooltip>
-        );
-        const renderTooltipFile = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                FileZilla FTP
-            </Tooltip>
-        );
-        const renderTooltipGit = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                GitHub
-            </Tooltip>
-        );
-        const renderTooltipIonic = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Ionic
-            </Tooltip>
-        );
-        const renderTooltipJira = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Jira
-            </Tooltip>
-        );
-        const renderTooltipNotion = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Notion
-            </Tooltip>
-        );
-        const renderTooltipPostman = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Postman
-            </Tooltip>
-        );
-        const renderTooltipReact = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                React
-            </Tooltip>
-        );
-        const renderTooltipSlack = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Slack
-            </Tooltip>
-        );
-        const renderTooltipVS = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                VScode
-            </Tooltip>
-        ); const renderTooltipZoom = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Zoom
-            </Tooltip>
-        );
-        const renderTooltipUnity = (props) => (
-            <Tooltip id="button-tooltip" {...props}>
-                Unity
-            </Tooltip>
-        );
         const TriviaLink = () => {
             window.open("http://animaltrivia.azurewebsites.net", '_blank');
         }
@@ -236,9 +149,51 @@ class Home extends React.Component {
                             <Container fluid >
                                 <Row style={{ marginBottom: '700px', marginTop: '200px' }}>
                                     <Col md={8}>
-                                        <Image style={{borderRadius: '50px'}} src={PersonalPic4} fluid></Image>
+                                   
+                                        <Carousel fade controls={false} pause='hover' indicators={false}>
+                                            <Carousel.Item interval={1000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic4}
+                                                    alt="First slide"
+                                                />
+                                                <Carousel.Caption>
+                                                    <h3>First slide label</h3>
+                                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                                </Carousel.Caption>
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={1000}>
+                                                <img
+                                                style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic4}
+                                                    alt="Second slide"
+                                                />
+
+                                                <Carousel.Caption>
+                                                    <h3>Second slide label</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </Carousel.Caption>
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={1000}>
+                                                <img
+                                                style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic4}
+                                                    alt="Third slide"
+                                                />
+
+                                                <Carousel.Caption>
+                                                    <h3>Third slide label</h3>
+                                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                                </Carousel.Caption>
+                                            </Carousel.Item>
+                                        </Carousel>
+                                    
+                                        {/* <Image style={{ borderRadius: '50px' }} src={PersonalPic4} fluid></Image> */}
                                     </Col>
-                                    <Col md={4} style={{textAlign: 'left'}}>
+                                    <Col md={4} style={{ textAlign: 'left' }}>
                                         <h1 style={{ margin: '20px', color: 'white', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '90px' }}>
                                             Trevor Womack:{' '}
                                             <span style={{ color: 'White', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '70px' }}>
@@ -326,7 +281,7 @@ class Home extends React.Component {
                                         <p className="xsTitle text-center d-block d-lg-none">Languages and technologies</p>
                                     </Col>
                                 </Row>
-                                <Row className="center">
+                                {/* <Row className="center">
                                     <Col lg={9} xs={11} className="tabsBG noPadding" >
                                         <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first">
                                             <Row className="center" >
@@ -463,7 +418,7 @@ class Home extends React.Component {
                                             </Row>
                                         </Tab.Container>
                                     </Col>
-                                </Row>
+                                </Row> */}
 
                                 <Row>
                                     <Col className="center d-none d-md-block">
@@ -564,6 +519,24 @@ class Home extends React.Component {
         )
     }
 }
+
+const Example = () => {
+    const ref = React.useRef(null);
+    const {style, ...mouseHandlers} = use3dEffect(ref);
+  
+    return (
+      <animated.div
+        ref={ref}
+        style={{
+          background: '#61dafb', color: 'white', padding: '2em',
+          ...style
+        }}
+        {...mouseHandlers}
+      >
+        Hover over me!
+      </animated.div>
+    );
+  };
 
 export default Home;
 

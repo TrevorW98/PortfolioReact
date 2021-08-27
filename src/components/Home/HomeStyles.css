@@ -1,10 +1,28 @@
-body{
-    height: 100%;
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #3b3c3d, #1c1e1f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #3b3c3d, #1c1e1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+    background: linear-gradient(65deg,#56e8e6,#2781d0,#bd930c);
+  background-size: 180% 180%;
+  animation: gradient-animation 24s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
 .trevorWomackTitle{
     font-size: 60px;
     color: #ffffff;
@@ -20,32 +38,13 @@ body{
     color: #ffffff;
     font-family: 'Open Sans Condensed', sans-serif;
 }
-.titleStyle2{
-    font-size: 90px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
-.titleStyle3{
-    font-size: 60px;
-    color: #000000;
-    font-family: 'Oswald', sans-serif;
-}
-.titleStyle4{
-    font-size: 60px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
+
 .secondaryHeader1{
     font-size: 40px;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
 }
-.sticky{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+
 .center{
     display: flex;
     justify-content: center;
@@ -77,13 +76,7 @@ body{
     font-family: 'Oswald', sans-serif;
     margin-left: 15px;
 }
-.carouselBG{
-    border-radius: 0px;
-    height: auto;
-}
-.whiteBG{
-    background-color: #ffffff;
-}
+
 .protoBtnStyle{
     background-color: #203242;
     font-size: 25px;
@@ -93,9 +86,7 @@ body{
     border-radius: 5px;
     transition: transform .2s;
 }
-.protoBtnStyle :hover{
-    transform: scale(1.2); 
-}
+
 .secondaryHeader{
     font-size: 28px;
     color: #ffffff;
@@ -167,9 +158,6 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.contactBG{
-    background-color: #4860A0;
-}
 .Home{
     background-color: #203242;
     font-size: 20px;
@@ -185,26 +173,7 @@ body{
 .marginLeft{
     margin-left: 20px;
 }
-/* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 20px; }
-.material-icons.md-80 { font-size: 40px; }
-.material-icons.md-120 { font-size: 60px; }
 
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(255, 255, 255, 1); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-.pageBreakBG{
-background: #28365A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #28365A, #4860A0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #28365A, #4860A0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 .displayTxt{
     color: white;
 }
