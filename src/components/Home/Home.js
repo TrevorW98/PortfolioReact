@@ -1,11 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Col, Container, Row, Card, Carousel } from 'react-bootstrap';
+import { Col, Container, Row, Card, Carousel, Nav, NavDropdown } from 'react-bootstrap';
 import './HomeStyles.css';
 import CalculationButtons from '../Calculations/calc.js';
 import PersonalPic1 from '../../assets/Orientation.png';
-import PersonalPic2 from '../../assets/code1fixed.png';
-import PersonalPic3 from '../../assets/apifixed.png';
+import PersonalPic2 from '../../assets/Hero.jpg';
+import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg';
 import PersonalPic4 from '../../assets/stompfixed.png';
 import TritonLogo from '../../assets/tritonlogofixed.png';
 import HFPLogo from '../../assets/HFPLogofixed.png';
@@ -13,6 +13,7 @@ import ATLogo from '../../assets/animals.jpg';
 import ReactLogo from '../../assets/ReactLogofixed.png';
 import WeatherLogo from '../../assets/weatherfixed.png';
 import ContactUs from '../ContactForm/ContactForm.js';
+import Resume from '../../assets/TrevorWomackResumeAXD2021.pdf'
 import { animated } from 'react-spring';
 import { use3dEffect } from 'use-3d-effect';
 // import SocialMediaLinks from '../SocialMediaLinks/SocialMedia.js';
@@ -51,10 +52,6 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            src1: PersonalPic1,
-            src2: PersonalPic2,
-            src3: PersonalPic3,
-            src4: PersonalPic4,
             carHeader: "life and family",
             alt1: "Group coding with the HFP team",
             alt2: "Code from the front and back end of Triton",
@@ -147,59 +144,38 @@ class Home extends React.Component {
                         <Route path="/">
                             {/* This container holds the header and main image */}
                             <Container fluid >
-                                <Row style={{ marginBottom: '700px', marginTop: '200px' }}>
-                                    <Col md={8}>
-                                   
-                                        <Carousel fade controls={false} pause='hover' indicators={false}>
-                                            <Carousel.Item interval={1000}>
-                                                <img
-                                                    style={{ borderRadius: '50px' }}
-                                                    className="d-block w-100"
-                                                    src={PersonalPic4}
-                                                    alt="First slide"
-                                                />
-                                                <Carousel.Caption>
-                                                    <h3>First slide label</h3>
-                                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                                </Carousel.Caption>
-                                            </Carousel.Item>
-                                            <Carousel.Item interval={1000}>
-                                                <img
-                                                style={{ borderRadius: '50px' }}
-                                                    className="d-block w-100"
-                                                    src={PersonalPic4}
-                                                    alt="Second slide"
-                                                />
-
-                                                <Carousel.Caption>
-                                                    <h3>Second slide label</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                </Carousel.Caption>
-                                            </Carousel.Item>
-                                            <Carousel.Item interval={1000}>
-                                                <img
-                                                style={{ borderRadius: '50px' }}
-                                                    className="d-block w-100"
-                                                    src={PersonalPic4}
-                                                    alt="Third slide"
-                                                />
-
-                                                <Carousel.Caption>
-                                                    <h3>Third slide label</h3>
-                                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                                </Carousel.Caption>
-                                            </Carousel.Item>
-                                        </Carousel>
-                                    
-                                        {/* <Image style={{ borderRadius: '50px' }} src={PersonalPic4} fluid></Image> */}
+                                <Row style={{ marginBottom: '50px', marginTop: '50px' }}>
+                                    <Col style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                        <Nav variant="tabs" defaultActiveKey="/home">
+                                            <Nav.Item>
+                                                <Nav.Link active={false} href="#AboutMe" style={{ color: 'white', fontFamily: 'InterMed' }}>About Me</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link active={false} href="#MyWork" style={{ color: 'white', fontFamily: 'InterMed' }}>My Work</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link active={false} href="#Contact" style={{ color: 'white', fontFamily: 'InterMed' }}>Contact</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link active={false} href={Resume} download="TrevorWResume2021" style={{ color: 'white', fontFamily: 'InterMed' }}>Resume</Nav.Link>
+                                            </Nav.Item>
+                                            <NavDropdown style={{ color: 'white', fontFamily: 'InterMed'}} title="Social Media" id="social-media-link-dropdown">
+                                                <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+                                                <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+                                                <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
+                                                <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
+                                            </NavDropdown>
+                                        </Nav>
                                     </Col>
-                                    <Col md={4} style={{ textAlign: 'left' }}>
-                                        <h1 style={{ margin: '20px', color: 'white', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '90px' }}>
+                                </Row>
+                                <Row style={{ marginBottom: '700px', marginTop: '100px', display: 'flex', justifyContent: 'center' }}>
+                                    <Col md={3} style={{ textAlign: 'left', marginRight: '100px' }}>
+                                        <h1 style={{ margin: '20px', color: 'white', fontWeight: 'lighter', fontFamily: 'InterBold', fontSize: '90px' }}>
                                             Trevor Womack:{' '}
-                                            <span style={{ color: 'White', fontWeight: 'lighter', fontFamily: 'Oswald', fontSize: '70px' }}>
+                                            <span style={{ color: 'White', fontWeight: 'lighter', fontFamily: 'InterReg', fontSize: '70px' }}>
                                                 {/* Style will be inherited from the parent element */}
                                                 <Typewriter
-                                                    words={['Web Developer', 'Designer', 'Chef', 'Cat Dad', 'Freelancer']}
+                                                    words={['Developer', 'Designer', 'Chef', 'Cat Dad', 'Freelancer', 'Hiker']}
                                                     loop={5}
                                                     cursor
                                                     cursorStyle='_'
@@ -211,50 +187,67 @@ class Home extends React.Component {
                                             </span>
                                         </h1>
                                     </Col>
-                                </Row>
-                                <Row className="center mt-5">
+                                    <Col md={7}>
+                                        <Carousel fade controls={false} pause='hover' indicators={false}>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic1}
+                                                    alt="Orientation for my HealthForce Partners internship"
+                                                />
 
-                                    {/* <Col lg={6} className="mt-5">
-                                        <Row>
-                                            <Col>
-                                                <p className="secondaryHeaderblk d-none d-md-block " id="main">I am a
-                                                    fullstack web developer with a passion for accessibility. I have received certification
-                                                    as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
-                                                    proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the
-                                                    15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
-                                                    further explore my passion for software development.
-                                                </p>
-                                                <p className="xsSecondaryHeaderblk d-block d-md-none">I am a
-                                                    fullstack web developer with a passion for accessibility. I have received certification
-                                                    as a software developer, after an intense 10 month program with over 1,000 hours of instructor led coursework, and am
-                                                    proficient in developing applications in multiple languages and technologies, of which you can see below. Out of 50 plus students, I was among the
-                                                    15 that finished the program and graduated. Throughout this course and since I have graduated, I have kept on learning and building projects to
-                                                    further explore my passion for software development.</p>
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col>
-                                                <p className="secondaryHeaderblk d-none d-md-block "> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating
-                                                    things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I
-                                                    could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
-                                                    continue to grow and learn each day.
-                                                </p>
-                                                <p className="xsSecondaryHeaderblk d-block d-md-none"> Before learning how to code, I was a cook working at a steakhouse in my home town. I have always had a passion for creating
-                                                    things and cooking for people, and my passion helped me to advance quickly in my field. After discovering CodeStack and how I
-                                                    could continue to pursue my passion of creating things through development, I was hooked. Today, I love what I do and I am excited to see
-                                                    continue to grow and learn each day.
-                                                </p>
-                                            </Col>
-                                        </Row>
-                                    </Col> */}
-                                </Row>
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic2}
+                                                    alt="A Glamour shot of some code"
+                                                />
 
-                                <Row >
-                                    <Col>
-                                        <p className="titleStyle4 text-center d-none d-lg-block">My Mission</p>
-                                        <p className="xsTitle text-center d-block d-lg-none">My Mission</p>
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic3}
+                                                    alt="A very classy picture I took of mushrooms growing on a downed tree along my favorite hiking trail"
+                                                />
+
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={PersonalPic4}
+                                                    alt="A picture of myself hiking in the redwood forest of Santa Cruz California"
+                                                />
+                                            </Carousel.Item>
+                                        </Carousel>
                                     </Col>
-
+                                </Row>
+                            </Container>
+                            <Container fluid id="AboutMe">
+                                <Row>
+                                    <Col>
+                                        <p>I am a fullstack web developer with a passion for accessibility.
+                                            I have received certification as a software developer, after an
+                                            intense 10 month program with over 1,000 hours of instructor led
+                                            coursework, and am proficient in developing applications in multiple
+                                            languages and technologies, of which you can see below. Out of 50 plus
+                                            students, I was among the 15 that finished the program and graduated.
+                                            Throughout this course and since I have graduated, I have kept on
+                                            learning and building projects to further explore my passion for
+                                            software development.
+                                            Before learning how to code, I was a cook working at a steakhouse
+                                            in my home town. I have always had a passion for creating things
+                                            and cooking for people, and my passion helped me to advance quickly
+                                            in my field. After discovering CodeStack and how I could continue to
+                                            pursue my passion of creating things through development, I was
+                                            hooked. Today, I love what I do and I am excited to see continue
+                                            to grow and learn each day.</p>
+                                    </Col>
                                 </Row>
                                 <Row className="mt-5 mb-5">
                                     <Col>
@@ -520,23 +513,6 @@ class Home extends React.Component {
     }
 }
 
-const Example = () => {
-    const ref = React.useRef(null);
-    const {style, ...mouseHandlers} = use3dEffect(ref);
-  
-    return (
-      <animated.div
-        ref={ref}
-        style={{
-          background: '#61dafb', color: 'white', padding: '2em',
-          ...style
-        }}
-        {...mouseHandlers}
-      >
-        Hover over me!
-      </animated.div>
-    );
-  };
 
 export default Home;
 

@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     min-height: 100vh;
-    background: linear-gradient(65deg,#56e8e6,#2781d0,#bd930c);
-  background-size: 180% 180%;
-  animation: gradient-animation 24s ease infinite;
+    background: linear-gradient(191deg,#18181d,#37373a);
+    background-size: 120% 120%;
+    animation: gradient-animation 8s ease infinite;
 }
+
 @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;
@@ -19,161 +21,20 @@ body{
     100% {
       background-position: 0% 50%;
     }
-  }
-
-
-
-.trevorWomackTitle{
-    font-size: 60px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
-.headingOneSmall{
-    font-size: 40px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
-.headingTwo{
-    font-size: 20px;
-    color: #ffffff;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.secondaryHeader1{
-    font-size: 40px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+@font-face {
+    font-family: 'InterReg';
+    src: local('InterReg'), url(../../fonts/Inter-Regular.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype','embedded-opentype', and 'svg' */
 }
-
-.center{
-    display: flex;
-    justify-content: center;
+@font-face {
+    font-family: 'InterBold';
+    src: local('InterBold'), url(../../fonts/Inter-Bold.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype','embedded-opentype', and 'svg' */
 }
-.marginTop{
-    margin-top: 30px;
-}
-.iconSpacing{
-    margin-top: 15px;
-}
-.iconBottomMargin{
-    margin-bottom: 10px;
-}
-.marginBottom{
-    margin-bottom: 30px;
-}
-.right{
-    display: flex;
-    justify-content:flex-end
-}
-.noPadding{
-    padding: 0px;
-    margin: 0px;
-}
-
-.aboutMeText{
-    color: white;
-    font-size: 30px;
-    font-family: 'Oswald', sans-serif;
-    margin-left: 15px;
-}
-
-.protoBtnStyle{
-    background-color: #203242;
-    font-size: 25px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    transition: transform .2s;
-}
-
-.secondaryHeader{
-    font-size: 28px;
-    color: #ffffff;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.secondaryHeaderblk{
-    font-size: 28px;
-    color: #000000;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.xsSecondaryHeader{
-    font-size: 18px;
-    color: #ffffff;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.xsSecondaryHeaderblk{
-    font-size: 18px;
-    color: #000000;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.xsTitle{
-    font-size: 40px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
-.xsSecondaryTitle{
-    font-size: 20px;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-}
-.cardTextStyle{
-    font-size: 20px;
-    color: #000000;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.cardheadStyle{
-    font-size: 25px;
-    text-align: center;
-    color: #000000;
-    font-family: 'Oswald', sans-serif;
-}
-.buttonBG{
-    background-color: #28365A;
-    border: none;
-    border-radius: 15px;
-}
-.buttonBG :hover{
-    background-color: #28365A;
-    border: none;
-    border-radius: 15px;
-}
-.buttonBG :active{
-    background-color: #28365A;
-    border: none;
-    border-radius: 15px;
-}
-.left{
-    display: flex;
-    justify-content: flex-start;
-}
-.tabsBG{
-    background-color: white;
-    border-radius: 10px;
-}
-.tabsFont{
-    background-color: #000000;
-    font-size: 25px;
-    color: #ffffff;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.Home{
-    background-color: #203242;
-    font-size: 20px;
-    color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    border: none;
-    width: 200px;
-    border-radius: 5px;
-}
-.height{
-    height: 450px;
-}
-.marginLeft{
-    margin-left: 20px;
-}
-
-.displayTxt{
-    color: white;
+@font-face {
+    font-family: 'InterMed';
+    src: local('InterMed'), url(../../fonts/Inter-Medium.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype','embedded-opentype', and 'svg' */
 }
