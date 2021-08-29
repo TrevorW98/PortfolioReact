@@ -41,7 +41,7 @@ import Native from '../../assets/Native.png'
 import FileZilla from '../../assets/filezfixed.png'
 import Postman from '../../assets/postman.svg'
 import Tilt from 'react-parallax-tilt';
-import ReactCardFlip from 'react-card-flip';
+import Triton from '../../assets/TritonCenter.jpg';
 
 
 class Home extends React.Component {
@@ -55,14 +55,8 @@ class Home extends React.Component {
             operator: "",
             clear: false,
             displayResult: false,
-            nextCalc: false,
-            isFlipped: false
+            nextCalc: false
         };
-        this.handleClick = this.handleClick.bind(this);
-    }
-    handleClick(e) {
-        e.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
 
     incrementNum = (addTo) => {
@@ -116,15 +110,6 @@ class Home extends React.Component {
     }
 
     render() {
-        // const TriviaLink = () => {
-        //     window.open("http://animaltrivia.azurewebsites.net", '_blank');
-        // }
-        // const HFPLink = () => {
-        //     window.open("https://info0886684.wixsite.com/healthforcepartners", '_blank');
-        // }
-        // const WeatherLink = () => {
-        //     window.open("http://weatherapplicationjs.azurewebsites.net", '_blank');
-        // }
         return (
             <>
                 <Router>
@@ -419,90 +404,36 @@ class Home extends React.Component {
                             <Container fluid style={{ marginBottom: '300px' }}>
                                 <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end' }}>
                                     <Col md={4} style={{ marginLeft: '140px' }}>
-                                        <h2 style={{ color: 'white', fontWeight: 'lighter', fontFamily: 'InterBold', fontSize: '90px' }}>Projects and Work</h2>
+                                        <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '90px' }}>Projects and Work</h2>
                                     </Col>
                                 </Row>
-                                <Row style={{display: 'flex', justifyContent: 'space-evenly'}}>
-                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
-                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
-                                            <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
-                                                <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
-                                                    <Card.Text>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                                    </Card.Text>
-                                                    <Button onClick={this.handleClick}>Flip Card</Button>
-                                                </Card.Body>
-                                            </Card> 
-
-                                             <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
-                                                <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
-                                                    <Card.Text>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                                    </Card.Text>
-                                                    <button onClick={this.handleClick}>Flip Card</button>
-                                                </Card.Body>
-                                            </Card>
-                                        </ReactCardFlip>
+                                <Row style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                                    <Col md={5} style={{ display: 'flex', justifyContent: 'center' }}>
+                                        <Card style={{ width: '35rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d' }}>
+                                            <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={Triton} />
+                                            <Card.Body>
+                                                <Card.Title>Triton</Card.Title>
+                                                <Card.Text>
+                                                    A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-focused features.
+                                                </Card.Text>
+                                                <Button variant="primary">Go somewhere</Button>
+                                            </Card.Body>
+                                        </Card>
                                     </Col>
-                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
-                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
-                                            <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                    <Col md={5} style={{ display: 'flex', justifyContent: 'center' }}>
+                                        <Tilt tiltReverse={true}>
+                                            <Card style={{ width: '35rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d' }}>
+                                                <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={Triton} />
                                                 <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Title></Card.Title>
                                                     <Card.Text>
                                                         Some quick example text to build on the card title and make up the bulk of
                                                         the card's content.
                                                     </Card.Text>
-                                                    <Button onClick={this.handleClick}>Flip Card</Button>
-                                                </Card.Body>
-                                            </Card> 
-
-                                             <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
-                                                <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
-                                                    <Card.Text>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                                    </Card.Text>
-                                                    <button onClick={this.handleClick}>Flip Card</button>
+                                                    <Button variant="primary">Go somewhere</Button>
                                                 </Card.Body>
                                             </Card>
-                                        </ReactCardFlip>
-                                    </Col>
-                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
-                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
-                                            <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
-                                                <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
-                                                    <Card.Text>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                                    </Card.Text>
-                                                    <Button onClick={this.handleClick}>Flip Card</Button>
-                                                </Card.Body>
-                                            </Card> 
-
-                                             <Card style={{ width: '18rem' }}>
-                                                <Card.Img variant="top" src="holder.js/100px180" />
-                                                <Card.Body>
-                                                    <Card.Title>Card Title</Card.Title>
-                                                    <Card.Text>
-                                                        Some quick example text to build on the card title and make up the bulk of
-                                                        the card's content.
-                                                    </Card.Text>
-                                                    <button onClick={this.handleClick}>Flip Card</button>
-                                                </Card.Body>
-                                            </Card>
-                                        </ReactCardFlip>
+                                        </Tilt>
                                     </Col>
                                 </Row>
                             </Container>
