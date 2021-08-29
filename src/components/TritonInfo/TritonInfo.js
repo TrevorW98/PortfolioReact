@@ -8,7 +8,6 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import TritonDev1 from '../../assets/dev2fixed.png'
 import TritonDev2 from '../../assets/tritonprotofixed.png'
 import TritonDev3 from '../../assets/tritonprotofixed.png'
 import TritonDev4 from '../../assets/tritonprotofixed.png'

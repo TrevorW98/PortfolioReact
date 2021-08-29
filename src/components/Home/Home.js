@@ -4,10 +4,13 @@ import './HomeStyles.css';
 import { Col, Container, Row, Carousel, Nav, Image } from 'react-bootstrap';
 import { Typewriter } from 'react-simple-typewriter'
 import CalculationButtons from '../Calculations/calc.js';
-import PersonalPic1 from '../../assets/Orientation.png';
-import PersonalPic2 from '../../assets/Hero.jpg';
-import PersonalPic3 from '../../assets/ProPhotoGrapher.jpg';
-import PersonalPic4 from '../../assets/stompfixed.png';
+import Orientation from '../../assets/Orientation.jpg';
+import Hero from '../../assets/Hero.jpg';
+import Coast from '../../assets/Coast.jpg';
+import Fosters from '../../assets/Fosters.jpg';
+import Navi from '../../assets/Navi.jpg';
+import Race from '../../assets/Race.jpg';
+import Stomp from '../../assets/Stomp.jpg';
 import ContactUs from '../ContactForm/ContactForm.js';
 import Resume from '../../assets/TrevorWomackResumeAXD2021.pdf'
 import Headshot from '../../assets/tw.jpg';
@@ -192,8 +195,8 @@ class Home extends React.Component {
                                                 <img
                                                     style={{ borderRadius: '50px' }}
                                                     className="d-block w-100"
-                                                    src={PersonalPic1}
-                                                    alt="Orientation for my HealthForce Partners internship"
+                                                    src={Orientation}
+                                                    alt="Orientation for the HealthForce Partners internship"
                                                 />
 
                                             </Carousel.Item>
@@ -201,8 +204,8 @@ class Home extends React.Component {
                                                 <img
                                                     style={{ borderRadius: '50px' }}
                                                     className="d-block w-100"
-                                                    src={PersonalPic2}
-                                                    alt="A Glamour shot of some code"
+                                                    src={Hero}
+                                                    alt="Code from the website: Unsplash"
                                                 />
 
                                             </Carousel.Item>
@@ -210,8 +213,8 @@ class Home extends React.Component {
                                                 <img
                                                     style={{ borderRadius: '50px' }}
                                                     className="d-block w-100"
-                                                    src={PersonalPic3}
-                                                    alt="Mushrooms growing on a downed tree along my favorite hiking trail"
+                                                    src={Coast}
+                                                    alt="Point Reyes National Seashore Hike"
                                                 />
 
                                             </Carousel.Item>
@@ -219,8 +222,32 @@ class Home extends React.Component {
                                                 <img
                                                     style={{ borderRadius: '50px' }}
                                                     className="d-block w-100"
-                                                    src={PersonalPic4}
+                                                    src={Fosters}
+                                                    alt="My two beautiful foster kittens, Sophia and Ava"
+                                                />
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={Stomp}
                                                     alt="Hiking in the redwood forest of Santa Cruz California"
+                                                />
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={Race}
+                                                    alt="Large bicycle gathering with many people filling a street in Portland Oregon"
+                                                />
+                                            </Carousel.Item>
+                                            <Carousel.Item interval={2000}>
+                                                <img
+                                                    style={{ borderRadius: '50px' }}
+                                                    className="d-block w-100"
+                                                    src={Navi}
+                                                    alt="One of two Adult permanent pet cats. They will not be adopted out"
                                                 />
                                             </Carousel.Item>
                                         </Carousel>
