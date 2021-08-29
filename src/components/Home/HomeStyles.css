@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
     min-height: 100vh;
-    background: linear-gradient(191deg,#18181d,#37373a);
+    background: linear-gradient(200deg,#18181d,#5e5e61, #5e5e62);
     background-size: 120% 120%;
     animation: gradient-animation 8s ease infinite;
 }
@@ -37,4 +39,19 @@ body{
     font-family: 'InterMed';
     src: local('InterMed'), url(../../fonts/Inter-Medium.ttf) format('truetype');
     /* other formats include: 'woff2', 'truetype, 'opentype','embedded-opentype', and 'svg' */
+}
+#social-Media::after{
+  display: none; 
+}
+.grow{
+  transition: all .2s ease-in-out;
+}
+.grow:hover{
+  transform: scale(1.1);
+}
+.growLarger{
+  transition: all .2s ease-in-out;
+}
+.growLarger:hover{
+  transform: scale(1.3);
 }
