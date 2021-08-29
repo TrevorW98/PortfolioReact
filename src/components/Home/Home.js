@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomeStyles.css';
-import { Col, Container, Row, Carousel, Nav, Image } from 'react-bootstrap';
+import { Col, Container, Row, Carousel, Nav, Image, Card, Button } from 'react-bootstrap';
 import { Typewriter } from 'react-simple-typewriter'
 import CalculationButtons from '../Calculations/calc.js';
 import Orientation from '../../assets/Orientation.jpg';
@@ -29,7 +29,7 @@ import JS from '../../assets/JS.png';
 import TS from '../../assets/tsfixed.png';
 import IONIC from '../../assets/ionicLogofixed.png';
 import REACT from '../../assets/REACT.png';
-import ANGULAR from '../../assets/ANGULAR.png';
+import ANGULAR from '../../assets/angular.png';
 import BOOT from '../../assets/BOOT.png';
 import UNITY from '../../assets/UNITY.png';
 import JIRA from '../../assets/JIRA.png'
@@ -40,6 +40,8 @@ import Notion from '../../assets/Notionfixed.png'
 import Native from '../../assets/Native.png'
 import FileZilla from '../../assets/filezfixed.png'
 import Postman from '../../assets/postman.svg'
+import Tilt from 'react-parallax-tilt';
+import ReactCardFlip from 'react-card-flip';
 
 
 class Home extends React.Component {
@@ -53,9 +55,16 @@ class Home extends React.Component {
             operator: "",
             clear: false,
             displayResult: false,
-            nextCalc: false
-        }
+            nextCalc: false,
+            isFlipped: false
+        };
+        this.handleClick = this.handleClick.bind(this);
     }
+    handleClick(e) {
+        e.preventDefault();
+        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    }
+
     incrementNum = (addTo) => {
         if (this.state.displayResult !== true) {
             this.setState({ firstInput: this.state.firstInput + addTo })
@@ -182,15 +191,15 @@ class Home extends React.Component {
                                         </h1>
                                     </Col>
                                     <Col md={7}>
-                                        <Image src={Headshot} style={{ borderRadius: '50px', boxShadow: '10px 10px 10px' }}></Image>
+                                        <Image src={Headshot} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }}></Image>
                                     </Col>
                                 </Row>
                                 <div id="AboutMe"></div>
                             </Container>
-                            <Container fluid style={{ marginBottom: '250px' }}>
+                            <Container fluid style={{ marginBottom: '300px' }}>
                                 <Row style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Col md={7} style={{ marginRight: '50px' }}>
-                                        <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '10px 10px 10px' }} >
+                                        <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                             <Carousel.Item interval={2000}>
                                                 <img
                                                     style={{ borderRadius: '50px' }}
@@ -255,10 +264,10 @@ class Home extends React.Component {
                                     <Col md={3}>
                                         <h2 id="main" style={{ color: 'white', fontWeight: 'lighter', fontFamily: 'InterBold', fontSize: '90px', marginBottom: '40px' }}>About Me</h2>
                                         <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18' }}>
-                                            <span style={{ marginLeft: '25px' }}>I</span> am a <a rel="noreferrer" href="https://www.instagram.com/stocktonca/?hl=en" target='_blank' aria-label="Link to Stockton California instagram" style={{ color: 'yellow' }}>Stockton, California</a> based software engineer and freelance
+                                            <span style={{ marginLeft: '25px' }}>I</span> am a <a rel="noreferrer" href="https://www.instagram.com/stocktonca/?hl=en" target='_blank' aria-label="Link to Stockton California instagram" style={{ color: 'Cyan' }}>Stockton, California</a> based software engineer and freelance
                                             web developer. Having recently graduated from CodeStack Academy and recieveing my certification in software
                                             engineering, I have since been honing my coding skills, releasing updates to my full-stack mobile application,
-                                            Triton, and learning new languages and frameworks by building out projects.</p>
+                                            <a aria-label="Link to Triton's listing on the Google Play Store" rel="noreferrer" target="_blank" href="http://play.google.com/store/apps/details?id=io.ionic.TritonFull" style={{ color: 'Cyan' }}>Triton</a>, and learning new languages and frameworks by building out projects.</p>
                                         <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18' }}><span style={{ marginLeft: '25px' }}>My</span> mission is to increase the accessibility of current
                                             and future websites, making the internet a place for all to enjoy. Everyone deserves to have access to the extensive opportunities
                                             and resources that the internet provides in this modern age. Color contrast, screen reader capabilities, alternate tags, and
@@ -267,149 +276,237 @@ class Home extends React.Component {
                                 </Row>
                                 <div id="Skills"></div>
                             </Container>
-                            <Container fluid>
+                            <Container fluid style={{ marginBottom: '300px' }}>
                                 <Row style={{ marginBottom: '40px' }}>
                                     <Col md={4} style={{ marginLeft: '140px' }}>
                                         <h2 style={{ color: 'white', fontWeight: 'lighter', fontFamily: 'InterBold', fontSize: '90px' }}>Skills and Services</h2>
-                                        <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18' }}>Select a badge to view official documentation</p>
+                                        <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18', marginLeft: '8px' }}>Select a badge to view official documentation</p>
                                     </Col>
                                 </Row>
                                 <Row style={{ marginTop: '100px', display: 'flex', justifyContent: 'space-evenly' }}>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><Image className="growLarger" style={{ width: '100px' }} src={HTML} alt="The HTML 5 logo"></Image></a>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                                                <Image className="growLarger" style={{ width: '120px' }} src={HTML} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                            <Image className="growLarger" style={{ width: '100px' }} src={CSS} alt="The HTML 5 logo"></Image>
-                                        </a>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={CSS} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={JS} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={JS} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={TS} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={TS} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={IONIC} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={IONIC} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                 </Row>
                                 <Row style={{ marginTop: '100px', display: 'flex', justifyContent: 'space-evenly' }}>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '110px' }} src={REACT} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '110px' }} src={REACT} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '120px' }} src={ANGULAR} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '120px' }} src={ANGULAR} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '90px', height: '90px', marginTop: '20px' }} src={BOOT} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '90px', height: '90px', marginTop: '20px' }} src={BOOT} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '290px' }} src={UNITY} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '290px' }} src={UNITY} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={JIRA} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={JIRA} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={VSCode} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={VSCode} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                 </Row>
                                 <Row style={{ marginTop: '100px', display: 'flex', justifyContent: 'space-evenly' }}>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={Github} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={Github} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={Slack} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={Slack} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={Notion} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={Notion} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={FileZilla} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={FileZilla} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                     <Col md={1} style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <Image className="growLarger" style={{ width: '100px' }} src={Postman} alt="The HTML 5 logo"></Image>
+                                        <Tilt tiltReverse={true}>
+                                            <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                                <Image className="growLarger" style={{ width: '100px' }} src={Postman} alt="The HTML 5 logo"></Image>
+                                            </a>
+                                        </Tilt>
                                     </Col>
                                 </Row>
-
-
-                                {/* <Row className="mt-5">
-                                    <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
-                                            <Card.Img variant="top" src={TritonLogo} alt="The logo for Triton" />
-                                            <Card.Body>
-                                                <Card.Title className="cardheadStyle">Triton</Card.Title>
-                                            </Card.Body>
-                                            <Card.Text className="cardTextStyle text-center">Angular, Ionic, Bootstrap, Android SDK, C#</Card.Text>
-                                            <Link to="/Triton" className="center mb-2">
-                                                <button className="Home" variant="primary">Learn about Triton</button>
-                                            </Link>
-                                        </Card>
-                                    </Col>
-                                    <Col xs={12} sm={12} md={4} lg={4} className="center mt-4">
-                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height" >
-                                            <Card.Img variant="top" src={HFPLogo} alt="The logo for Health Force Partners" />
-                                            <Card.Body>
-                                                <Card.Title className="cardheadStyle">HealthForce Partners</Card.Title>
-
-                                            </Card.Body>
-                                            <Card.Text className="cardTextStyle text-center">Wix Website Builder</Card.Text>
-                                            <div className="center mb-2">
-                                                <button variant="primary" className="Home" onClick={HFPLink}>Visit the website</button>
-                                            </div>
-                                        </Card>
-                                    </Col>
-                                    <Col xs={12} sm={12} md={4} lg={4} className="center mt-4" >
-                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
-                                            <Card.Img variant="top" src={ATLogo} alt="The letters 'A' and 'T' to represent the animal trivia application" />
-                                            <Card.Body>
-                                                <Card.Title className="cardheadStyle">Animal Trivia</Card.Title>
-
-                                            </Card.Body>
-                                            <Card.Text className="cardTextStyle text-center">React, Bootstrap, JSX, CSS</Card.Text>
-                                            <div className="center mb-2">
-                                                <button variant="primary" className="Home" onClick={TriviaLink}>Play Animal Trivia</button>
-                                            </div>
-                                        </Card>
+                            </Container>
+                            <Container fluid style={{ marginBottom: '300px' }}>
+                                <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end' }}>
+                                    <Col md={4} style={{ marginLeft: '140px' }}>
+                                        <h2 style={{ color: 'white', fontWeight: 'lighter', fontFamily: 'InterBold', fontSize: '90px' }}>Projects and Work</h2>
                                     </Col>
                                 </Row>
-                                <Row className="marginTop mt-2">
-                                    <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
-                                            <Card.Img variant="top" src={ReactLogo} alt="A picture of the logo for the React library" />
-                                            <Card.Body>
-                                                <Card.Title className="cardheadStyle">Calculator</Card.Title>
+                                <Row style={{display: 'flex', justifyContent: 'space-evenly'}}>
+                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
+                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
+                                            <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <Button onClick={this.handleClick}>Flip Card</Button>
+                                                </Card.Body>
+                                            </Card> 
 
-                                            </Card.Body>
-                                            <Card.Text className="cardTextStyle text-center">React, CSS, Bootstrap</Card.Text>
-                                            <Link to="/Calculator" className="center mb-2">
-                                                <button className="Home" variant="primary"> Use the Calculator</button>
-                                            </Link>
-                                        </Card>
+                                             <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <button onClick={this.handleClick}>Flip Card</button>
+                                                </Card.Body>
+                                            </Card>
+                                        </ReactCardFlip>
                                     </Col>
-                                    <Col xs={12} sm={12} md={6} lg={6} className="center mt-4">
-                                        <Card style={{ width: '18rem', borderStyle: 'none' }} className="height">
-                                            <Card.Img variant="top" src={WeatherLogo} alt="A picture of a sun and a cloud to represent the weather application" />
-                                            <Card.Body>
-                                                <Card.Title className="cardheadStyle">Weather Application</Card.Title>
+                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
+                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
+                                            <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <Button onClick={this.handleClick}>Flip Card</Button>
+                                                </Card.Body>
+                                            </Card> 
 
-                                            </Card.Body>
-                                            <Card.Text className="cardTextStyle text-center">Javascript, HTML, CSS</Card.Text>
-                                            <div className="center mb-2">
-                                                <button className="Home" onClick={WeatherLink} variant="primary">Check the weather</button>
-                                            </div>
-                                        </Card>
+                                             <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <button onClick={this.handleClick}>Flip Card</button>
+                                                </Card.Body>
+                                            </Card>
+                                        </ReactCardFlip>
                                     </Col>
-                                </Row> */}
+                                    <Col md={3} style={{display: 'flex', justifyContent: 'center'}}>
+                                        <ReactCardFlip isFlipped={this.state.isFlipped}>
+                                            <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <Button onClick={this.handleClick}>Flip Card</Button>
+                                                </Card.Body>
+                                            </Card> 
 
-                                {/*  */}
-
-
+                                             <Card style={{ width: '18rem' }}>
+                                                <Card.Img variant="top" src="holder.js/100px180" />
+                                                <Card.Body>
+                                                    <Card.Title>Card Title</Card.Title>
+                                                    <Card.Text>
+                                                        Some quick example text to build on the card title and make up the bulk of
+                                                        the card's content.
+                                                    </Card.Text>
+                                                    <button onClick={this.handleClick}>Flip Card</button>
+                                                </Card.Body>
+                                            </Card>
+                                        </ReactCardFlip>
+                                    </Col>
+                                </Row>
+                            </Container>
+                            <Container fluid >
                                 <Row id="Contact" className="whiteBG mt-5">
                                     <Col>
                                         <p className="titleStyle3 text-center d-none d-lg-block">Contact Me</p>
@@ -432,5 +529,6 @@ class Home extends React.Component {
 
 
 export default Home;
+
 
 /* <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */

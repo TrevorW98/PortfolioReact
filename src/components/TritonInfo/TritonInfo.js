@@ -76,7 +76,7 @@ class TritonInfo extends React.Component {
                                             <Carousel.Item>
                                                 <Image
                                                     className="d-block w-100 carouselBG"
-                                                    src={TritonDev1}
+                                                    src=""
                                                     alt="First slide"
                                                 />
                                             </Carousel.Item>
