@@ -12,7 +12,6 @@ import Race from '../../assets/Race.jpg';
 import Stomp from '../../assets/Stomp.jpg';
 import ContactUs from '../ContactForm/ContactForm.js';
 import Resume from '../../assets/TrevorWomackResumeAXD2021.pdf'
-import Headshotlg from '../../assets/TW688.jpg';
 import Headshotsm from '../../assets/TW422.jpg';
 import Headshotxs from '../../assets/TW122.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -54,7 +53,6 @@ class Home extends React.Component {
     }
     componentDidMount() {
         let tritonCard = document.getElementById('tritonCard');
-        let hfpCard = document.getElementById('hfpCard');
         tritonCard.addEventListener('click', () => {
             if (!this.state.tritonDetails) {
                 this.setState({ tritonDetails: true });
@@ -62,9 +60,6 @@ class Home extends React.Component {
                 this.setState({ tritonDetails: false });
             }
         });
-        hfpCard.addEventListener('click', () => {
-            this.setState({ tritonDetails: false });
-        })
 
     }
     tritonDeets = () => {
