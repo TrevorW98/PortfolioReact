@@ -22,25 +22,25 @@ export default function ContactUs() {
             <Form onSubmit={sendEmail}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridName">
-                        <Form.Control type="text" name="name" placeholder="Name" />
+                        <Form.Control style={{fontFamily: 'InterReg'}} type="text" name="name" placeholder="Name" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Control type="email" name="email" placeholder="Email" />
+                        <Form.Control style={{fontFamily: 'InterReg'}} type="email" name="email" placeholder="Email" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridSubject">
-                        <Form.Control type="text" name="subject" placeholder="Subject" />
+                        <Form.Control style={{fontFamily: 'InterReg'}} type="text" name="subject" placeholder="Subject" />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridMessage">
-                        <Form.Control as="textarea" type="text" placeholder="Message" name="message" />
+                        <Form.Control style={{fontFamily: 'InterReg'}} as="textarea" type="text" placeholder="Message" name="message" />
                     </Form.Group>
                 </Form.Row>
-                <Button className="Home" variant="primary" type="submit" value="Send">
+                <Button style={{fontFamily: 'InterMed', backgroundColor: '#18181d'}} className="Home" variant="primary" type="submit" value="Send">
                     Submit
                 </Button>
             </Form>
