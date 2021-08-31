@@ -212,7 +212,7 @@ class Home extends React.Component {
                 </Container>
                 <Container fluid style={{ marginBottom: '40px' }}>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-md-block" style={{marginTop: '50px'}} md={6} >
+                        <Col className="d-none d-md-block" style={{marginTop: '180px'}} md={6} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -278,7 +278,7 @@ class Home extends React.Component {
                         <Col md={5} >
                             <Row>
                                 <Col id="main">
-                                    <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginBottom: '40px', marginTop: '140px', textAlign: 'center' }}>About Me</h2>
+                                    <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '140px', textAlign: 'center' }}>About Me</h2>
                                     <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginBottom: '40px', marginTop: '40px' }}>About Me</h2>
                                 </Col>
                             </Row>
