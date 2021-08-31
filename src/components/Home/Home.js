@@ -340,29 +340,29 @@ class Home extends React.Component {
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                                <a rel="noreferrer" href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The C Sharp Logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={JS} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={JS} alt="The Javascript logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={TS} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://www.typescriptlang.org/docs/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={TS} alt="The TypeScript Logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={IONIC} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://ionicframework.com/docs" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={IONIC} alt="The Ionic logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
@@ -370,43 +370,43 @@ class Home extends React.Component {
                     <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={REACT} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://reactjs.org/docs/getting-started.html" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={REACT} alt="The React logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '8px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '110px' }} src={ANGULAR} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://angular.io/docs" target="_blank">
+                                    <Image className="growLarger" style={{ width: '110px' }} src={ANGULAR} alt="The Angular logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '90px', height: '90px', marginTop: '20px' }} src={BOOT} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://getbootstrap.com/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '90px', height: '90px', marginTop: '20px' }} src={BOOT} alt="The Bootstrap logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '140px' }} src={UNITY} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://docs.unity3d.com/Manual/index.html" target="_blank">
+                                    <Image className="growLarger" style={{ width: '140px' }} src={UNITY} alt="The Unity logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={JIRA} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://confluence.atlassian.com/jira" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={JIRA} alt="The Jira logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={VSCode} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://code.visualstudio.com/docs" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={VSCode} alt="The VS Code logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
@@ -414,43 +414,43 @@ class Home extends React.Component {
                     <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true} style={{ backgroundColor: 'white', borderRadius: '50px', height: '95px' }}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '96px' }} src={Github} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://docs.github.com/en" target="_blank">
+                                    <Image className="growLarger" style={{ width: '96px' }} src={Github} alt="The GitHub logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={Slack} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://slack.com/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={Slack} alt="The Slack logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={Notion} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://www.notion.so/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={Notion} alt="The Notion logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://reactnative.dev/docs/getting-started" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The React Native logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={FileZilla} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://filezilla-project.org/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={FileZilla} alt="The FileZilla logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
-                                <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={Postman} alt="The HTML 5 logo"></Image>
+                                <a rel="noreferrer" href="https://www.postman.com/" target="_blank">
+                                    <Image className="growLarger" style={{ width: '100px' }} src={Postman} alt="The Post Man logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
