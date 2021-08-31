@@ -95,8 +95,8 @@ class Home extends React.Component {
         return (
             <>
                 {/* This container holds the header and main image */}
-                <Container id="Home" fluid style={{ marginBottom: '200px' }} >
-                    <Row style={{ marginBottom: '50px', display: 'flex', justifyContent: 'flex-end' }}>
+                <Container id="Home" fluid  >
+                    <Row style={{ marginBottom: '50px', display: 'flex', justifyContent: 'flex-end'}}>
                         <Col style={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <Navbar collapseOnSelect expand="lg" style={{ position: 'fixed', zIndex: '2', backgroundColor: "#18181d", borderRadius: "10px", border: "none", boxShadow: '2px 2px 15px' }}>
                                 <Container>
@@ -146,7 +146,7 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ marginTop: '80px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginTop: '100px', padding: '20px' }}>
+                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginTop: '100px'}}>
                             <Row>
                                 <Col style={{ display: 'flex', justifyContent: 'center' }}>
                                     <h1 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>
@@ -198,18 +198,21 @@ class Home extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginBottom: '200px' }}>
                             <Image src={Headshotsm} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
-                        <Col className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px', marginLeft: '40px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
+
+                    </Row>
+                    <Row style={{  display: 'flex', justifyContent: 'center' }}>
+                        <Col xs={10} className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
                     </Row>
                     <div id="AboutMe"></div>
                 </Container>
-                <Container fluid style={{ marginBottom: '200px' }}>
+                <Container fluid style={{ marginBottom: '40px' }}>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col md={6} >
+                        <Col className="d-none d-md-block" style={{marginTop: '50px'}} md={6} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -280,7 +283,7 @@ class Home extends React.Component {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="d-none d-lg-block">
+                                <Col className="d-none d-lg-block" style={{ marginBottom: '160px' }}>
                                     <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>
                                         <span style={{ marginLeft: '25px' }}>I</span> am a <a rel="noreferrer" href="https://www.instagram.com/stocktonca/?hl=en" target='_blank' aria-label="Link to Stockton California instagram" style={{ color: 'Cyan' }}>Stockton, California</a> based software engineer and freelance
                                         web developer. Having recently graduated from CodeStack Academy and receiving my certification in software
@@ -307,7 +310,7 @@ class Home extends React.Component {
                     </Row>
                     <div id="Skills"></div>
                 </Container>
-                <Container fluid style={{ marginBottom: '200px' }}>
+                <Container fluid >
                     <Row className="d-none d-lg-block" style={{ marginBottom: '20px' }}>
                         <Col md={4} style={{ marginLeft: '100px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Skills and Services</h2>
@@ -321,42 +324,42 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                                    <Image className="growLarger" style={{ width: '120px' }} src={HTML} alt="The HTML 5 logo"></Image>
+                                    <Image className="growLarger" style={{ width: '100px' }} src={HTML} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={CSS} alt="The HTML 5 logo"></Image>
+                                    <Image className="growLarger" style={{ width: '100px' }} src={CSS} alt="The CSS Logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The HTML 5 logo"></Image>
+                                    <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The C Sharp Logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={JS} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={TS} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={IONIC} alt="The HTML 5 logo"></Image>
@@ -365,42 +368,42 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '110px' }} src={REACT} alt="The HTML 5 logo"></Image>
+                                    <Image className="growLarger" style={{ width: '100px' }} src={REACT} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '8px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                    <Image className="growLarger" style={{ width: '120px' }} src={ANGULAR} alt="The HTML 5 logo"></Image>
+                                    <Image className="growLarger" style={{ width: '110px' }} src={ANGULAR} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '90px', height: '90px', marginTop: '20px' }} src={BOOT} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                            <Tilt tiltReverse={true} style={{ borderRadius: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                            <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '140px' }} src={UNITY} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={JIRA} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px', height: '100px', marginTop: '5px' }} src={VSCode} alt="The HTML 5 logo"></Image>
@@ -409,42 +412,42 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true} style={{ backgroundColor: 'white', borderRadius: '50px', height: '95px' }}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '96px' }} src={Github} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={Slack} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={Notion} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={FileZilla} alt="The HTML 5 logo"></Image>
                                 </a>
                             </Tilt>
                         </Col>
-                        <Col xs={6} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                        <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                                     <Image className="growLarger" style={{ width: '100px' }} src={Postman} alt="The HTML 5 logo"></Image>
@@ -453,12 +456,12 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid style={{ marginBottom: '200px' }}>
-                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end' }}>
-                        <Col className="d-none d-lg-block" md={3} style={{ marginRight: '140px' }}>
+                <Container fluid >
+                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end'}}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginRight: '140px',  marginTop: '120px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Projects and Work</h2>
                         </Col>
-                        <Col className="d-block d-lg-none" md={3}>
+                        <Col className="d-block d-lg-none" md={3} style={{  marginTop: '60px' }} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Projects and Work</h2>
                         </Col>
                     </Row>
@@ -484,7 +487,7 @@ class Home extends React.Component {
                         </Col>
                         <Col className="d-none d-md-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
                             <a style={{ textDecoration: 'none', border: 'none' }} target="_blank" rel="noreferrer" href="http://play.google.com/store/apps/details?id=io.ionic.TritonFull">
-                                <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Tilt tiltReverse={true} tiltEnable={false} style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Card style={{ width: '20rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
                                         <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={Triton} alt="The logo for Triton, a paw print on a square, teal background" />
                                         <Card.Body>
@@ -506,7 +509,7 @@ class Home extends React.Component {
                         </Col>
                         <Col className="d-block d-md-none" style={{ display: 'flex', justifyContent: 'center' }}>
                             <a style={{ textDecoration: 'none', border: 'none' }} target="_blank" rel="noreferrer" href="http://play.google.com/store/apps/details?id=io.ionic.TritonFull">
-                                <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Tilt tiltEnable={false} tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Card style={{ width: '15rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
                                         <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={Triton} alt="The logo for Triton, a paw print on a square, teal background" />
                                         <Card.Body>
@@ -548,7 +551,7 @@ class Home extends React.Component {
                         </Col>
                         <Col className="d-none d-md-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
                             <a href="https://www.healthforcepartners.net/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Tilt tiltEnable={false} tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Card style={{ width: '20rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
                                         <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={HFP} alt="The logo for HealthForce Partners, and also a link to their website." />
                                         <Card.Body>
@@ -566,9 +569,9 @@ class Home extends React.Component {
                                 </Tilt>
                             </a>
                         </Col>
-                        <Col className="d-block d-md-none" style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-block d-md-none" style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
                             <a href="https://www.healthforcepartners.net/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                <Tilt tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Tilt tiltEnable={false} tiltReverse={true} style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Card style={{ width: '15rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
                                         <Card.Img style={{ borderRadius: '12px 12px 0px 0px' }} variant="top" src={HFP} alt="The logo for HealthForce Partners, and also a link to their website." />
                                         <Card.Body>
@@ -593,12 +596,12 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid >
+                <Container fluid style={{marginBottom: '35px'}}>
                     <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-start' }}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginLeft: '200px' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginLeft: '200px', marginTop: '50px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Contact Me</h2>
                         </Col>
-                        <Col className="d-block d-lg-none" >
+                        <Col className="d-block d-lg-none" style={{marginTop: '50px'}} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px' }}>Contact Me</h2>
                         </Col>
                     </Row>
