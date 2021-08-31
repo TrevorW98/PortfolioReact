@@ -122,7 +122,7 @@ class Home extends React.Component {
                                                 <Nav.Link active={false} href="#Skills" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Skills</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#MyWork" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>My Work</Nav.Link>
+                                                <Nav.Link active={false} href="#myWork" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>My Work</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
                                                 <Nav.Link active={false} href="#Contact" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Contact</Nav.Link>
@@ -198,7 +198,7 @@ class Home extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginBottom: '200px' }}>
+                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginBottom: '200px', marginTop: '100px' }}>
                             <Image src={Headshotsm} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
 
@@ -278,7 +278,7 @@ class Home extends React.Component {
                         <Col md={5} >
                             <Row>
                                 <Col id="main">
-                                    <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginBottom: '40px', marginTop: '40px', textAlign: 'center' }}>About Me</h2>
+                                    <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginBottom: '40px', marginTop: '140px', textAlign: 'center' }}>About Me</h2>
                                     <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginBottom: '40px', marginTop: '40px' }}>About Me</h2>
                                 </Col>
                             </Row>
@@ -311,7 +311,7 @@ class Home extends React.Component {
                     <div id="Skills"></div>
                 </Container>
                 <Container fluid >
-                    <Row className="d-none d-lg-block" style={{ marginBottom: '20px' }}>
+                    <Row className="d-none d-lg-block" style={{ marginBottom: '20px', marginTop: '320px' }}>
                         <Col md={4} style={{ marginLeft: '100px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Skills and Services</h2>
                             <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>Select a badge to view official documentation</p>
@@ -455,10 +455,11 @@ class Home extends React.Component {
                             </Tilt>
                         </Col>
                     </Row>
+                    <div id="myWork"></div>
                 </Container>
                 <Container fluid >
                     <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end'}}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginRight: '140px',  marginTop: '120px' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginRight: '140px',  marginTop: '320px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Projects and Work</h2>
                         </Col>
                         <Col className="d-block d-lg-none" md={3} style={{  marginTop: '60px' }} >
@@ -476,10 +477,10 @@ class Home extends React.Component {
                                             A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-care focused features.
                                         </Card.Text>
                                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px', padding: '0px' }}>
-                                            <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
-                                            <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
-                                            <span class="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
-                                            <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
+                                            <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
+                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
+                                            <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
+                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -496,11 +497,11 @@ class Home extends React.Component {
                                                 A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-care focused features.
                                             </Card.Text>
                                             <div style={{ marginTop: '10px', padding: '0px' }}>
-                                                <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
-                                                <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
-                                                <span class="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Material UI</span>
-                                                <span class="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
-                                                <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
+                                                <span className="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Material UI</span>
+                                                <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -518,11 +519,11 @@ class Home extends React.Component {
                                                 A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-care focused features.
                                             </Card.Text>
                                             <div style={{ marginTop: '10px', padding: '0px' }}>
-                                                <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Angular 11</span>
-                                                <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '10px' }}>TypeScript</span>
-                                                <span class="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Material UI</span>
-                                                <span class="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '10px' }}>Android SDK</span>
-                                                <span class="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '10px' }}>SQL Server</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Angular 11</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '10px' }}>TypeScript</span>
+                                                <span className="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Material UI</span>
+                                                <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '10px' }}>Android SDK</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '10px' }}>SQL Server</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -597,8 +598,9 @@ class Home extends React.Component {
                     </Row>
                 </Container>
                 <Container fluid style={{marginBottom: '35px'}}>
+                    <div id="Contact"></div>
                     <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-start' }}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginLeft: '200px', marginTop: '50px' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginLeft: '200px', marginTop: '330px' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Contact Me</h2>
                         </Col>
                         <Col className="d-block d-lg-none" style={{marginTop: '50px'}} >
