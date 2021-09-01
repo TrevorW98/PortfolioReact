@@ -1,6 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import { Col, Form, Button } from 'react-bootstrap';
+import { Col, Form, Button, Card, Row } from 'react-bootstrap';
 import './contact.css';
 
 class ContactUs extends React.Component {
@@ -26,33 +26,41 @@ class ContactUs extends React.Component {
 
     formSection = () => {
         if (!this.state.submitted) {
-            return <Form onSubmit={this.sendEmail}>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="formGridName">
-                        <Form.Control required aria-label="nameInput" style={{ fontFamily: 'InterReg' }} type="text" name="name" placeholder="Name" />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Control required style={{ fontFamily: 'InterReg' }} type="email" name="email" placeholder="Email" />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="formGridSubject">
-                        <Form.Control required style={{ fontFamily: 'InterReg' }} type="text" name="subject" placeholder="Subject" />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="formGridMessage">
-                        <Form.Control required style={{ fontFamily: 'InterReg' }} as="textarea" type="text" placeholder="Message" name="message" />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row style={{display: 'flex', justifyContent: 'center'}}>
-                    <Button style={{ width: '100px', borderRadius: '5px', fontFamily: 'InterMed', backgroundColor: '#18181d' }} className="Home" variant="primary" type="submit" value="Send">
-                        Submit
-                    </Button>
-                </Form.Row>
-            </Form>
+            return <Row style={{display: 'flex', justifyContent: 'center'}}>
+                <Col style={{display: 'flex', justifyContent: 'center'}}>
+                    <Card style={{ width: '40rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
+                        <Card.Body>
+                            <Form onSubmit={this.sendEmail}>
+                                <Form.Row>
+                                    <Form.Group as={Col} controlId="formGridName">
+                                        <Form.Control required aria-label="nameInput" style={{ fontFamily: 'InterReg' }} type="text" name="name" placeholder="Name" />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group as={Col} controlId="formGridEmail">
+                                        <Form.Control required style={{ fontFamily: 'InterReg' }} type="email" name="email" placeholder="Email" />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group as={Col} controlId="formGridSubject">
+                                        <Form.Control required style={{ fontFamily: 'InterReg' }} type="text" name="subject" placeholder="Subject" />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group as={Col} controlId="formGridMessage">
+                                        <Form.Control required style={{ fontFamily: 'InterReg' }} as="textarea" type="text" placeholder="Message" name="message" />
+                                    </Form.Group>
+                                </Form.Row>
+                                <Form.Row style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Button style={{ width: '100px', borderRadius: '5px', fontFamily: 'InterMed', backgroundColor: '#18181d' }} className="Home" variant="primary" type="submit" value="Send">
+                                        Submit
+                                    </Button>
+                                </Form.Row>
+                            </Form>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
         }
         else {
             return <p style={{ fontSize: '30px', fontFamily: 'InterBold', textAlign: 'center', color: 'white' }}>Thank you for the submission!</p>

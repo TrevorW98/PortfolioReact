@@ -45,8 +45,8 @@ import Cert from '../../assets/Certificate.jpg'
 import SQL from '../../assets/SQLlogo.png'
 import XD from '../../assets/AdobeXD.png'
 import WINDOW from '../../assets/windows.png'
-
-
+import AZURE from '../../assets/azure.png'
+import NET from '../../assets/NET.png'
 
 
 class Home extends React.Component {
@@ -127,10 +127,10 @@ class Home extends React.Component {
                                     <Navbar.Collapse id="responsive-navbar-nav">
                                         <Nav variant="tabs" defaultActiveKey="/home">
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#Home" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Home</Nav.Link>
+                                                <Nav.Link active={false} href="#AboutMe" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>About Me</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#AboutMe" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>About Me</Nav.Link>
+                                                <Nav.Link active={false} href="#Education" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Education</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
                                                 <Nav.Link active={false} href="#Skills" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Skills</Nav.Link>
@@ -159,17 +159,17 @@ class Home extends React.Component {
                             </Navbar>
                         </Col>
                     </Row>
-                    <Row style={{ marginTop: '80px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginTop: '100px' }}>
-                            <Row>
-                                <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Row style={{ marginTop: '80px', display: 'flex', alignItems: 'center' }}>
+                        <Col className="d-none d-lg-block"  >
+                            <Row style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h1 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>
                                         Trevor Womack: {' '}
                                     </h1>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '60px', textAlign: 'center' }}>
                                         {/* Style will be inherited from the parent element */}
                                         <Typewriter
@@ -185,7 +185,6 @@ class Home extends React.Component {
                                     </span>
                                 </Col>
                             </Row>
-
                         </Col>
                         <Col className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
                             <Row>
@@ -212,21 +211,26 @@ class Home extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginBottom: '200px', marginTop: '100px' }}>
+                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <Image src={Headshotsm} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
-
                     </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
                         <Col xs={10} className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
                             <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
                     </Row>
-                    <div id="AboutMe"></div>
+
                 </Container>
-                <Container fluid style={{ marginBottom: '40px' }}>
+                <Container id="AboutMe" fluid>
+                    <Row style={{ marginBottom: '60px' }}>
+                        <Col >
+                            <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '240px', textAlign: 'center' }}>About Me</h2>
+                            <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginBottom: '40px', marginTop: '40px' }}>About Me</h2>
+                        </Col>
+                    </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-md-block" style={{ marginTop: '180px' }} md={5} >
+                        <Col className="d-none d-md-block" md={5} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -283,14 +287,8 @@ class Home extends React.Component {
                         </Col>
                         <Col md={5} >
                             <Row>
-                                <Col id="main">
-                                    <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '140px', textAlign: 'center' }}>About Me</h2>
-                                    <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginBottom: '40px', marginTop: '40px' }}>About Me</h2>
-                                </Col>
-                            </Row>
-                            <Row>
                                 <Col className="d-none d-lg-block" style={{ marginBottom: '160px' }}>
-                                    <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>
+                                    <p id="main" style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>
                                         <span style={{ marginLeft: '25px' }}>I</span> am a <a rel="noreferrer" href="https://www.instagram.com/stocktonca/?hl=en" target='_blank' aria-label="Link to Stockton California instagram" style={{ color: 'Cyan' }}>Stockton, California</a> based software engineer and freelance
                                         web developer. Having recently graduated from CodeStack Academy and receiving my certification in software
                                         engineering, I have since been honing my coding skills, releasing updates to my full-stack mobile application,
@@ -314,16 +312,16 @@ class Home extends React.Component {
                             </Row>
                         </Col>
                     </Row>
-                    <div id="Skills"></div>
+
                 </Container>
-                <Container fluid >
-                    <Row className="d-none d-lg-block" style={{ marginBottom: '20px', marginTop: '320px' }}>
-                        <Col md={6}>
+                <Container id="Education" fluid >
+                    <Row className="d-none d-lg-block" style={{ marginBottom: '60px', marginTop: '320px' }}>
+                        <Col >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Education</h2>
                         </Col>
                     </Row>
                     <Row className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col md={6}>
+                        <Col >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Education</h2>
                         </Col>
                     </Row>
@@ -345,14 +343,15 @@ class Home extends React.Component {
                             <Image style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} fluid src={Cert} ></Image>
                         </Col>
                     </Row>
+
                 </Container>
-                <Container fluid>
+                <Container fluid id="Skills">
                     <Row>
                         <Col style={{ display: 'flex', justifyContent: 'center' }}>
                             <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '320px', textAlign: 'center' }}>Skills</h2>
                         </Col>
                     </Row>
-                    <Row >
+                    <Row className="d-none d-lg-block">
                         <Col style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
                             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                                 <Card style={{ width: '70rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
@@ -367,6 +366,7 @@ class Home extends React.Component {
                                         <Image className="growLarger" style={{ width: '100px' }} src={REACT} alt="The React logo"></Image>
                                         <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={BOOT} alt="The Bootstrap logo"></Image>
                                         <Image className="growLarger" style={{ width: '115px' }} src={ANGULAR} alt="The Angular logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px' }} src={Native} alt="The React Native logo"></Image>
                                     </Card.Body>
                                     <Card.Body>
                                         <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Services</Card.Title>
@@ -376,6 +376,8 @@ class Home extends React.Component {
                                         <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={VSCode} alt="The VS Code logo"></Image>
                                         <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={JIRA} alt="The Jira logo"></Image>
                                         <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={Github} alt="The GitHub logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={Slack} alt="The Slack logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={Notion} alt="The Notion logo"></Image>
                                     </Card.Body>
                                     <Button onClick={this.handleClick} variant="primary">Back-End</Button>
                                 </Card>
@@ -385,10 +387,14 @@ class Home extends React.Component {
                                     <Card.Body>
                                         <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Languages, Frameworks, and Libraries</Card.Title>
                                         <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The C Sharp Logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px' }} src={NET} alt="The dot net core Logo"></Image>
                                     </Card.Body>
                                     <Card.Body>
                                         <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Services</Card.Title>
-                                        <Image className="growLarger" style={{ width: '75px' }} src={SQL} alt="The SQL server logo"></Image>
+                                        <Image className="growLarger" style={{ width: '75px', padding: '5px' }} src={SQL} alt="The SQL server logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={FileZilla} alt="The FileZilla logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={Postman} alt="The Post Man logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={AZURE} alt="The Azure logo"></Image>
                                     </Card.Body>
                                     <Button onClick={this.handleClick} variant="primary">Front-End</Button>
                                 </Card>
@@ -672,21 +678,14 @@ class Home extends React.Component {
                 <Container fluid style={{ marginBottom: '35px' }}>
                     <div id="Contact"></div>
                     <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginTop: '330px' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginTop: '330px', display: 'flex', justifyContent: 'center' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Contact Me</h2>
                         </Col>
-                        <Col className="d-block d-lg-none" style={{ marginTop: '50px' }} >
+                        <Col className="d-block d-lg-none" style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px' }}>Contact Me</h2>
                         </Col>
                     </Row>
-                    <Row className="center whiteBG" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col lg={4} className="d-none d-lg-block">
-                            <ContactUs></ContactUs>
-                        </Col>
-                        <Col className="d-block d-lg-none" >
-                            <ContactUs></ContactUs>
-                        </Col>
-                    </Row>
+                    <ContactUs></ContactUs>
                 </Container>
             </>
         )
