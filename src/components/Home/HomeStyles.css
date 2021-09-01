@@ -8,9 +8,9 @@ html {
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(200deg,#18181d,#5e5e61, #5e5e62);
+    background: linear-gradient(106deg,#18181d,#5e5e61, #4a4a4d, #18181d);
     background-size: 120% 120%;
-    animation: gradient-animation 8s ease infinite;
+    animation: gradient-animation 20s ease infinite;
 }
 
 @keyframes gradient-animation {
