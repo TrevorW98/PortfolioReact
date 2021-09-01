@@ -7,7 +7,6 @@ import Orientation from '../../assets/Orientation.jpg';
 import Hero from '../../assets/Hero.jpg';
 import Coast from '../../assets/Coast.jpg';
 import Fosters from '../../assets/Fosters.jpg';
-import Navi from '../../assets/Navi.jpg';
 import Race from '../../assets/Race.jpg';
 import Stomp from '../../assets/Stomp.jpg';
 import ContactUs from '../ContactForm/ContactForm.js';
@@ -16,6 +15,7 @@ import Headshotsm from '../../assets/TW422.jpg';
 import Headshotxs from '../../assets/TW122.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Navi from '../../assets/Navi.jpg';
 import HTML from '../../assets/HTML.png';
 import CSS from '../../assets/CSS.png';
 import CSHARP from '../../assets/CSHARP.png';
@@ -28,7 +28,7 @@ import BOOT from '../../assets/BOOT.png';
 import UNITY from '../../assets/UNITY.png';
 import JIRA from '../../assets/JIRA.png'
 import VSCode from '../../assets/VSfixed.png'
-import Github from '../../assets/github.png'
+import Github from '../../assets/GitH.png'
 import Slack from '../../assets/slackfixed.png'
 import Notion from '../../assets/Notionfixed.png'
 import Native from '../../assets/Native.png'
@@ -40,6 +40,11 @@ import HFP from '../../assets/HFP.jpg'
 import Index from '../../assets/Index.png'
 import TritonHome from '../../assets/TritonHome.jpg'
 import Logo from '../../assets/Logo.jpg'
+import ReactCardFlip from 'react-card-flip';
+import Cert from '../../assets/Certificate.jpg'
+import SQL from '../../assets/SQLlogo.png'
+import XD from '../../assets/AdobeXD.png'
+import WINDOW from '../../assets/windows.png'
 
 
 
@@ -48,8 +53,10 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tritonDetails: false
+            tritonDetails: false,
+            isFlipped: false
         };
+        this.handleClick = this.handleClick.bind(this);
     }
     componentDidMount() {
         let tritonCard = document.getElementById('tritonCard');
@@ -62,6 +69,13 @@ class Home extends React.Component {
         });
 
     }
+
+
+    handleClick(e) {
+        e.preventDefault();
+        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    }
+
     tritonDeets = () => {
         if (this.state.tritonDetails) {
             return <Container fluid>
@@ -96,16 +110,16 @@ class Home extends React.Component {
             <>
                 {/* This container holds the header and main image */}
                 <Container id="Home" fluid  >
-                    <Row style={{ marginBottom: '50px', display: 'flex', justifyContent: 'flex-end'}}>
+                    <Row style={{ marginBottom: '50px', display: 'flex', justifyContent: 'flex-end' }}>
                         <Col style={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <Navbar collapseOnSelect expand="lg" style={{ position: 'fixed', zIndex: '2', backgroundColor: "#18181d", borderRadius: "10px", border: "none", boxShadow: '2px 2px 15px' }}>
                                 <Container>
                                     <Navbar.Brand href="#home">
                                         <img
                                             src={Logo}
-                                            width="30"
-                                            height="30"
-                                            className="d-inline-block align-top"
+                                            width="25"
+                                            height="25"
+                                            className="d-inline-block "
                                             alt="Trevor Womack Development Logo"
                                         />
                                     </Navbar.Brand>
@@ -113,31 +127,31 @@ class Home extends React.Component {
                                     <Navbar.Collapse id="responsive-navbar-nav">
                                         <Nav variant="tabs" defaultActiveKey="/home">
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#Home" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Home</Nav.Link>
+                                                <Nav.Link active={false} href="#Home" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Home</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#AboutMe" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>About Me</Nav.Link>
+                                                <Nav.Link active={false} href="#AboutMe" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>About Me</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#Skills" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Skills</Nav.Link>
+                                                <Nav.Link active={false} href="#Skills" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Skills</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#myWork" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>My Work</Nav.Link>
+                                                <Nav.Link active={false} href="#myWork" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>My Work</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href="#Contact" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Contact</Nav.Link>
+                                                <Nav.Link active={false} href="#Contact" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Contact</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link active={false} href={Resume} download="TrevorWResume2021" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '18px' }}>Resume</Nav.Link>
+                                                <Nav.Link active={false} href={Resume} download="TrevorWResume2021" style={{ color: 'white', fontFamily: 'InterMed', border: '0px', fontSize: '14px' }}>Resume</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link aria-label="LinkedIn" rel="noreferrer" active={false} target="_blank" href="https://www.linkedin.com/in/trevorwjr98/" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faLinkedin} size="2x" /></Nav.Link>
+                                                <Nav.Link aria-label="LinkedIn" rel="noreferrer" active={false} target="_blank" href="https://www.linkedin.com/in/trevorwjr98/" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faLinkedin} size="1x" /></Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link aria-label="Instagram" rel="noreferrer" active={false} target="_blank" href="https://www.instagram.com/twomack_development/" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faInstagram} size="2x" /></Nav.Link>
+                                                <Nav.Link aria-label="Instagram" rel="noreferrer" active={false} target="_blank" href="https://www.instagram.com/twomack_development/" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faInstagram} size="1x" /></Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item className="growLarger">
-                                                <Nav.Link aria-label="GitHub" rel="noreferrer" active={false} target="_blank" href="https://github.com/TrevorW98" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faGithub} size="2x" /></Nav.Link>
+                                                <Nav.Link aria-label="GitHub" rel="noreferrer" active={false} target="_blank" href="https://github.com/TrevorW98" style={{ color: 'white', fontFamily: 'InterMed', border: '0px' }}><FontAwesomeIcon icon={faGithub} size="1x" /></Nav.Link>
                                             </Nav.Item>
                                         </Nav>
                                     </Navbar.Collapse>
@@ -146,7 +160,7 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ marginTop: '80px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginTop: '100px'}}>
+                        <Col className="d-none d-lg-block" style={{ display: 'flex', justifyContent: 'center', marginTop: '100px' }}>
                             <Row>
                                 <Col style={{ display: 'flex', justifyContent: 'center' }}>
                                     <h1 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>
@@ -159,14 +173,14 @@ class Home extends React.Component {
                                     <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '60px', textAlign: 'center' }}>
                                         {/* Style will be inherited from the parent element */}
                                         <Typewriter
-                                            words={[' Developer', ' Designer', ' Chef', ' Cat Dad', ' Hiker']}
+                                            words={['Web Developer', 'UI/UX Designer', 'Software Engineer', 'Mobile Developer']}
                                             loop={10}
                                             cursor
                                             cursorStyle='_'
                                             typeSpeed={70}
                                             deleteSpeed={50}
                                             delaySpeed={1000}
-                                            onLoopDone={() => console.log(`Done after 5 loops!`)}
+                                            onLoopDone={() => console.log(``)}
                                         />
                                     </span>
                                 </Col>
@@ -203,7 +217,7 @@ class Home extends React.Component {
                         </Col>
 
                     </Row>
-                    <Row style={{  display: 'flex', justifyContent: 'center' }}>
+                    <Row style={{ display: 'flex', justifyContent: 'center' }}>
                         <Col xs={10} className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
                             <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
@@ -212,7 +226,7 @@ class Home extends React.Component {
                 </Container>
                 <Container fluid style={{ marginBottom: '40px' }}>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-md-block" style={{marginTop: '180px'}} md={6} >
+                        <Col className="d-none d-md-block" style={{ marginTop: '180px' }} md={5} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -265,14 +279,6 @@ class Home extends React.Component {
                                         alt="Large bicycle gathering with many people filling a street in Portland Oregon"
                                     />
                                 </Carousel.Item>
-                                <Carousel.Item interval={2000}>
-                                    <img
-                                        style={{ borderRadius: '50px' }}
-                                        className="d-block w-100"
-                                        src={Navi}
-                                        alt="One of two Adult permanent pet cats. They will not be adopted out"
-                                    />
-                                </Carousel.Item>
                             </Carousel>
                         </Col>
                         <Col md={5} >
@@ -312,18 +318,84 @@ class Home extends React.Component {
                 </Container>
                 <Container fluid >
                     <Row className="d-none d-lg-block" style={{ marginBottom: '20px', marginTop: '320px' }}>
-                        <Col md={4} style={{ marginLeft: '100px' }}>
-                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Skills and Services</h2>
-                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>Select a badge to view official documentation</p>
+                        <Col md={6}>
+                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Education</h2>
                         </Col>
                     </Row>
                     <Row className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col md={4}>
-                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Skills and Services</h2>
-                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '12px', textAlign: 'center' }}>Select a badge to view official documentation</p>
+                        <Col md={6}>
+                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Education</h2>
                         </Col>
                     </Row>
-                    <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
+                    <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col sm={5}>
+                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>
+                                <span style={{ marginLeft: '25px' }}><a style={{ color: 'Cyan' }} href="https://codestackacademy.org/home" target="_blank" rel="noreferrer" aria-label="Codestack Academy official website.">CodeStack Academy</a></span>  is Stockton's first software engineering certification program and code school, offered by the San Joaquin County Of Education.
+                                Through this 11 month program, I learned how to code starting with the fundamentals of HTML, CSS, and JavaScript and ending with publishing a full-stack mobile application
+                                to the Google Play Store using Angular 12 and Ionic. With over 1,000 hours of instructor led lectures, coursework and projects, and internship experience, I have
+                                graduated knowing that I have the skills to create amazing programs and applications.
+                            </p>
+                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}><span style={{ marginLeft: '25px' }}>Starting</span> with over 50 students, I was among the 15 graduates to complete
+                                this rigorous program and move on to receive certification. Through the teachings of CodeStack, I am able to confidently research and learn new technologies, languages, and services to achieve my end goal.
+                                Since graduation, I also have access to a plethora of industry experts and resources to continue my education and refine my skills.
+                            </p>
+
+                        </Col>
+                        <Col sm={5} style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Image style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} fluid src={Cert} ></Image>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container fluid>
+                    <Row>
+                        <Col style={{ display: 'flex', justifyContent: 'center' }}>
+                            <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '320px', textAlign: 'center' }}>Skills</h2>
+                        </Col>
+                    </Row>
+                    <Row >
+                        <Col style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+                            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                                <Card style={{ width: '70rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
+                                    <Card.Header style={{ color: 'white', fontFamily: 'InterBold', fontSize: '25px', textAlign: 'center' }}>Front-End</Card.Header>
+                                    <Card.Body>
+                                        <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Languages, Frameworks, and Libraries</Card.Title>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={HTML} alt="The HTML 5 logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={CSS} alt="The CSS Logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={JS} alt="The Javascript logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={TS} alt="The TypeScript Logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={IONIC} alt="The Ionic logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px' }} src={REACT} alt="The React logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={BOOT} alt="The Bootstrap logo"></Image>
+                                        <Image className="growLarger" style={{ width: '115px' }} src={ANGULAR} alt="The Angular logo"></Image>
+                                    </Card.Body>
+                                    <Card.Body>
+                                        <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Services</Card.Title>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={XD} alt="The AdobeXD Logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={WINDOW} alt="The AdobeXD Logo"></Image>
+                                        <Image className="growLarger" style={{ width: '140px', padding: '5px' }} src={UNITY} alt="The Unity logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={VSCode} alt="The VS Code logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={JIRA} alt="The Jira logo"></Image>
+                                        <Image className="growLarger" style={{ width: '100px', padding: '5px' }} src={Github} alt="The GitHub logo"></Image>
+                                    </Card.Body>
+                                    <Button onClick={this.handleClick} variant="primary">Back-End</Button>
+                                </Card>
+
+                                <Card style={{ width: '70rem', border: 'none', borderRadius: "13px", boxShadow: '5px 5px 8px #18181d', backgroundColor: '#18181d' }}>
+                                    <Card.Header style={{ color: 'white', fontFamily: 'InterBold', fontSize: '25px', textAlign: 'center' }}>Back-End</Card.Header>
+                                    <Card.Body>
+                                        <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Languages, Frameworks, and Libraries</Card.Title>
+                                        <Image className="growLarger" style={{ width: '100px' }} src={CSHARP} alt="The C Sharp Logo"></Image>
+                                    </Card.Body>
+                                    <Card.Body>
+                                        <Card.Title style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px', textAlign: 'left' }}>Services</Card.Title>
+                                        <Image className="growLarger" style={{ width: '75px' }} src={SQL} alt="The SQL server logo"></Image>
+                                    </Card.Body>
+                                    <Button onClick={this.handleClick} variant="primary">Front-End</Button>
+                                </Card>
+                            </ReactCardFlip>
+                        </Col>
+                    </Row>
+                    {/* <Row style={{ marginTop: '50px', display: 'flex', justifyContent: 'space-evenly' }}>
                         <Col xs={6} md={4} lg={1} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                             <Tilt tiltReverse={true}>
                                 <a rel="noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
@@ -454,15 +526,15 @@ class Home extends React.Component {
                                 </a>
                             </Tilt>
                         </Col>
-                    </Row>
                     <div id="myWork"></div>
+                    </Row> */}
                 </Container>
                 <Container fluid >
-                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-end'}}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginRight: '140px',  marginTop: '320px' }}>
-                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Projects and Work</h2>
+                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" style={{ marginTop: '320px', display: 'flex', justifyContent: 'flex-start' }}>
+                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Projects and Work</h2>
                         </Col>
-                        <Col className="d-block d-lg-none" md={3} style={{  marginTop: '60px' }} >
+                        <Col className="d-block d-lg-none" style={{ marginTop: '60px' }} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Projects and Work</h2>
                         </Col>
                     </Row>
@@ -477,10 +549,10 @@ class Home extends React.Component {
                                             A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-care focused features.
                                         </Card.Text>
                                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px', padding: '0px' }}>
-                                            <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
-                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
-                                            <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
-                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
+                                            <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '14px' }}>Angular 11</span>
+                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '14px' }}>TypeScript</span>
+                                            <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '14px' }}>Android SDK</span>
+                                            <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '14px' }}>SQL Server</span>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -497,11 +569,11 @@ class Home extends React.Component {
                                                 A full-stack mobile application which gives users access to an index of animals and the information needed to care for them, along with other pet-care focused features.
                                             </Card.Text>
                                             <div style={{ marginTop: '10px', padding: '0px' }}>
-                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Angular 11</span>
-                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>TypeScript</span>
-                                                <span className="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Material UI</span>
-                                                <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '16px' }}>Android SDK</span>
-                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '16px' }}>SQL Server</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '12px' }}>Angular 11</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '12px' }}>TypeScript</span>
+                                                <span className="badge bg-secondary" style={{ color: 'white', marginRight: '8px', fontSize: '12px' }}>Material UI</span>
+                                                <span className="badge" style={{ backgroundColor: '#1e7c34', color: 'white', marginRight: '8px', fontSize: '12px' }}>Android SDK</span>
+                                                <span className="badge" style={{ backgroundColor: '#004fa3', color: 'white', marginRight: '8px', fontSize: '12px' }}>SQL Server</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -541,9 +613,9 @@ class Home extends React.Component {
                                                 During my internship at HealthForce Partners, I worked on designing, developing, and deploying the companies new website with Wix technologies.
                                             </Card.Text>
                                             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                                                <span class="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '16px' }}>Velo</span>
-                                                <span class="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '16px' }}>Wix</span>
-                                                <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Adobe XD</span>
+                                                <span className="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '14px' }}>Velo</span>
+                                                <span className="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '14px' }}>Wix</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '14px' }}>Adobe XD</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -561,9 +633,9 @@ class Home extends React.Component {
                                                 During my internship at HealthForce Partners, I worked on designing, developing, and deploying the companies new website with Wix technologies.
                                             </Card.Text>
                                             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                                                <span class="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '16px' }}>Velo</span>
-                                                <span class="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '16px' }}>Wix</span>
-                                                <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '16px' }}>Adobe XD</span>
+                                                <span className="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '12px' }}>Velo</span>
+                                                <span className="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '12px' }}>Wix</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '12px' }}>Adobe XD</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -581,9 +653,9 @@ class Home extends React.Component {
                                                 During my internship at HealthForce Partners, I worked on designing, developing, and deploying the companies new website with Wix technologies.
                                             </Card.Text>
                                             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                                                <span class="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '10px' }}>Velo</span>
-                                                <span class="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '10px' }}>Wix</span>
-                                                <span class="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Adobe XD</span>
+                                                <span className="badge bg-warning" style={{ color: 'black', marginRight: '8px', fontSize: '10px' }}>Velo</span>
+                                                <span className="badge bg-light" style={{ color: 'black', marginRight: '8px', fontSize: '10px' }}>Wix</span>
+                                                <span className="badge bg-danger" style={{ color: 'white', marginRight: '8px', fontSize: '10px' }}>Adobe XD</span>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -597,18 +669,18 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid style={{marginBottom: '35px'}}>
+                <Container fluid style={{ marginBottom: '35px' }}>
                     <div id="Contact"></div>
-                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'flex-start' }}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginLeft: '200px', marginTop: '330px' }}>
-                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px' }}>Contact Me</h2>
+                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginTop: '330px' }}>
+                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Contact Me</h2>
                         </Col>
-                        <Col className="d-block d-lg-none" style={{marginTop: '50px'}} >
+                        <Col className="d-block d-lg-none" style={{ marginTop: '50px' }} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px' }}>Contact Me</h2>
                         </Col>
                     </Row>
-                    <Row className="center whiteBG" style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                        <Col lg={6} className="d-none d-lg-block" style={{ marginLeft: '200px' }}>
+                    <Row className="center whiteBG" style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col lg={4} className="d-none d-lg-block">
                             <ContactUs></ContactUs>
                         </Col>
                         <Col className="d-block d-lg-none" >

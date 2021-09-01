@@ -58,7 +58,7 @@ body{
   transition: all .2s ease-in-out;
 }
 .growLarger:hover{
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 .coloc{
   color: #1e7c34;
