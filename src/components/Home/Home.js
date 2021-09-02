@@ -15,7 +15,6 @@ import Headshotsm from '../../assets/TW422.jpg';
 import Headshotxs from '../../assets/TW122.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import Navi from '../../assets/Navi.jpg';
 import HTML from '../../assets/HTML.png';
 import CSS from '../../assets/CSS.png';
 import CSHARP from '../../assets/CSHARP.png';
