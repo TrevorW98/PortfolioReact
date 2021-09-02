@@ -42,6 +42,7 @@ import TritonHome from '../../assets/TritonHome.jpg'
 import Logo from '../../assets/Logo.jpg'
 import ReactCardFlip from 'react-card-flip';
 import Cert from '../../assets/Certificate.jpg'
+import CertXS from '../../assets/CertificateXS.jpg'
 import SQL from '../../assets/SQLlogo.png'
 import XD from '../../assets/AdobeXD.png'
 import WINDOW from '../../assets/windows.png'
@@ -170,7 +171,7 @@ class Home extends React.Component {
                             </Row>
                             <Row>
                                 <Col style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                    <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '60px', textAlign: 'center' }}>
+                                    <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '50px', textAlign: 'center' }}>
                                         {/* Style will be inherited from the parent element */}
                                         <Typewriter
                                             words={['Web Developer', 'UI/UX Designer', 'Software Engineer', 'Mobile Developer']}
@@ -195,10 +196,10 @@ class Home extends React.Component {
                             </Row>
                             <Row>
                                 <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                                    <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '30px' }}>
+                                    <span style={{ color: 'White', fontFamily: 'Tech', fontSize: '20px' }}>
                                         {/* Style will be inherited from the parent element */}
                                         <Typewriter
-                                            words={[' Developer', ' Designer', ' Chef', ' Cat Dad', ' Hiker']}
+                                            words={['Web Developer', 'UI/UX Designer', 'Software Engineer', 'Mobile Developer']}
                                             loop={10}
                                             cursor
                                             cursorStyle='_'
@@ -216,21 +217,21 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col xs={10} className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
+                        <Col xs={9} sm={5} className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <Image src={Headshotxs} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px', display: 'flex', justifyContent: 'center' }} alt="Trevor Womack Jr's Headshot, he looks stunning and beautiful, and so do you."></Image>
                         </Col>
                     </Row>
 
                 </Container>
                 <Container id="AboutMe" fluid>
-                    <Row style={{ marginBottom: '40px' }}>
+                    <Row style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
                         <Col >
                             <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '240px', textAlign: 'center' }}>About Me</h2>
-                            <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginBottom: '40px', marginTop: '40px' }}>About Me</h2>
+                            <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginTop: '40px', textAlign: 'center' }}>About Me</h2>
                         </Col>
                     </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-md-block" md={5} >
+                        <Col className="d-none d-lg-block" md={5} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -298,7 +299,7 @@ class Home extends React.Component {
                                         - 17.0.2 and Triton, built with the latest iteration of Angular - 12. While knowing and staying up to date with the latest technology, I also have
                                         a deep understanding of the fundamentals - JavaScript, HTML, and CSS. </p>
                                 </Col>
-                                <Col className="d-block d-lg-none">
+                                <Col className="d-block d-lg-none" >
                                     <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '12px' }}>
                                         <span style={{ marginLeft: '25px' }}>I</span> am a <a rel="noreferrer" href="https://www.instagram.com/stocktonca/?hl=en" target='_blank' aria-label="Link to Stockton California instagram" style={{ color: 'Cyan' }}>Stockton, California</a> based software engineer and freelance
                                         web developer. Having recently graduated from CodeStack Academy and receiving my certification in software
@@ -315,18 +316,21 @@ class Home extends React.Component {
 
                 </Container>
                 <Container id="Education" fluid >
-                    <Row className="d-none d-lg-block" style={{ marginBottom: '40px', marginTop: '320px' }}>
+                    <Row className="d-none d-lg-block" style={{ marginBottom: '40px', marginTop: '200px' }}>
                         <Col >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Education</h2>
                         </Col>
                     </Row>
                     <Row className="d-block d-lg-none" style={{ display: 'flex', justifyContent: 'center' }}>
                         <Col >
-                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Education</h2>
+                            <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center', marginTop: '75px', marginBottom: '10px' }}>Education</h2>
                         </Col>
                     </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col sm={5}>
+                        <Col className="d-block d-lg-none" xs={10} sm={8} style={{ display: 'flex', justifyContent: 'center', marginBottom: '25px' }}>
+                            <Image style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} fluid src={CertXS} ></Image>
+                        </Col>
+                        <Col className="d-none d-lg-block" sm={5}>
                             <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '18px' }}>
                                 <span style={{ marginLeft: '25px' }}><a style={{ color: 'Cyan' }} href="https://codestackacademy.org/home" target="_blank" rel="noreferrer" aria-label="Codestack Academy official website.">CodeStack Academy</a></span>  is Stockton's first software engineering certification program and code school, offered by the San Joaquin County Of Education.
                                 Through this 11 month program, I learned how to code starting with the fundamentals of HTML, CSS, and JavaScript and ending with publishing a full-stack mobile application
@@ -339,9 +343,23 @@ class Home extends React.Component {
                             </p>
 
                         </Col>
-                        <Col sm={5} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-block d-lg-none" sm={10} >
+                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '14px' }}>
+                                <span style={{ marginLeft: '25px' }}><a style={{ color: 'Cyan' }} href="https://codestackacademy.org/home" target="_blank" rel="noreferrer" aria-label="Codestack Academy official website.">CodeStack Academy</a></span>  is Stockton's first software engineering certification program and code school, offered by the San Joaquin County Of Education.
+                                Through this 11 month program, I learned how to code starting with the fundamentals of HTML, CSS, and JavaScript and ending with publishing a full-stack mobile application
+                                to the Google Play Store using Angular 12 and Ionic. With over 1,000 hours of instructor led lectures, coursework and projects, and internship experience, I have
+                                graduated knowing that I have the skills to create amazing programs and applications.
+                            </p>
+                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '14px' }}><span style={{ marginLeft: '25px' }}>Starting</span> with over 50 students, I was among the 15 graduates to complete
+                                this rigorous program and move on to receive certification. Through the teachings of CodeStack, I am able to confidently research and learn new technologies, languages, and services to achieve my end goal.
+                                Since graduation, I also have access to a plethora of industry experts and resources to continue my education and refine my skills.
+                            </p>
+
+                        </Col>
+                        <Col className="d-none d-lg-block" xs={5} style={{ display: 'flex', justifyContent: 'center' }}>
                             <Image style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} fluid src={Cert} ></Image>
                         </Col>
+
                     </Row>
 
                 </Container>
