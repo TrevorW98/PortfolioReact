@@ -82,14 +82,15 @@ class Home extends React.Component {
                 <Row style={{ padding: '0px', display: 'flex', justifyContent: 'center', marginTop: '70px' }}>
                     <Col md={4}>
                         <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '20px', marginTop: '70px' }}>
-                            <span style={{ marginLeft: '25px' }}>When</span> I first started developing Triton, it was as an assignment from
-                            CodeStack Academy. As the course progressed and months went on, my passion for Triton grew as more
-                            functionality and design pieces started coming together and by the end
-                            of our course, I was determined to continue working and releasing updates.
-                            Triton is currently available on the Google Play Store for Android and
-                            will be available for IOS in the near future. </p>
-                        <a style={{ textDecoration: 'none', border: 'none' }} target="_blank" rel="noreferrer" href="http://play.google.com/store/apps/details?id=io.ionic.TritonFull">
-                            <Button style={{ color: 'white', backgroundColor: '#18181d', border: 'none', fontFamily: 'InterMed', marginLeft: '110px' }}>Google Play Store Listing</Button>
+                            <span style={{ marginLeft: '25px' }}>The</span> name Triton is based off of a fish that I came into ownership of unexpectedly and suddenly.
+                            I had to scour the internet for information on how to care for this rare fish, spending hours reading and learning about the proper care conditions. 
+                        I decided to make an app that would help with that search by providing information on many different animals; how to care for them,
+                        feed them, etc. in the hopes that It would make pet ownership easier for others and more beneficial to their pets. </p>
+                            <p style={{ color: 'white', fontFamily: 'InterMed', fontSize: '20px', marginTop: '20px' }}>
+                            <span style={{ marginLeft: '25px' }}>Triton</span> features: an Index of animals with information about their physical properties, dietary needs, and more, a pet-ownership quiz, to help determine what pet would work best for your situation, 
+                            a profile for both the user and their pets, and a journal to keep important notes or medical information about their pets.</p>
+                        <a style={{ textDecoration: 'none', border: 'none', display: 'flex', justifyContent: 'center' }} target="_blank" rel="noreferrer" href="http://play.google.com/store/apps/details?id=io.ionic.TritonFull">
+                            <Button style={{ color: 'white', backgroundColor: '#18181d', border: 'none', fontFamily: 'InterMed' }}>Google Play Store Listing</Button>
                         </a>
                     </Col>
                     <Col md={3} style={{ display: 'flex', justifyContent: 'center' }}>
@@ -231,7 +232,7 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                     <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" md={5} >
+                        <Col className="d-none d-lg-block" md={4} >
                             <Carousel fade controls={false} pause='hover' indicators={false} style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} >
                                 <Carousel.Item interval={2000}>
                                     <img
@@ -355,7 +356,7 @@ class Home extends React.Component {
                             </p>
 
                         </Col>
-                        <Col className="d-none d-lg-block" xs={5} style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" xs={4} style={{ display: 'flex', justifyContent: 'center' }}>
                             <Image style={{ borderRadius: '50px', boxShadow: '8px 8px 10px' }} fluid src={Cert} ></Image>
                         </Col>
 
@@ -365,7 +366,7 @@ class Home extends React.Component {
                 <Container fluid id="Skills">
                     <Row>
                         <Col style={{ display: 'flex', justifyContent: 'center' }}>
-                            <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '240px', textAlign: 'center' }}>Skills</h2>
+                            <h2 className="d-none d-lg-block" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', marginTop: '140px', textAlign: 'center' }}>Skills</h2>
                             <h2 className="d-block d-lg-none" style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', marginTop: '40px', textAlign: 'center' }}>Skills</h2>
                         </Col>
                     </Row>
@@ -668,12 +669,20 @@ class Home extends React.Component {
                     </Row> */}
                 </Container>
                 <Container fluid >
-                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" style={{ marginTop: '320px', display: 'flex', justifyContent: 'flex-start' }}>
+                    <Row style={{  display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" style={{ marginTop: '140px', display: 'flex', justifyContent: 'flex-start' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Projects and Work</h2>
                         </Col>
                         <Col className="d-block d-lg-none" style={{ marginTop: '60px' }} >
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '30px', textAlign: 'center' }}>Projects and Work</h2>
+                        </Col>
+                    </Row>
+                    <Row style={{ marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-start' }}>
+                            <h2 style={{ color: 'white', fontFamily: 'InterMed', fontSize: '20px', textAlign: 'center' }}>Select a card to learn more</h2>
+                        </Col>
+                        <Col className="d-block d-lg-none" style={{ marginTop: '60px' }} >
+                            <h2 style={{ color: 'white', fontFamily: 'InterMed', fontSize: '14px', textAlign: 'center' }}>Select a card to learn more</h2>
                         </Col>
                     </Row>
                     {/* Large */}
@@ -814,7 +823,7 @@ class Home extends React.Component {
                 <Container fluid style={{ marginBottom: '35px' }}>
                     <div id="Contact"></div>
                     <Row style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
-                        <Col className="d-none d-lg-block" md={4} style={{ marginTop: '300px', display: 'flex', justifyContent: 'center' }}>
+                        <Col className="d-none d-lg-block" md={4} style={{ marginTop: '140px', display: 'flex', justifyContent: 'center' }}>
                             <h2 style={{ color: 'white', fontFamily: 'InterBold', fontSize: '60px', textAlign: 'center' }}>Contact Me</h2>
                         </Col>
                         <Col className="d-block d-lg-none" style={{ marginTop: '50px', display: 'flex', justifyContent: 'center' }} >
